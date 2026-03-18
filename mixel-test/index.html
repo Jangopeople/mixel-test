@@ -427,9 +427,138 @@
       .stats { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
       .summary-text { grid-template-columns: 1fr; }
     }
-  </style>
+  
+    /* LOGIN STYLES */
+    #login-view {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #f0f4f8 0%, #e8f1f9 100%);
+      z-index: 9999;
+      font-family: "Space Grotesk", -apple-system, sans-serif;
+    }
+    #login-view.hidden { display: none !important; }
+    
+    .login-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+      overflow: hidden;
+      max-width: 500px;
+      width: 100%;
+    }
+    
+    .login-top {
+      background: linear-gradient(135deg, #0f1f3d, #124d8d);
+      color: white;
+      padding: 28px;
+    }
+    
+    .login-top h1 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    
+    .login-form {
+      padding: 28px;
+      display: grid;
+      gap: 16px;
+    }
+    
+    .form-group { display: grid; gap: 8px; }
+    .form-group label {
+      font-size: 12px;
+      color: #607391;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    
+    .form-group input {
+      padding: 12px 14px;
+      border: 1px solid #d6e4f0;
+      border-radius: 10px;
+      font-size: 14px;
+      font-family: inherit;
+    }
+    
+    .form-group input:focus {
+      outline: none;
+      border-color: #5087c7;
+      box-shadow: 0 0 0 3px rgba(80, 135, 199, 0.15);
+    }
+    
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 8px 0;
+    }
+    
+    .btn-primary {
+      padding: 12px;
+      background: #f5a623;
+      color: #0f1f3d;
+      border: none;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 8px;
+    }
+    
+    .btn-primary:hover {
+      background: #e8941a;
+    }
+    
+    .help-text {
+      font-size: 12px;
+      color: #607391;
+      background: #f5f9ff;
+      border: 1px solid #d6e6fc;
+      border-radius: 8px;
+      padding: 12px;
+      line-height: 1.6;
+    }
+</style>
 </head>
 <body>
+
+<div id="login-view">
+  <div class="login-card">
+    <div class="login-top">
+      <h1>MIXEL Test Portal</h1>
+      <p>Internal guided QA portal for end-to-end user testing across MIXEL apps. Accounting has a deep-dive walkthrough with exact click paths and expected outcomes.</p>
+    </div>
+    <div class="login-form">
+      <div class="form-group">
+        <label for="login-email">Email</label>
+        <input id="login-email" type="email" placeholder="test@test.ch" />
+      </div>
+      <div class="form-group">
+        <label for="login-password">Password</label>
+        <input id="login-password" type="password" placeholder="Password" />
+      </div>
+      <div class="checkbox-group">
+        <input id="login-remember" type="checkbox" checked />
+        <label for="login-remember" style="margin:0;text-transform:none;letter-spacing:normal;">Keep me signed in on this device</label>
+      </div>
+      <button class="btn-primary" id="login-btn">Enter Test Portal</button>
+      <div class="help-text">
+        Assigned test users can sign in using approved internal credentials. Passwords are not displayed in this portal.<br><br>
+        This portal auto-saves progress locally in your browser and exports a PDF incident report.
+      </div>
+    </div>
+  </div>
+</div>
+
+
   <div id="login-view" class="login-wrap">
     <div class="login-card">
       <div class="login-top">
@@ -13755,6 +13884,75 @@ function bindEvents() {
 bindEvents();
 applyLanguageToStaticUI();
 restoreSession();
+
+
+// LOGIN FUNCTIONALITY
+const TEST_CREDENTIALS = {
+  "michael@mixel.ch": "Mixel8181",
+  "sarah@mixel.ch": "Mixel8181",
+  "anabelle@mixel.ch": "Mixel8181"
+};
+
+let currentUser = null;
+const SESSION_KEY = "mixel-test-session";
+
+function login() {
+  const email = (document.getElementById("login-email")?.value || "").trim().toLowerCase();
+  const password = document.getElementById("login-password")?.value || "";
+  
+  if (!email || !password) {
+    alert("Please enter both email and password");
+    return;
+  }
+  
+  if (!TEST_CREDENTIALS[email]) {
+    alert("User not found");
+    return;
+  }
+  
+  if (TEST_CREDENTIALS[email] !== password) {
+    alert("Invalid password");
+    return;
+  }
+  
+  currentUser = email;
+  if (document.getElementById("login-remember")?.checked) {
+    localStorage.setItem(SESSION_KEY, JSON.stringify({
+      email: email,
+      expiresAt: Date.now() + (30 * 24 * 60 * 60 * 1000)
+    }));
+  }
+  
+  document.getElementById("login-view")?.classList.add("hidden");
+}
+
+function logout() {
+  currentUser = null;
+  localStorage.removeItem(SESSION_KEY);
+  document.getElementById("login-view")?.classList.remove("hidden");
+  document.getElementById("login-password").value = "";
+}
+
+function restoreSession() {
+  const raw = localStorage.getItem(SESSION_KEY);
+  if (!raw) return;
+  try {
+    const data = JSON.parse(raw);
+    if (data.email && Date.now() < data.expiresAt && TEST_CREDENTIALS[data.email]) {
+      currentUser = data.email;
+      document.getElementById("login-view")?.classList.add("hidden");
+    }
+  } catch (e) {}
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("login-btn")?.addEventListener("click", login);
+  document.getElementById("login-password")?.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") login();
+  });
+  restoreSession();
+});
+
 </script>
 </body>
 </html>
