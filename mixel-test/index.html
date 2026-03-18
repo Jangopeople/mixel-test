@@ -13733,12 +13733,7 @@ function generatePDF() {
 }
 
 function bindEvents() {
-  document.getElementById("login-btn").onclick = () => {
-    login().catch(err => {
-      console.error("Login error:", err);
-      alert("Login failed: " + (err.message || "Unknown error"));
-    });
-  };
+  document.getElementById("login-btn").onclick = login;
   document.getElementById("logout-btn").onclick = logout;
   document.getElementById("reset-btn").onclick = resetAll;
   document.getElementById("pdf-btn").onclick = generatePDF;
@@ -13749,12 +13744,7 @@ function bindEvents() {
     if (currentUser) render();
   };
   document.getElementById("login-password").addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
-      login().catch(err => {
-        console.error("Login error:", err);
-        alert("Login failed: " + (err.message || "Unknown error"));
-      });
-    }
+    if (e.key === "Enter") login();
   });
 
   ["m-tester", "m-user", "m-date", "m-env", "m-version", "m-release"].forEach(id => {
