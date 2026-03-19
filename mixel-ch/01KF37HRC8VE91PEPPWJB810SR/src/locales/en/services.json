@@ -1,0 +1,408 @@
+{
+  "network": {
+    "title": "Network Solutions",
+    "subtitle": "Professional Network Infrastructure for Your Business – WLAN, Switch Configuration and Network Security",
+    "overview": {
+      "title": "Modern Network Infrastructure for Your Business",
+      "description": "A stable and secure network is the foundation for efficient work. We plan, install and maintain your network infrastructure with leading technologies like Unifi, Cisco and HP."
+    },
+    "services": {
+      "wlan": {
+        "title": "WLAN Installation & Configuration",
+        "description": "Professional WLAN networks with Unifi Access Points for optimal coverage and speed",
+        "features": [
+          "Site Survey and Planning",
+          "Installation and Cabling",
+          "Configuration and Optimization",
+          "VLAN Segmentation"
+        ]
+      },
+      "switch": {
+        "title": "Switch Infrastructure",
+        "description": "High-performance switches for reliable network performance",
+        "features": [
+          "Managed Switches (Unifi, Cisco, HP)",
+          "PoE for Phones and APs",
+          "Redundancy and High Availability",
+          "Performance Monitoring"
+        ]
+      },
+      "firewall": {
+        "title": "Firewall & Security",
+        "description": "Comprehensive network security to protect your data",
+        "features": [
+          "Next-Gen Firewall Installation",
+          "VPN Configuration",
+          "Intrusion Detection",
+          "Content Filtering"
+        ]
+      },
+      "support": {
+        "title": "Maintenance & Support",
+        "description": "Proactive maintenance and fast support for your network infrastructure",
+        "features": [
+          "24/7 Monitoring",
+          "Firmware Updates",
+          "Performance Optimization",
+          "Remote & On-Site Support"
+        ]
+      }
+    },
+    "cta": {
+      "consult": "Free Consultation",
+      "quote": "Request Quote"
+    },
+    "finalCta": {
+      "title": "Ready for a Professional Network?",
+      "description": "Contact us for a free initial consultation and quote"
+    }
+  },
+  "server": {
+    "title": "Server & Infrastructure",
+    "subtitle": "Reliable Server Solutions for Business-Critical Applications – Installation, Virtualization and Maintenance",
+    "overview": {
+      "title": "Professional Server Infrastructure",
+      "description": "Modern server solutions with HPE, Dell and Lenovo for maximum availability and performance of your business-critical applications."
+    },
+    "services": {
+      "installation": {
+        "title": "Server Installation",
+        "description": "Complete server installation including hardware, operating system and configuration",
+        "features": [
+          "Hardware Sizing",
+          "Operating System Installation",
+          "RAID Configuration",
+          "Network Integration"
+        ]
+      },
+      "virtualization": {
+        "title": "Virtualization",
+        "description": "VMware and Hyper-V virtualization for optimal resource utilization",
+        "features": [
+          "VMware vSphere",
+          "Microsoft Hyper-V",
+          "VM Migration",
+          "Backup & Recovery"
+        ]
+      },
+      "storage": {
+        "title": "Storage Solutions",
+        "description": "NAS, SAN and Object Storage for secure data storage",
+        "features": [
+          "Synology NAS",
+          "Enterprise SAN",
+          "Backup Strategies",
+          "Disaster Recovery"
+        ]
+      },
+      "monitoring": {
+        "title": "Monitoring & Maintenance",
+        "description": "Proactive monitoring and regular maintenance",
+        "features": [
+          "24/7 System Monitoring",
+          "Performance Analysis",
+          "Update Management",
+          "Incident Management"
+        ]
+      }
+    },
+    "cta": {
+      "consult": "Free Consultation",
+      "quote": "Request Quote"
+    },
+    "finalCta": {
+      "title": "Need a Server Solution?",
+      "description": "We're happy to advise you and create a customized quote"
+    }
+  },
+  "microsoft365": {
+    "title": "Microsoft 365",
+    "subtitle": "Complete Microsoft 365 Integration and Support – Migration, Configuration and Training",
+    "overview": {
+      "title": "Microsoft 365 for Your Business",
+      "description": "As a Microsoft Partner, we support you with the complete integration of Microsoft 365 into your IT infrastructure."
+    },
+    "services": {
+      "migration": {
+        "title": "Migration & Setup",
+        "description": "Seamless migration from Exchange, SharePoint and OneDrive",
+        "features": [
+          "Tenant Setup",
+          "Email Migration",
+          "Data Migration",
+          "User Onboarding"
+        ]
+      },
+      "teams": {
+        "title": "Teams & Collaboration",
+        "description": "Microsoft Teams for efficient collaboration",
+        "features": [
+          "Teams Configuration",
+          "Telephony Integration",
+          "SharePoint Integration",
+          "Governance"
+        ]
+      },
+      "security": {
+        "title": "Security & Compliance",
+        "description": "Comprehensive security features from Microsoft 365",
+        "features": [
+          "Multi-Factor Authentication",
+          "Conditional Access",
+          "Data Loss Prevention",
+          "Compliance Center"
+        ]
+      },
+      "support": {
+        "title": "Support & Training",
+        "description": "Ongoing support and employee training",
+        "features": [
+          "User Training",
+          "Admin Training",
+          "24/7 Support",
+          "Best Practices"
+        ]
+      }
+    },
+    "cta": {
+      "consult": "Free Consultation",
+      "quote": "Request Quote"
+    },
+    "finalCta": {
+      "title": "Ready for Microsoft 365?",
+      "description": "Contact us for a free consultation"
+    }
+  },
+  "video": {
+    "title": "Video Surveillance & Security",
+    "subtitle": "Professional Video Security Solutions with Unifi Protect – Installation, Configuration and Maintenance",
+    "overview": {
+      "title": "Modern Video Security",
+      "description": "Protect your business with professional IP camera systems from Unifi, Axis and Hikvision."
+    },
+    "services": {
+      "camera": {
+        "title": "Camera Installation",
+        "description": "Professional IP cameras for indoor and outdoor",
+        "features": [
+          "Site Survey",
+          "Camera Installation",
+          "Cabling",
+          "Configuration"
+        ]
+      },
+      "recording": {
+        "title": "Recording & Storage",
+        "description": "Secure recording and long-term storage",
+        "features": [
+          "NVR Installation",
+          "Cloud Backup",
+          "Redundant Storage",
+          "Archiving"
+        ]
+      },
+      "alerts": {
+        "title": "Smart Alerts",
+        "description": "Intelligent notifications for motion detection",
+        "features": [
+          "Motion Detection",
+          "Person Detection",
+          "Push Notifications",
+          "Email Alerts"
+        ]
+      },
+      "remote": {
+        "title": "Remote Access",
+        "description": "Secure remote access to your cameras",
+        "features": [
+          "Mobile Apps",
+          "Web Access",
+          "VPN Integration",
+          "Multi-User Access"
+        ]
+      }
+    },
+    "cta": {
+      "consult": "Free Consultation",
+      "quote": "Request Quote"
+    },
+    "finalCta": {
+      "title": "Interested in Video Security?",
+      "description": "Get a free consultation"
+    }
+  },
+  "telephony": {
+    "title": "Telephony Systems",
+    "subtitle": "Modern VoIP Telephony and Communication Solutions for Your Business",
+    "overview": {
+      "title": "Professional VoIP Telephony",
+      "description": "Modern telephony systems with VoIP technology for flexible and cost-effective calling."
+    },
+    "services": {
+      "voip": {
+        "title": "VoIP Installation",
+        "description": "Complete VoIP telephony solution",
+        "features": [
+          "PBX Installation",
+          "SIP Trunks",
+          "Phone Configuration",
+          "Number Porting"
+        ]
+      },
+      "teams": {
+        "title": "Teams Integration",
+        "description": "Integration with Microsoft Teams",
+        "features": [
+          "Direct Routing",
+          "Teams Telephony",
+          "Unified Communications",
+          "Presence Integration"
+        ]
+      },
+      "features": {
+        "title": "Advanced Features",
+        "description": "Professional telephony features",
+        "features": [
+          "Voicemail-to-Email",
+          "Auto-Attendant",
+          "Call Recording",
+          "Call Queues"
+        ]
+      },
+      "support": {
+        "title": "Support & Maintenance",
+        "description": "Ongoing support for your telephony",
+        "features": [
+          "24/7 Support",
+          "Updates",
+          "Monitoring",
+          "Troubleshooting"
+        ]
+      }
+    },
+    "cta": {
+      "consult": "Free Consultation",
+      "quote": "Request Quote"
+    },
+    "finalCta": {
+      "title": "Want Modern Telephony?",
+      "description": "We're happy to advise you"
+    }
+  },
+  "ai": {
+    "title": "AI Solutions",
+    "subtitle": "Artificial Intelligence for Your Business – Consulting, Integration and Automation",
+    "overview": {
+      "title": "AI for Your Business",
+      "description": "Harness the power of Artificial Intelligence for automation, efficiency gains and innovation."
+    },
+    "services": {
+      "consulting": {
+        "title": "AI Consulting",
+        "description": "Strategic consulting for AI integration",
+        "features": [
+          "Use Case Identification",
+          "ROI Analysis",
+          "Feasibility Studies",
+          "Roadmap Development"
+        ]
+      },
+      "integration": {
+        "title": "AI Tools Integration",
+        "description": "Integration of ChatGPT, Copilot & more",
+        "features": [
+          "Microsoft Copilot",
+          "ChatGPT Enterprise",
+          "Custom AI Tools",
+          "API Integration"
+        ]
+      },
+      "automation": {
+        "title": "Process Automation",
+        "description": "Automate business processes with AI",
+        "features": [
+          "Document Processing",
+          "Data Analysis",
+          "Customer Service Bots",
+          "Workflow Automation"
+        ]
+      },
+      "training": {
+        "title": "Training & Education",
+        "description": "Train your employees in AI usage",
+        "features": [
+          "AI Workshops",
+          "Hands-on Training",
+          "Best Practices",
+          "Change Management"
+        ]
+      }
+    },
+    "cta": {
+      "consult": "Free Consultation",
+      "quote": "Request Quote"
+    },
+    "finalCta": {
+      "title": "Ready for AI in Your Business?",
+      "description": "Get advice from our AI experts"
+    }
+  },
+  "servicedesk": {
+    "title": "Service Desk & IT Support",
+    "subtitle": "24/7 IT Support for Your Employees – Helpdesk, Remote Support and On-Site Service",
+    "overview": {
+      "title": "Professional IT Support",
+      "description": "Our Service Desk is available around the clock – for quick help with IT problems."
+    },
+    "services": {
+      "helpdesk": {
+        "title": "Helpdesk",
+        "description": "First-level support for your employees",
+        "features": [
+          "Phone Support",
+          "Email Support",
+          "Chat Support",
+          "Ticket System"
+        ]
+      },
+      "remote": {
+        "title": "Remote Support",
+        "description": "Quick help via remote maintenance",
+        "features": [
+          "Screen Sharing",
+          "Remote Desktop",
+          "Problem Analysis",
+          "Immediate Help"
+        ]
+      },
+      "onsite": {
+        "title": "On-Site Service",
+        "description": "Technicians on-site when needed",
+        "features": [
+          "Hardware Repair",
+          "Installation",
+          "Maintenance",
+          "Emergency Service"
+        ]
+      },
+      "availability": {
+        "title": "24/7 Availability",
+        "description": "Always available when you need us",
+        "features": [
+          "Round-the-Clock",
+          "Weekends",
+          "Holidays",
+          "Emergency Hotline"
+        ]
+      }
+    },
+    "cta": {
+      "consult": "Free Consultation",
+      "quote": "Request Quote"
+    },
+    "finalCta": {
+      "title": "Need IT Support?",
+      "description": "Contact us – we're here for you"
+    }
+  }
+}
