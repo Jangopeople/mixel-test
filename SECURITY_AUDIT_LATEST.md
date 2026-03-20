@@ -17,7 +17,7 @@ Missing middleware file (middleware.ts). Suggest enforcing route-level security.
 Passed - Pattern not found
 ```
 
-## SAST: Usage of new Function() - Arbitrary Code Execution Risk — PASS (5ms)
+## SAST: Usage of new Function() - Arbitrary Code Execution Risk — PASS (6ms)
 ```
 Passed - Pattern not found
 ```
