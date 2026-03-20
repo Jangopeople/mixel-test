@@ -1,0 +1,169 @@
+name: Daily CodeRabbit Code Review
+
+on:
+  schedule:
+    # Run every day at 07:00 UTC (08:00 Zurich time)
+    - cron: '0 7 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  daily-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up scan branch
+        run: |
+          DATE=$(date +'%Y-%m-%d')
+          BRANCH_NAME="coderabbit/daily-scan-${DATE}"
+          
+          # Configure git
+          git config user.name "CodeRabbit Daily Scanner"
+          git config user.email "scanner@mixel.ch"
+          
+          # Delete old scan branches (cleanup)
+          git branch -r | grep 'coderabbit/daily-scan' | while read branch; do
+            remote_branch=${branch#origin/}
+            echo "Deleting old branch: $remote_branch"
+            git push origin --delete "$remote_branch" 2>/dev/null || true
+          done
+          
+          # Close old scan PRs
+          gh pr list --label "daily-scan" --state open --json number --jq '.[].number' | while read pr_num; do
+            echo "Closing old PR: #$pr_num"
+            gh pr close "$pr_num" --delete-branch 2>/dev/null || true
+          done
+          
+          # Create new scan branch
+          git checkout -b "$BRANCH_NAME"
+          
+          # Add a scan marker file (triggers diff for CodeRabbit)
+          echo "Daily code review scan: ${DATE}" > .coderabbit-scan
+          echo "Timestamp: $(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> .coderabbit-scan
+          
+          git add .coderabbit-scan
+          git commit -m "chore: daily code review scan ${DATE}
+
+          This is an automated daily scan to trigger CodeRabbit AI review.
+          CodeRabbit will analyze the entire codebase for:
+          - Security vulnerabilities
+          - Code quality issues
+          - Bug detection
+          - Performance improvements
+          - Best practice violations
+          
+          @coderabbitai full review"
+          
+          git push origin "$BRANCH_NAME"
+          
+          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
+          echo "DATE=$DATE" >> $GITHUB_ENV
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Pull Request
+        run: |
+          PR_BODY=$(cat <<'BODY'
+          ## 🤖 Automated Daily Code Review
+          
+          **Date:** ${{ env.DATE }}
+          **Triggered by:** Scheduled daily scan
+          
+          ---
+          
+          ### What this does:
+          This PR triggers a full CodeRabbit AI review of the codebase.
+          
+          **CodeRabbit will check for:**
+          - 🔒 Security vulnerabilities
+          - 🐛 Bugs and logic errors
+          - ⚡ Performance issues
+          - 📝 Code quality and best practices
+          - 🔄 Dependency issues
+          
+          ---
+          
+          > **Note:** This PR should NOT be merged. Review the CodeRabbit comments, apply fixes in separate PRs, then close this one.
+          
+          @coderabbitai full review
+          BODY
+          )
+
+          PR_NUMBER=$(gh api repos/${{ github.repository }}/pulls \
+            -f title="🔍 Daily Code Review — ${{ env.DATE }}" \
+            -f head="${{ env.BRANCH_NAME }}" \
+            -f base="main" \
+            -f body="$PR_BODY" \
+            --jq '.number')
+
+          PR_URL=$(gh api repos/${{ github.repository }}/pulls/${PR_NUMBER} --jq '.html_url')
+
+          gh api repos/${{ github.repository }}/issues/${PR_NUMBER}/labels \
+            -f labels[]="daily-scan" \
+            -f labels[]="coderabbit" \
+            -f labels[]="automated" >/dev/null
+
+          echo "PR created: $PR_URL"
+          echo "PR_NUMBER=$PR_NUMBER" >> "$GITHUB_ENV"
+          echo "PR_URL=$PR_URL" >> "$GITHUB_ENV"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Add review instructions comment
+        run: |
+          gh pr comment "${{ env.PR_URL }}" --body "## 📋 Review Instructions for Michael
+          
+          1. Wait ~5 minutes for CodeRabbit to complete its review
+          2. Read through the CodeRabbit comments on this PR
+          3. For each issue found:
+             - Create a separate fix branch from main
+             - Apply the fix
+             - Open a new PR (CodeRabbit will review the fix too)
+          4. Once all fixes are applied, **close this PR** (don't merge)
+          
+          ### Quick commands you can use in comments:
+          - \`@coderabbitai review\` — re-trigger a review
+          - \`@coderabbitai resolve\` — mark an issue as resolved
+          - \`@coderabbitai summary\` — get a summary of all findings"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # Optional: Send notification via GitHub Issues
+  notify:
+    needs: daily-scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create notification issue
+        run: |
+          DATE=$(date +'%Y-%m-%d')
+          
+          # Check if notification issue already exists for today
+          EXISTING=$(gh issue list --label "daily-scan-notification" --search "$DATE" --json number --jq 'length')
+
+          if [ "$EXISTING" = "0" ]; then
+            gh issue create \
+              --title "📊 Daily Code Review Report — ${DATE}" \
+              --body "## Daily Code Review Triggered
+          
+          **Date:** ${DATE}
+          **Status:** ✅ CodeRabbit scan PR created
+          
+          Check the open PRs labeled \`daily-scan\` for the full review.
+          
+          ---
+          *This is an automated notification from the daily code review system.*" \
+              --label "daily-scan-notification"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
