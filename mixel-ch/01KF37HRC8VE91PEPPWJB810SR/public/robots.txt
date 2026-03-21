@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /auth/
-Disallow: /*/accounting
-Disallow: /*/accounting/
-Disallow: /*/accounting/*
-
-Sitemap: https://www.mixel.ch/sitemap.xml
-Host: www.mixel.ch
