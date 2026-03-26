@@ -1,0 +1,68 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="640" height="640" rx="48" fill="url(#bg2)"/>
+  <!-- Grid pattern accent -->
+  <g opacity="0.04">
+    <line x1="160" y1="0" x2="160" y2="640" stroke="#059669" stroke-width="1"/>
+    <line x1="320" y1="0" x2="320" y2="640" stroke="#059669" stroke-width="1"/>
+    <line x1="480" y1="0" x2="480" y2="640" stroke="#059669" stroke-width="1"/>
+    <line x1="0" y1="160" x2="640" y2="160" stroke="#059669" stroke-width="1"/>
+    <line x1="0" y1="320" x2="640" y2="320" stroke="#059669" stroke-width="1"/>
+    <line x1="0" y1="480" x2="640" y2="480" stroke="#059669" stroke-width="1"/>
+  </g>
+  <!-- Cloud shape background -->
+  <path d="M180 300C180 260 210 230 250 230C260 200 290 180 320 180C350 180 380 200 390 230C430 230 460 260 460 300C460 340 430 370 390 370H250C210 370 180 340 180 300Z" fill="#059669" opacity="0.08"/>
+  <!-- Person left (back) -->
+  <path d="M150 640C150 640 168 520 200 496C222 478 244 472 260 470C276 472 298 478 320 496C340 510 350 540 354 580" fill="#374151"/>
+  <circle cx="260" cy="360" r="64" fill="#D4A882"/>
+  <path d="M196 340C200 296 228 272 260 270C292 272 320 296 324 340C310 324 286 314 260 314C234 314 210 324 196 340Z" fill="#5B3E2B"/>
+  <ellipse cx="244" cy="358" rx="7" ry="6" fill="white"/>
+  <ellipse cx="276" cy="358" rx="7" ry="6" fill="white"/>
+  <circle cx="245" cy="358" r="4" fill="#3B2F2F"/>
+  <circle cx="277" cy="358" r="4" fill="#3B2F2F"/>
+  <path d="M248 380C254 388 260 390 264 390C268 390 274 388 280 380" stroke="#C4756B" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- Person right (back) -->
+  <path d="M286 580C290 540 300 510 320 496C342 478 364 472 380 470C396 472 418 478 440 496C472 520 490 640 490 640" fill="#1E293B"/>
+  <circle cx="380" cy="360" r="64" fill="#F0D0B4"/>
+  <path d="M316 348C318 298 346 268 380 266C414 268 442 298 444 348C428 328 406 316 380 316C354 316 332 328 316 348Z" fill="#1C1917"/>
+  <ellipse cx="364" cy="358" rx="7" ry="6" fill="white"/>
+  <ellipse cx="396" cy="358" rx="7" ry="6" fill="white"/>
+  <circle cx="365" cy="358" r="4" fill="#3B2F2F"/>
+  <circle cx="397" cy="358" r="4" fill="#3B2F2F"/>
+  <path d="M368 380C374 388 380 390 384 390C388 390 394 388 400 380" stroke="#C4756B" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- Glasses on right person -->
+  <rect x="352" y="352" width="26" height="16" rx="4" stroke="#374151" stroke-width="2.5" fill="none"/>
+  <rect x="384" y="352" width="26" height="16" rx="4" stroke="#374151" stroke-width="2.5" fill="none"/>
+  <path d="M378 360H384" stroke="#374151" stroke-width="2"/>
+  <!-- Person center (front) -->
+  <path d="M218 640C218 640 236 510 270 486C296 466 314 458 320 456C326 458 344 466 370 486C404 510 422 640 422 640" fill="#059669"/>
+  <circle cx="320" cy="340" r="72" fill="#EAC9A8"/>
+  <!-- Hair - longer, styled -->
+  <path d="M248 322C250 268 280 238 320 235C360 238 390 268 392 322C386 300 362 282 320 280C278 282 254 300 248 322Z" fill="#3B2415"/>
+  <path d="M248 322C246 340 246 352 250 358C252 346 252 334 254 322Z" fill="#3B2415"/>
+  <path d="M392 322C394 340 394 352 390 358C388 346 388 334 386 322Z" fill="#3B2415"/>
+  <!-- Eyes -->
+  <ellipse cx="298" cy="342" rx="9" ry="8" fill="white"/>
+  <ellipse cx="342" cy="342" rx="9" ry="8" fill="white"/>
+  <circle cx="300" cy="342" r="5" fill="#3B2F2F"/>
+  <circle cx="344" cy="342" r="5" fill="#3B2F2F"/>
+  <circle cx="301" cy="340" r="2" fill="white"/>
+  <circle cx="345" cy="340" r="2" fill="white"/>
+  <!-- Smile -->
+  <path d="M304 366C310 374 316 376 320 376C324 376 330 374 336 366" stroke="#C4756B" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- Cloud icon badge -->
+  <circle cx="520" cy="120" r="40" fill="#059669" opacity="0.12"/>
+  <path d="M504 126C504 116 510 108 520 108C526 104 532 100 540 100C548 100 554 104 558 108C566 110 572 116 572 124C572 132 566 138 558 138H506C500 138 496 134 496 128" stroke="#059669" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Server icon badge -->
+  <circle cx="120" cy="520" r="36" fill="#059669" opacity="0.12"/>
+  <rect x="104" y="506" width="32" height="12" rx="3" stroke="#059669" stroke-width="2.5" fill="none"/>
+  <rect x="104" y="522" width="32" height="12" rx="3" stroke="#059669" stroke-width="2.5" fill="none"/>
+  <circle cx="112" cy="512" r="2" fill="#059669"/>
+  <circle cx="112" cy="528" r="2" fill="#059669"/>
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="640" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ECFDF5"/>
+      <stop offset="1" stop-color="#D1FAE5"/>
+    </linearGradient>
+  </defs>
+</svg>
