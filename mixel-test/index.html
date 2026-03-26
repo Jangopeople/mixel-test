@@ -875,7 +875,7 @@ const APPS = [
                         "id": "ACC-034",
                         "title": "Apply a Discount to a Quote",
                         "where": "Sales > Quotes > Discount",
-                        "steps": "1. Open or create a quote\n2. Add a line item\n3. Enter a discount percentage or fixed amount on a line item or the whole quote\n4. Save",
+                        "steps": "1. In the left menu, click 'Verkauf' to expand the Sales group. 2. Then click the relevant sub-item (Angebote / Rechnungen / Wiederkehrend).\n3. Open or create a quote\n4. Add a line item\n5. Enter a discount percentage or fixed amount on a line item or the whole quote\n6. Save",
                         "expected": "Discount is applied and reflected in the totals. The discounted amount is visible on the quote PDF preview.",
                         "prio": "Medium"
                     },
@@ -883,7 +883,7 @@ const APPS = [
                         "id": "ACC-035",
                         "title": "Preview Quote as PDF",
                         "where": "Sales > Quotes > PDF Preview",
-                        "steps": "1. Open a saved quote\n2. Click 'Preview' or 'Download PDF'",
+                        "steps": "1. In the left menu, click 'Verkauf' to expand the Sales group. 2. Then click the relevant sub-item (Angebote / Rechnungen / Wiederkehrend).\n3. Open a saved quote\n4. Click 'Preview' or 'Download PDF'",
                         "expected": "A PDF is generated containing company logo, contact details, line items, VAT breakdown, and total. Formatting is clean and professional.",
                         "prio": "Medium"
                     },
@@ -891,7 +891,7 @@ const APPS = [
                         "id": "ACC-036",
                         "title": "Send Quote via Email",
                         "where": "Sales > Quotes > Send Email",
-                        "steps": "1. Open a saved quote\n2. Click 'Send' or 'Send by Email'\n3. Verify the pre-filled recipient email from the contact\n4. Edit the subject/body if needed\n5. Send",
+                        "steps": "1. In the left menu, click 'Verkauf' to expand the Sales group. 2. Then click the relevant sub-item (Angebote / Rechnungen / Wiederkehrend).\n3. Open a saved quote\n4. Click 'Send' or 'Send by Email'\n5. Verify the pre-filled recipient email from the contact\n6. Edit the subject/body if needed\n7. Send",
                         "expected": "Quote email is sent. Quote status changes to 'Sent'. A sent timestamp is recorded.",
                         "prio": "Medium"
                     },
@@ -899,7 +899,7 @@ const APPS = [
                         "id": "ACC-037",
                         "title": "Convert Accepted Quote to Invoice",
                         "where": "Sales > Quotes > Convert to Invoice",
-                        "steps": "1. Open a quote with status 'Sent'\n2. Mark the quote as 'Accepted'\n3. Click 'Convert to Invoice'",
+                        "steps": "1. In the left menu, click 'Verkauf' to expand the Sales group. 2. Then click the relevant sub-item (Angebote / Rechnungen / Wiederkehrend).\n3. Open a quote with status 'Sent'\n4. Mark the quote as 'Accepted'\n5. Click 'Convert to Invoice'",
                         "expected": "A new invoice is created with all line items, prices, and contact data copied from the quote. Invoice is in Draft status.",
                         "prio": "High"
                     },
@@ -907,7 +907,7 @@ const APPS = [
                         "id": "ACC-038",
                         "title": "Reject / Expire a Quote",
                         "where": "Sales > Quotes > Reject/Expire",
-                        "steps": "1. Open a draft or sent quote\n2. Mark it as 'Rejected' or allow the expiry date to pass\n3. Check the status",
+                        "steps": "1. In the left menu, click 'Verkauf' to expand the Sales group. 2. Then click the relevant sub-item (Angebote / Rechnungen / Wiederkehrend).\n3. Open a draft or sent quote\n4. Mark it as 'Rejected' or allow the expiry date to pass\n5. Check the status",
                         "expected": "Quote status changes to 'Rejected' or 'Expired'. It cannot be converted to an invoice in this state without action.",
                         "prio": "High"
                     },
@@ -915,7 +915,7 @@ const APPS = [
                         "id": "ACC-039",
                         "title": "Clone / Duplicate a Quote",
                         "where": "Sales > Quotes > Clone",
-                        "steps": "1. Open an existing quote\n2. Click 'Duplicate' or 'Clone'",
+                        "steps": "1. In the left menu, click 'Verkauf' to expand the Sales group. 2. Then click the relevant sub-item (Angebote / Rechnungen / Wiederkehrend).\n3. Open an existing quote\n4. Click 'Duplicate' or 'Clone'",
                         "expected": "A new draft quote is created with identical line items and contact. The quote number is a new unique number.",
                         "prio": "Medium"
                     }
@@ -937,7 +937,7 @@ const APPS = [
                         "id": "ACC-041",
                         "title": "Apply Multiple VAT Rates on One Invoice",
                         "where": "Sales > Invoices > Multiple VAT Rates",
-                        "steps": "1. Create a new invoice\n2. Add line item 1 with standard VAT (e.g. 20%)\n3. Add line item 2 with reduced VAT (e.g. 5%)\n4. Add line item 3 with zero-rate VAT (0%)\n5. Save",
+                        "steps": "1. In the left menu, click 'Verkauf' to expand the Sales group. 2. Then click the relevant sub-item (Angebote / Rechnungen / Wiederkehrend).\n3. Create a new invoice\n4. Add line item 1 with standard VAT (e.g. 20%)\n5. Add line item 2 with reduced VAT (e.g. 5%)\n6. Add line item 3 with zero-rate VAT (0%)\n7. Save",
                         "expected": "Each line shows the correct VAT. The VAT summary section breaks down each rate and amount separately. Total is correct.",
                         "prio": "High"
                     },
@@ -945,7 +945,7 @@ const APPS = [
                         "id": "ACC-042",
                         "title": "Multi-Currency Invoice (EUR)",
                         "where": "Sales > Invoices > Multi-Currency",
-                        "steps": "1. Create a new invoice\n2. Change the invoice currency to EUR\n3. Add line items\n4. Save",
+                        "steps": "1. In the left menu, click 'Verkauf' to expand the Sales group. 2. Then click the relevant sub-item (Angebote / Rechnungen / Wiederkehrend).\n3. Create a new invoice\n4. Change the invoice currency to EUR\n5. Add line items\n6. Save",
                         "expected": "Invoice is created in EUR. The exchange rate or equivalent in the base currency is shown. PDF invoice displays EUR amounts and symbol.",
                         "prio": "High"
                     },
@@ -953,7 +953,7 @@ const APPS = [
                         "id": "ACC-043",
                         "title": "Generate QR-Invoice / Payment Reference",
                         "where": "Sales > Invoices > QR-Bill",
-                        "steps": "1. Create or open a draft invoice\n2. Ensure the bank account (IBAN) is configured\n3. Click 'Finalise' or 'Issue Invoice'\n4. Download or preview the PDF",
+                        "steps": "1. In the left menu, click 'Verkauf' to expand the Sales group. 2. Then click the relevant sub-item (Angebote / Rechnungen / Wiederkehrend).\n3. Create or open a draft invoice\n4. Ensure the bank account (IBAN) is configured\n5. Click 'Finalise' or 'Issue Invoice'\n6. Download or preview the PDF",
                         "expected": "The invoice PDF contains a QR payment section at the bottom with the correct IBAN, amount, and reference number.",
                         "prio": "High"
                     },
@@ -961,7 +961,7 @@ const APPS = [
                         "id": "ACC-044",
                         "title": "Send Invoice via Email",
                         "where": "Sales > Invoices > Send Email",
-                        "steps": "1. Open a finalised invoice\n2. Click 'Send'\n3. Confirm recipient email\n4. Send",
+                        "steps": "1. In the left menu, click 'Verkauf' to expand the Sales group. 2. Then click the relevant sub-item (Angebote / Rechnungen / Wiederkehrend).\n3. Open a finalised invoice\n4. Click 'Send'\n5. Confirm recipient email\n6. Send",
                         "expected": "Invoice is emailed to the customer. Invoice status changes to 'Sent'. Delivery timestamp is recorded.",
                         "prio": "High"
                     },
@@ -969,7 +969,7 @@ const APPS = [
                         "id": "ACC-045",
                         "title": "Mark Invoice as Paid (Full Payment)",
                         "where": "Sales > Invoices > Mark as Paid",
-                        "steps": "1. Open a sent invoice\n2. Click 'Record Payment' (DE: 'Zahlung erfassen', FR: 'Enregistrer un paiement')\n3. Enter payment date, amount (full), and bank account\n4. Click 'Record Payment' to save",
+                        "steps": "1. In the left menu, click 'Verkauf' to expand the Sales group. 2. Then click the relevant sub-item (Angebote / Rechnungen / Wiederkehrend).\n3. Open a sent invoice\n4. Click 'Record Payment' (DE: 'Zahlung erfassen', FR: 'Enregistrer un paiement')\n5. Enter payment date, amount (full), and bank account\n6. Click 'Record Payment' to save",
                         "expected": "Invoice status changes to 'Paid'. Outstanding balance shows CHF 0.00. A payment record is created and linked to the invoice.",
                         "prio": "High"
                     },
@@ -977,7 +977,7 @@ const APPS = [
                         "id": "ACC-046",
                         "title": "Record Partial Payment on Invoice",
                         "where": "Sales > Invoices > Partial Payment",
-                        "steps": "1. Open an unpaid invoice\n2. Click 'Record Payment' (DE: 'Zahlung erfassen', FR: 'Enregistrer un paiement')\n3. Enter an amount less than the invoice total\n4. Click 'Record Payment' to save",
+                        "steps": "1. In the left menu, click 'Verkauf' to expand the Sales group. 2. Then click the relevant sub-item (Angebote / Rechnungen / Wiederkehrend).\n3. Open an unpaid invoice\n4. Click 'Record Payment' (DE: 'Zahlung erfassen', FR: 'Enregistrer un paiement')\n5. Enter an amount less than the invoice total\n6. Click 'Record Payment' to save",
                         "expected": "Invoice status changes to 'Partially Paid'. The remaining outstanding balance is correctly calculated and displayed.",
                         "prio": "High"
                     },
@@ -985,7 +985,7 @@ const APPS = [
                         "id": "ACC-047",
                         "title": "Send Automatic Payment Reminder",
                         "where": "Sales > Invoices > Payment Reminder",
-                        "steps": "1. Open a sent invoice that is past due\n2. Click 'Send Reminder' or trigger reminder manually\n3. Confirm recipient and message",
+                        "steps": "1. In the left menu, click 'Verkauf' to expand the Sales group. 2. Then click the relevant sub-item (Angebote / Rechnungen / Wiederkehrend).\n3. Open a sent invoice that is past due\n4. Click 'Send Reminder' or trigger reminder manually\n5. Confirm recipient and message",
                         "expected": "Reminder email is sent to the customer. A reminder log entry is recorded on the invoice.",
                         "prio": "High"
                     },
@@ -993,7 +993,7 @@ const APPS = [
                         "id": "ACC-048",
                         "title": "Create a Credit Note (Cancellation)",
                         "where": "Sales > Invoices > Credit Note",
-                        "steps": "1. Open a finalised/paid invoice\n2. Click 'Create Credit Note' (DE: 'Gutschrift erstellen', FR: 'Créer un avoir')\n3. Confirm the credit note amount (full or partial)",
+                        "steps": "1. In the left menu, click 'Verkauf' to expand the Sales group. 2. Then click the relevant sub-item (Angebote / Rechnungen / Wiederkehrend).\n3. Open a finalised/paid invoice\n4. Click 'Create Credit Note' (DE: 'Gutschrift erstellen', FR: 'Créer un avoir')\n5. Confirm the credit note amount (full or partial)",
                         "expected": "A credit note is created referencing the original invoice. The credit note has its own unique number (e.g. CN-001). The original invoice shows the credit applied.",
                         "prio": "High"
                     },
@@ -1001,7 +1001,7 @@ const APPS = [
                         "id": "ACC-049",
                         "title": "Clone / Duplicate an Invoice",
                         "where": "Sales > Invoices > Clone",
-                        "steps": "1. Open an existing invoice\n2. Click 'Duplicate Invoice' (DE: 'Rechnung duplizieren', FR: 'Dupliquer la facture')",
+                        "steps": "1. In the left menu, click 'Verkauf' to expand the Sales group. 2. Then click the relevant sub-item (Angebote / Rechnungen / Wiederkehrend).\n3. Open an existing invoice\n4. Click 'Duplicate Invoice' (DE: 'Rechnung duplizieren', FR: 'Dupliquer la facture')",
                         "expected": "A new draft invoice is created with the same line items and contact. The date defaults to today and a new invoice number is assigned.",
                         "prio": "High"
                     },
@@ -1009,7 +1009,7 @@ const APPS = [
                         "id": "ACC-050",
                         "title": "Invoice with Late Payment Fee",
                         "where": "Sales > Invoices > Late Fee",
-                        "steps": "1. Open an overdue invoice\n2. Add a line item for late fee or interest\n3. Re-issue / update the invoice\n4. Send the updated invoice to the customer",
+                        "steps": "1. In the left menu, click 'Verkauf' to expand the Sales group. 2. Then click the relevant sub-item (Angebote / Rechnungen / Wiederkehrend).\n3. Open an overdue invoice\n4. Add a line item for late fee or interest\n5. Re-issue / update the invoice\n6. Send the updated invoice to the customer",
                         "expected": "Late fee line item is added. Total is updated. The customer receives the revised invoice showing the additional charge.",
                         "prio": "High"
                     },
@@ -1017,7 +1017,7 @@ const APPS = [
                         "id": "ACC-051",
                         "title": "Verify Automatic Journal Entry from Invoice",
                         "where": "Sales > Invoices > Journal Entry",
-                        "steps": "1. Create and finalise an invoice\n2. Record a payment on the invoice (click 'Record Payment' / DE: 'Zahlung erfassen')\n3. Click 'Buchhaltung' in the sidebar, then click the 'Journal' tab\n4. Search for entries linked to this invoice or payment number",
+                        "steps": "1. In the left menu, click 'Verkauf' to expand the Sales group. 2. Then click the relevant sub-item (Angebote / Rechnungen / Wiederkehrend).\n3. Create and finalise an invoice\n4. Record a payment on the invoice (click 'Record Payment' / DE: 'Zahlung erfassen')\n5. Click 'Buchhaltung' in the sidebar, then click the 'Journal' tab\n6. Search for entries linked to this invoice or payment number",
                         "expected": "Two auto-generated journal entries exist: (1) Invoice finalisation: Debit Accounts Receivable / Credit Revenue, with VAT posted correctly. (2) Payment recording: Debit Bank / Credit Accounts Receivable. Both entries are marked as 'auto-generated' and reference the source document.",
                         "prio": "High"
                     },
@@ -1025,7 +1025,7 @@ const APPS = [
                         "id": "ACC-052",
                         "title": "Invoice PDF with Custom Template",
                         "where": "Sales > Invoices > PDF Template",
-                        "steps": "1. Ensure a logo and company details are configured\n2. Create a new invoice and click 'Preview PDF'",
+                        "steps": "1. In the left menu, click 'Verkauf' to expand the Sales group. 2. Then click the relevant sub-item (Angebote / Rechnungen / Wiederkehrend).\n3. Ensure a logo and company details are configured\n4. Create a new invoice and click 'Preview PDF'",
                         "expected": "PDF contains: company logo, company name and address, customer address, invoice number, date, due date, line items table, VAT breakdown, total, and bank/payment details.",
                         "prio": "High"
                     }
@@ -1047,7 +1047,7 @@ const APPS = [
                         "id": "ACC-054",
                         "title": "Verify Recurring Invoice Auto-Generation",
                         "where": "Sales > Recurring Invoices > Auto-Generate",
-                        "steps": "1. After creating a recurring invoice, advance or wait until the scheduled date\n2. Check the Invoices list for a new auto-generated invoice",
+                        "steps": "1. In the left menu, click 'Verkauf' to expand the Sales group. 2. Then click the relevant sub-item (Angebote / Rechnungen / Wiederkehrend).\n3. After creating a recurring invoice, advance or wait until the scheduled date\n4. Check the Invoices list for a new auto-generated invoice",
                         "expected": "A new draft or sent invoice is automatically created matching the recurring template, with the correct date and incremented invoice number.",
                         "prio": "High"
                     },
@@ -1055,7 +1055,7 @@ const APPS = [
                         "id": "ACC-055",
                         "title": "Edit a Recurring Invoice",
                         "where": "Sales > Recurring Invoices > Edit",
-                        "steps": "1. Open an existing recurring invoice\n2. Change the unit price on a line item\n3. Save",
+                        "steps": "1. In the left menu, click 'Verkauf' to expand the Sales group. 2. Then click the relevant sub-item (Angebote / Rechnungen / Wiederkehrend).\n3. Open an existing recurring invoice\n4. Change the unit price on a line item\n5. Save",
                         "expected": "Changes are saved and will apply to future generated invoices. Previously generated invoices are unaffected.",
                         "prio": "High"
                     },
@@ -1063,7 +1063,7 @@ const APPS = [
                         "id": "ACC-056",
                         "title": "Pause a Recurring Invoice",
                         "where": "Sales > Recurring Invoices > Pause",
-                        "steps": "1. Open a recurring invoice\n2. Click 'Pause' or 'Disable'",
+                        "steps": "1. In the left menu, click 'Verkauf' to expand the Sales group. 2. Then click the relevant sub-item (Angebote / Rechnungen / Wiederkehrend).\n3. Open a recurring invoice\n4. Click 'Pause' or 'Disable'",
                         "expected": "Recurring status changes to 'Paused'. No new invoices are generated while paused. The option to resume is available.",
                         "prio": "High"
                     },
@@ -1071,7 +1071,7 @@ const APPS = [
                         "id": "ACC-057",
                         "title": "Delete a Recurring Invoice",
                         "where": "Sales > Recurring Invoices > Delete",
-                        "steps": "1. Open a recurring invoice\n2. Click 'Delete' or 'Cancel Recurring'\n3. Confirm the action",
+                        "steps": "1. In the left menu, click 'Verkauf' to expand the Sales group. 2. Then click the relevant sub-item (Angebote / Rechnungen / Wiederkehrend).\n3. Open a recurring invoice\n4. Click 'Delete' or 'Cancel Recurring'\n5. Confirm the action",
                         "expected": "The recurring invoice is removed. Previously generated invoices remain intact in the system.",
                         "prio": "High"
                     }
@@ -1093,7 +1093,7 @@ const APPS = [
                         "id": "ACC-059",
                         "title": "Upload a Receipt Photo",
                         "where": "Expenses > Upload Receipt",
-                        "steps": "1. Create a new expense or open an existing one\n2. Click 'Attach Receipt' or 'Upload'\n3. Select a JPG/PNG file from your computer\n4. Save",
+                        "steps": "1. In the left menu, click 'Einkauf' to expand the Purchases group. 2. Then click 'Ausgaben' (Expenses).\n3. Create a new expense or open an existing one\n4. Click 'Attach Receipt' or 'Upload'\n5. Select a JPG/PNG file from your computer\n6. Save",
                         "expected": "Receipt image is attached to the expense record. A thumbnail or link to the file is visible in the expense detail.",
                         "prio": "Medium"
                     },
@@ -1101,7 +1101,7 @@ const APPS = [
                         "id": "ACC-060",
                         "title": "Categorise an Expense",
                         "where": "Expenses > Categorize",
-                        "steps": "1. Open a draft expense\n2. Select or change the category (e.g. 'Office Supplies', 'Software', 'Travel')\n3. Save",
+                        "steps": "1. In the left menu, click 'Einkauf' to expand the Purchases group. 2. Then click 'Ausgaben' (Expenses).\n3. Open a draft expense\n4. Select or change the category (e.g. 'Office Supplies', 'Software', 'Travel')\n5. Save",
                         "expected": "Category is saved. Expense reports filtered by category include this expense.",
                         "prio": "High"
                     },
@@ -1109,7 +1109,7 @@ const APPS = [
                         "id": "ACC-061",
                         "title": "Apply VAT to an Expense",
                         "where": "Expenses > Apply VAT",
-                        "steps": "1. Open a draft expense\n2. Enter the gross amount\n3. Apply a VAT rate (e.g. 20%)\n4. Observe the net and VAT split",
+                        "steps": "1. In the left menu, click 'Einkauf' to expand the Purchases group. 2. Then click 'Ausgaben' (Expenses).\n3. Open a draft expense\n4. Enter the gross amount\n5. Apply a VAT rate (e.g. 20%)\n6. Observe the net and VAT split",
                         "expected": "Net amount and VAT are correctly calculated. VAT amount is posted to the recoverable input VAT account.",
                         "prio": "Medium"
                     },
@@ -1117,7 +1117,7 @@ const APPS = [
                         "id": "ACC-062",
                         "title": "Submit Expense for Approval",
                         "where": "Expenses > Submit for Approval",
-                        "steps": "1. Open a draft expense\n2. Click 'Submit for Approval'",
+                        "steps": "1. In the left menu, click 'Einkauf' to expand the Purchases group. 2. Then click 'Ausgaben' (Expenses).\n3. Open a draft expense\n4. Click 'Submit for Approval'",
                         "expected": "Expense status changes to 'Pending Approval'. The expense is locked for editing.",
                         "prio": "Medium"
                     },
@@ -1125,7 +1125,7 @@ const APPS = [
                         "id": "ACC-063",
                         "title": "Approve an Expense",
                         "where": "Expenses > Approve",
-                        "steps": "1. Open a pending expense (as an approver / admin)\n2. Click 'Approve'",
+                        "steps": "1. In the left menu, click 'Einkauf' to expand the Purchases group. 2. Then click 'Ausgaben' (Expenses).\n3. Open a pending expense (as an approver / admin)\n4. Click 'Approve'",
                         "expected": "Expense status changes to 'Approved'. A journal entry is created posting the expense to the correct cost account.",
                         "prio": "High"
                     },
@@ -1133,7 +1133,7 @@ const APPS = [
                         "id": "ACC-064",
                         "title": "Reject an Expense",
                         "where": "Expenses > Reject",
-                        "steps": "1. Open a pending expense\n2. Click 'Reject'\n3. Enter a rejection reason",
+                        "steps": "1. In the left menu, click 'Einkauf' to expand the Purchases group. 2. Then click 'Ausgaben' (Expenses).\n3. Open a pending expense\n4. Click 'Reject'\n5. Enter a rejection reason",
                         "expected": "Expense status changes to 'Rejected'. The submitter can see the reason. The expense can be revised and resubmitted.",
                         "prio": "Medium"
                     },
@@ -1319,7 +1319,7 @@ const APPS = [
                         "id": "ACC-085",
                         "title": "View Reconciliation History",
                         "where": "Banking > Reconciliation > History",
-                        "steps": "1. Click 'Banking' in the sidebar\n2. Select a bank account from 'Ihre Konten'\n3. View the reconciliation history for the account",
+                        "steps": "1. Click 'Banking' in the sidebar\n2. Select a bank account from 'Ihre Konten'\n3. View the reconciliation history for the account\nNote: In the German interface, this tab is labelled 'Abgleichshistorie'.",
                         "expected": "A list of completed reconciliations is shown with dates, closing balances, and whether they balanced.",
                         "prio": "Critical"
                     }
@@ -1340,56 +1340,56 @@ const APPS = [
                     {
                         "id": "ACC-087",
                         "title": "View Balance Sheet",
-                        "where": "Reports > Balance Sheet",
-                        "steps": "1. Click 'Finanzberichte' in the sidebar\n2. Click the 'Bilanz' (Balance Sheet) tab\n3. Set the date using 'Von' and 'Bis' date pickers or year quick-select buttons\n4. Review the report",
+                        "where": "Finanzberichte > Balance Sheet",
+                        "steps": "1. Click 'Finanzberichte' in the sidebar\n2. Click the 'Bilanz' (Balance Sheet) tab\n3. Set the date using 'Von' and 'Bis' date pickers or year quick-select buttons\n4. Review the report\nGerman labels: Income Statement = 'Gewinn & Verlust', Balance Sheet = 'Bilanz', VAT = 'MwSt.-Abrechnung'",
                         "expected": "Balance sheet is generated showing assets, liabilities, and equity. Total assets = total liabilities + equity.",
                         "prio": "High"
                     },
                     {
                         "id": "ACC-088",
                         "title": "View Income Statement (P&L)",
-                        "where": "Reports > Income Statement",
-                        "steps": "1. Click 'Finanzberichte' in the sidebar\n2. Click the 'Gewinn & Verlust' (Profit & Loss) tab (default view)\n3. Set date range using 'Von' and 'Bis' pickers or year/quarter quick-select buttons (2026, 2025, Q1-Q4)",
+                        "where": "Finanzberichte > Income Statement",
+                        "steps": "1. Click 'Finanzberichte' in the sidebar\n2. Click the 'Gewinn & Verlust' (Profit & Loss) tab (default view)\n3. Set date range using 'Von' and 'Bis' pickers or year/quarter quick-select buttons (2026, 2025, Q1-Q4)\nGerman labels: Income Statement = 'Gewinn & Verlust', Balance Sheet = 'Bilanz', VAT = 'MwSt.-Abrechnung'",
                         "expected": "P&L report is shown with Umsatz (Revenue), Warenaufwand (COGS), Bruttogewinn (Gross Profit), operating expenses, and Reingewinn/Reinverlust (Net Profit/Loss).",
                         "prio": "High"
                     },
                     {
                         "id": "ACC-089",
                         "title": "View Accounts Receivable Aging Report",
-                        "where": "Reports > AR Aging",
-                        "steps": "1. Click 'Finanzberichte' in the sidebar\n2. Look for the 'Forderungen' (Accounts Receivable) or aging report tab if available",
+                        "where": "Finanzberichte > AR Aging",
+                        "steps": "1. Click 'Finanzberichte' in the sidebar\n2. Look for the 'Forderungen' (Accounts Receivable) or aging report tab if available\nGerman labels: Income Statement = 'Gewinn & Verlust', Balance Sheet = 'Bilanz', VAT = 'MwSt.-Abrechnung'",
                         "expected": "Report shows outstanding customer invoices grouped by age: 0-30 days, 31-60 days, 61-90 days, 90+ days. Total matches outstanding invoices.",
                         "prio": "High"
                     },
                     {
                         "id": "ACC-090",
                         "title": "View Accounts Payable Aging Report",
-                        "where": "Reports > AP Aging",
-                        "steps": "1. Click 'Finanzberichte' in the sidebar\n2. Look for the 'Verbindlichkeiten' (Accounts Payable) or aging report tab if available",
+                        "where": "Finanzberichte > AP Aging",
+                        "steps": "1. Click 'Finanzberichte' in the sidebar\n2. Look for the 'Verbindlichkeiten' (Accounts Payable) or aging report tab if available\nGerman labels: Income Statement = 'Gewinn & Verlust', Balance Sheet = 'Bilanz', VAT = 'MwSt.-Abrechnung'",
                         "expected": "Report shows outstanding supplier bills grouped by age. Total matches unpaid supplier invoices.",
                         "prio": "High"
                     },
                     {
                         "id": "ACC-091",
                         "title": "Filter Reports by Custom Date Range",
-                        "where": "Reports > Custom Date Range",
-                        "steps": "1. Open any Finanzberichte tab (e.g. Gewinn & Verlust)\n2. Use the 'Von' (From) and 'Bis' (To) date pickers to set a custom period\n3. Alternatively click a year quick-select (2026, 2025) or quarter button (Q1, Q2, Q3, Q4)",
+                        "where": "Finanzberichte > Custom Date Range",
+                        "steps": "1. Open any Finanzberichte tab (e.g. Gewinn & Verlust)\n2. Use the 'Von' (From) and 'Bis' (To) date pickers to set a custom period\n3. Alternatively click a year quick-select (2026, 2025) or quarter button (Q1, Q2, Q3, Q4)\nGerman labels: Income Statement = 'Gewinn & Verlust', Balance Sheet = 'Bilanz', VAT = 'MwSt.-Abrechnung'",
                         "expected": "Report data refreshes and reflects only transactions within the selected period.",
                         "prio": "High"
                     },
                     {
                         "id": "ACC-092",
                         "title": "Export Report to PDF",
-                        "where": "Reports > Export PDF",
-                        "steps": "1. Open any financial report\n2. Click 'Export' > 'PDF'",
+                        "where": "Finanzberichte > Export PDF",
+                        "steps": "1. Open any financial report\n2. Click 'Export' > 'PDF'\nGerman labels: Income Statement = 'Gewinn & Verlust', Balance Sheet = 'Bilanz', VAT = 'MwSt.-Abrechnung'",
                         "expected": "A PDF file is downloaded with the report title, selected date range, company name/logo, and all data rows.",
                         "prio": "High"
                     },
                     {
                         "id": "ACC-093",
                         "title": "Export Report to CSV",
-                        "where": "Reports > Export Excel",
-                        "steps": "1. Open any Finanzberichte report\n2. Click the 'CSV' download button (top right)",
+                        "where": "Finanzberichte > Export Excel",
+                        "steps": "1. Open any Finanzberichte report\n2. Click the 'CSV' download button (top right)\nGerman labels: Income Statement = 'Gewinn & Verlust', Balance Sheet = 'Bilanz', VAT = 'MwSt.-Abrechnung'",
                         "expected": "A CSV file is downloaded with data in structured columns, suitable for further analysis in Excel or other tools.",
                         "prio": "High"
                     },
@@ -1534,8 +1534,8 @@ const APPS = [
                     {
                         "id": "ACC-109",
                         "title": "Access Audit Log / Activity History",
-                        "where": "Sidebar > Activity",
-                        "steps": "1. Click 'Prüfpfad' (Audit Trail) in the sidebar for the full audit log\n2. Alternatively, click 'Aktivitäten' in the sidebar for notifications and activity log\n3. Browse recent user actions",
+                        "where": "Sidebar > Prüfpfad",
+                        "steps": "1. In the left menu, scroll down and click 'Prüfpfad' (Audit Trail).\n2. Browse recent user actions",
                         "expected": "A chronological log of user actions is shown (e.g. invoice created, contact edited, login event) with timestamp and user.",
                         "prio": "Critical"
                     }
