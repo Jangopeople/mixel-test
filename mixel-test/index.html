@@ -473,9 +473,11 @@ Accounting has a deep-dive walkthrough with exact click paths and expected outco
           <option value="EN">English</option>
           <option value="DE">Deutsch</option>
           <option value="FR">Français</option>
+          <option value="IT">Italiano</option>
         </select>
         <button class="btn btn-soft" id="reset-btn">Reset Results</button>
         <button class="btn btn-dark" id="pdf-btn">Generate PDF Report</button>
+        <button class="btn" id="qa-run-btn" style="background:linear-gradient(135deg,#DA7756,#C9694B);color:#fff;border:none;font-weight:600;" title="Run autonomous AI tests against acc.mixel.ch">🤖 Run AI Tests</button>
         <button class="btn btn-soft" id="logout-btn">Logout</button>
       </div>
     </div>
@@ -10550,6 +10552,386 @@ function bindEvents() {
 bindEvents();
 applyLanguageToStaticUI();
 restoreSession();
+</script>
+
+<!-- MIXEL AI Assistant — powered by DeepSeek R1 via chat.mixel.ch -->
+<style>
+  #mx-ai-btn {
+    position: fixed; bottom: 24px; right: 24px; z-index: 9000;
+    width: 52px; height: 52px; border-radius: 50%;
+    background: linear-gradient(135deg, #0f1f3d, #124d8d);
+    color: #fff; border: none; cursor: pointer;
+    box-shadow: 0 4px 16px rgba(15,31,61,0.28);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; transition: transform .15s, box-shadow .15s;
+  }
+  #mx-ai-btn:hover { transform: scale(1.08); box-shadow: 0 6px 22px rgba(15,31,61,0.38); }
+  #mx-ai-panel {
+    display: none; position: fixed; bottom: 88px; right: 24px; z-index: 9000;
+    width: min(380px, calc(100vw - 32px));
+    background: #fff; border: 1px solid #d5e0ef; border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(15,31,61,0.14);
+    flex-direction: column; overflow: hidden;
+    font-family: "Space Grotesk", system-ui, sans-serif;
+  }
+  #mx-ai-panel.open { display: flex; }
+  .mx-ai-head {
+    background: linear-gradient(135deg, #0f1f3d, #124d8d);
+    color: #fff; padding: 13px 16px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .mx-ai-head-title { font-weight: 700; font-size: 14px; display: flex; align-items: center; gap: 8px; }
+  .mx-ai-head-title span.dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #4ade80; display: inline-block; flex-shrink: 0;
+  }
+  .mx-ai-close { background: none; border: none; color: rgba(255,255,255,.75);
+    cursor: pointer; font-size: 18px; padding: 0; line-height: 1; }
+  .mx-ai-close:hover { color: #fff; }
+  #mx-ai-msgs {
+    flex: 1; overflow-y: auto; padding: 14px; display: flex;
+    flex-direction: column; gap: 10px; max-height: 320px; min-height: 120px;
+  }
+  .mx-msg { max-width: 88%; padding: 9px 13px; border-radius: 12px; font-size: 13px; line-height: 1.5; }
+  .mx-msg.bot { background: #eef3f8; color: #0f203a; align-self: flex-start; border-bottom-left-radius: 4px; }
+  .mx-msg.user { background: #124d8d; color: #fff; align-self: flex-end; border-bottom-right-radius: 4px; }
+  .mx-msg.thinking { color: #5e7290; font-style: italic; }
+  .mx-ai-input-row {
+    display: flex; gap: 8px; padding: 10px 12px;
+    border-top: 1px solid #d5e0ef; background: #f7fbff;
+  }
+  #mx-ai-input {
+    flex: 1; border: 1px solid #d5e0ef; border-radius: 8px;
+    padding: 8px 10px; font-size: 13px; font-family: inherit;
+    resize: none; outline: none; background: #fff; color: #0f203a;
+    min-height: 36px; max-height: 90px;
+  }
+  #mx-ai-input:focus { border-color: #124d8d; }
+  #mx-ai-send {
+    background: #124d8d; color: #fff; border: none; border-radius: 8px;
+    padding: 0 14px; cursor: pointer; font-size: 16px; flex-shrink: 0;
+    transition: background .15s;
+  }
+  #mx-ai-send:hover { background: #0f3f7a; }
+  #mx-ai-send:disabled { background: #5e7290; cursor: not-allowed; }
+</style>
+
+<button id="mx-ai-btn" title="Ask Mixail — DeepSeek AI">🤖</button>
+
+<div id="mx-ai-panel">
+  <div class="mx-ai-head">
+    <div class="mx-ai-head-title">
+      <span class="dot"></span>Mixail — QA Assistant
+    </div>
+    <button class="mx-ai-close" id="mx-ai-close-btn">✕</button>
+  </div>
+  <div id="mx-ai-msgs">
+    <div class="mx-msg bot">Hi! I'm Mixail, your QA assistant powered by DeepSeek. I know all 12 MIXEL apps and their test cases. Ask me anything about a test step, what to check, or how to mark a result.</div>
+  </div>
+  <div class="mx-ai-input-row">
+    <textarea id="mx-ai-input" placeholder="Ask about a test case…" rows="1"></textarea>
+    <button id="mx-ai-send">➤</button>
+  </div>
+</div>
+
+<script>
+(function() {
+  const API_BASE = "https://chat.mixel.ch/ollama/v1";
+  const API_KEY  = "sk-wQ-YuNmeZ1IhCl7EwIRjA0CquEXy4-r_PdrXeJ8avAQpwK03Brxfmg";
+  const MODEL    = "deepseek-r1:32b";
+  const SYSTEM   = `You are Mixail, the AI QA assistant for the MIXEL Test Portal at test.mixel.ch.
+This portal guides internal testers through end-to-end test cases across 12 MIXEL applications:
+MIXEL ACC (accounting SaaS at acc.mixel.ch), MIXEL ISM (infrastructure/remote access),
+MIXEL PBX (telephony), MIXEL KYC (onboarding/compliance), MIXEL AI (builder workspace),
+MIXEL STORE, MIXEL JANGO-CH, MIXEL JANGO-MU, MIXEL MARKETING, MIXEL OLIVIA,
+MIXEL CONNECT (remote access server), and MIXEL PORTAL.
+
+Your role:
+- Help testers understand what a test case is checking and why it matters
+- Explain what a PASS, FAIL, or SKIP result means for a given step
+- Suggest what evidence to capture (screenshot, log, error message)
+- Clarify expected vs actual behaviour
+- Help reproduce or isolate failures
+- Be concise: 2–4 sentences unless more detail is needed
+- Never make up test cases that don't exist in the portal`;
+
+  const history = [{ role: "system", content: SYSTEM }];
+  const btn   = document.getElementById("mx-ai-btn");
+  const panel = document.getElementById("mx-ai-panel");
+  const msgs  = document.getElementById("mx-ai-msgs");
+  const input = document.getElementById("mx-ai-input");
+  const send  = document.getElementById("mx-ai-send");
+
+  btn.addEventListener("click", () => panel.classList.toggle("open"));
+  document.getElementById("mx-ai-close-btn").addEventListener("click", () => panel.classList.remove("open"));
+
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); sendMsg(); }
+  });
+  send.addEventListener("click", sendMsg);
+
+  function addMsg(text, role) {
+    const d = document.createElement("div");
+    d.className = "mx-msg " + role;
+    d.textContent = text;
+    msgs.appendChild(d);
+    msgs.scrollTop = msgs.scrollHeight;
+    return d;
+  }
+
+  async function sendMsg() {
+    const text = input.value.trim();
+    if (!text || send.disabled) return;
+    input.value = "";
+    addMsg(text, "user");
+    history.push({ role: "user", content: text });
+    send.disabled = true;
+    const thinking = addMsg("Thinking…", "bot thinking");
+
+    try {
+      const res = await fetch(API_BASE + "/chat/completions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer " + API_KEY
+        },
+        body: JSON.stringify({ model: MODEL, messages: history, temperature: 0.3 })
+      });
+      const data = await res.json();
+      const reply = data.choices?.[0]?.message?.content?.trim() || "Sorry, no response received.";
+      thinking.remove();
+      addMsg(reply, "bot");
+      history.push({ role: "assistant", content: reply });
+    } catch (err) {
+      thinking.remove();
+      addMsg("Connection error — is chat.mixel.ch reachable? (" + err.message + ")", "bot");
+    } finally {
+      send.disabled = false;
+      input.focus();
+    }
+  }
+})();
+</script>
+
+<!-- ── AI QA Test Runner ─────────────────────────────────────────────────── -->
+<style>
+  #qa-panel {
+    display: none; position: fixed; inset: 0; z-index: 9500;
+    background: rgba(10,20,40,0.55); backdrop-filter: blur(4px);
+    align-items: center; justify-content: center;
+  }
+  #qa-panel.open { display: flex; }
+  #qa-box {
+    background: #fff; border-radius: 18px; box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    width: min(700px, calc(100vw - 32px)); max-height: 85vh;
+    display: flex; flex-direction: column; overflow: hidden;
+  }
+  #qa-header {
+    background: linear-gradient(135deg, #DA7756, #C9694B);
+    color: #fff; padding: 16px 20px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  #qa-header h3 { margin: 0; font-size: 16px; }
+  #qa-header span { font-size: 12px; opacity: .8; }
+  #qa-close { background: none; border: none; color: #fff; font-size: 20px; cursor: pointer; line-height: 1; }
+  #qa-body { padding: 20px; overflow-y: auto; flex: 1; }
+  #qa-controls { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 16px; }
+  #qa-controls select, #qa-controls input {
+    padding: 6px 10px; border: 1px solid #d5e0ef; border-radius: 8px; font-size: 13px;
+  }
+  #qa-start-btn {
+    background: linear-gradient(135deg, #DA7756, #C9694B); color: #fff;
+    border: none; border-radius: 8px; padding: 8px 18px; font-weight: 600;
+    cursor: pointer; font-size: 13px;
+  }
+  #qa-start-btn:disabled { opacity: .5; cursor: not-allowed; }
+  #qa-progress-wrap { margin-bottom: 14px; display: none; }
+  #qa-progress-bar-bg {
+    height: 8px; background: #eef3f8; border-radius: 4px; overflow: hidden;
+  }
+  #qa-progress-bar { height: 100%; background: linear-gradient(90deg, #DA7756, #C9694B); width: 0; transition: width .4s; }
+  #qa-stats { display: flex; gap: 16px; font-size: 13px; margin-top: 8px; }
+  #qa-stats .s-pass { color: #17a16a; font-weight: 700; }
+  #qa-stats .s-fail { color: #d93b46; font-weight: 700; }
+  #qa-stats .s-skip { color: #a67f12; font-weight: 700; }
+  #qa-results-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  #qa-results-table th { background: #eef3f8; padding: 7px 10px; text-align: left; font-weight: 600; color: #5e7290; }
+  #qa-results-table td { padding: 7px 10px; border-bottom: 1px solid #eef3f8; vertical-align: top; }
+  .qa-pass { color: #17a16a; font-weight: 700; }
+  .qa-fail { color: #d93b46; font-weight: 700; }
+  .qa-skip { color: #a67f12; font-weight: 700; }
+  #qa-done-notice { display: none; background: #f0faf5; border: 1px solid #b8e8d0; border-radius: 8px; padding: 12px 16px; font-size: 13px; margin-bottom: 14px; }
+</style>
+
+<!-- QA Panel HTML -->
+<div id="qa-panel">
+  <div id="qa-box">
+    <div id="qa-header">
+      <div>
+        <h3>🤖 Autonomous AI QA Runner</h3>
+        <span>Playwright + qwen2.5:7b — powered by your Proxmox server</span>
+      </div>
+      <button id="qa-close">✕</button>
+    </div>
+    <div id="qa-body">
+      <div id="qa-controls">
+        <select id="qa-app">
+          <option value="acc">acc.mixel.ch — Accounting</option>
+          <option value="pbx">pbx.mixel.ch — PBX</option>
+          <option value="ism">ism.mixel.ch — ISM</option>
+          <option value="kyc">kyc.mixel.ch — KYC</option>
+        </select>
+        <select id="qa-lang">
+          <option value="de">Deutsch</option>
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="it">Italiano</option>
+        </select>
+        <input id="qa-limit" type="number" min="0" max="200" value="0" style="width:80px" title="Max cases (0 = all)" placeholder="All" />
+        <button id="qa-start-btn">▶ Start</button>
+        <span id="qa-job-id" style="color:#5e7290;font-size:12px;"></span>
+      </div>
+
+      <div id="qa-done-notice"></div>
+
+      <div id="qa-progress-wrap">
+        <div id="qa-progress-bar-bg"><div id="qa-progress-bar"></div></div>
+        <div id="qa-stats">
+          <span>Progress: <b id="qa-pct">0%</b></span>
+          <span class="s-pass">✅ <span id="qa-passed">0</span></span>
+          <span class="s-fail">❌ <span id="qa-failed">0</span></span>
+          <span class="s-skip">⏭ <span id="qa-skipped">0</span></span>
+          <span style="color:#5e7290">/ <span id="qa-total">?</span> total</span>
+        </div>
+      </div>
+
+      <table id="qa-results-table">
+        <thead><tr><th>ID</th><th>Title</th><th>Result</th><th>Notes</th></tr></thead>
+        <tbody id="qa-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const AGENT_URL = "https://agent.mixel.ch";
+  let _pollTimer = null;
+  let _jobId = null;
+
+  const panel     = document.getElementById("qa-panel");
+  const closeBtn  = document.getElementById("qa-close");
+  const runBtn    = document.getElementById("qa-run-btn");
+  const startBtn  = document.getElementById("qa-start-btn");
+  const appSel    = document.getElementById("qa-app");
+  const langSel   = document.getElementById("qa-lang");
+  const limitInp  = document.getElementById("qa-limit");
+  const jobIdEl   = document.getElementById("qa-job-id");
+  const progWrap  = document.getElementById("qa-progress-wrap");
+  const progBar   = document.getElementById("qa-progress-bar");
+  const pctEl     = document.getElementById("qa-pct");
+  const passedEl  = document.getElementById("qa-passed");
+  const failedEl  = document.getElementById("qa-failed");
+  const skippedEl = document.getElementById("qa-skipped");
+  const totalEl   = document.getElementById("qa-total");
+  const tbody     = document.getElementById("qa-tbody");
+  const doneNote  = document.getElementById("qa-done-notice");
+
+  runBtn.addEventListener("click", () => {
+    panel.classList.add("open");
+    // Sync lang selector with portal's current language
+    const portalLang = (document.getElementById("ui-lang")?.value || "DE").toLowerCase();
+    if (["de","en","fr","it"].includes(portalLang)) langSel.value = portalLang;
+  });
+  closeBtn.addEventListener("click", () => {
+    panel.classList.remove("open");
+    if (_pollTimer) clearInterval(_pollTimer);
+  });
+  panel.addEventListener("click", (e) => { if (e.target === panel) panel.classList.remove("open"); });
+
+  startBtn.addEventListener("click", async () => {
+    const app   = appSel.value;
+    const lang  = langSel.value;
+    const limit = parseInt(limitInp.value) || 0;
+
+    // Reset UI
+    tbody.innerHTML = "";
+    doneNote.style.display = "none";
+    progWrap.style.display = "block";
+    progBar.style.width = "0";
+    pctEl.textContent = "0%";
+    passedEl.textContent = failedEl.textContent = skippedEl.textContent = "0";
+    totalEl.textContent = "?";
+    startBtn.disabled = true;
+    jobIdEl.textContent = "Starting…";
+
+    try {
+      const params = new URLSearchParams({ app_id: app, lang, limit });
+      const res = await fetch(`${AGENT_URL}/v1/qa-run?${params}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const { job_id } = await res.json();
+      _jobId = job_id;
+      jobIdEl.textContent = `Job: ${job_id}`;
+      _pollTimer = setInterval(() => _poll(job_id), 3000);
+    } catch (e) {
+      jobIdEl.textContent = "Error: " + e.message;
+      startBtn.disabled = false;
+    }
+  });
+
+  function _renderRow(r, existing) {
+    const icon  = r.status === "pass" ? "✅" : r.status === "fail" ? "❌" : "⏭";
+    const cls   = r.status === "pass" ? "qa-pass" : r.status === "fail" ? "qa-fail" : "qa-skip";
+    const label = `<span class="${cls}">${icon} ${r.status.toUpperCase()}</span>`;
+    if (existing) {
+      existing.cells[2].innerHTML = label;
+      existing.cells[3].textContent = (r.reason || "").slice(0, 120);
+    } else {
+      const tr = document.createElement("tr");
+      tr.id = "qr-" + r.id;
+      tr.innerHTML = `<td><b>${r.id}</b></td><td>${r.title.slice(0,60)}</td><td>${label}</td><td>${(r.reason||"").slice(0,120)}</td>`;
+      tbody.appendChild(tr);
+    }
+  }
+
+  async function _poll(jobId) {
+    try {
+      const res  = await fetch(`${AGENT_URL}/v1/qa-status/${jobId}`);
+      const data = await res.json();
+
+      // Update stats
+      const pct = data.progress || 0;
+      progBar.style.width = pct + "%";
+      pctEl.textContent   = pct + "%";
+      passedEl.textContent  = data.passed  || 0;
+      failedEl.textContent  = data.failed  || 0;
+      skippedEl.textContent = data.skipped || 0;
+      totalEl.textContent   = data.total   || "?";
+
+      // Render latest results
+      (data.results || []).forEach(r => {
+        const existing = document.getElementById("qr-" + r.id);
+        _renderRow(r, existing);
+      });
+
+      if (data.status === "done" || data.status === "error") {
+        clearInterval(_pollTimer);
+        startBtn.disabled = false;
+        if (data.status === "done") {
+          doneNote.style.display = "block";
+          doneNote.innerHTML = `<b>✅ Run complete!</b> ${data.passed} passed, ${data.failed} failed, ${data.skipped} skipped in ${data.duration || "?"}.<br>📱 WhatsApp + email report sent to michael@mixel.ch`;
+        } else {
+          jobIdEl.textContent = "Error: " + (data.error || "unknown");
+        }
+      }
+    } catch (e) {
+      console.warn("QA poll error:", e);
+    }
+  }
+})();
 </script>
 </body>
 </html>
