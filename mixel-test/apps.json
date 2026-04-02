@@ -108,8 +108,8 @@
               "id": "ACC-012",
               "title": "Konfigurieren Sie Standardzahlungsbedingungen",
               "where": "Einstellungen > Nummerierung",
-              "steps": "1. Klicke auf den Button \"Nummerierung\"\n2. Überprüfe, dass der Text \"Zahlungsfrist\" sichtbar ist",
-              "expected": "Das Feld für Standardzahlungsbedingungen (Zahlungsfrist) ist konfigurierbar.",
+              "steps": "1. Klicken Sie im linken Menü auf \"Einstellungen\"\n2. Klicken Sie auf den Tab \"Nummerierung\"\n3. Scrollen Sie zur Karte \"Standardwerte\"\n4. Geben Sie im Feld \"Zahlungsfrist (Tage)\" den Wert \"30\" ein\n5. Klicken Sie auf \"Nummerierung speichern\"\n6. Prüfen Sie, dass die Meldung \"Nummerierungseinstellungen gespeichert\" erscheint",
+              "expected": "Der Standardwert für die Zahlungsfrist wird gespeichert. Neue Rechnungen verwenden diesen Wert als Fälligkeitsdatum (berechnet ab Rechnungsdatum).",
               "prio": "High"
             },
             {
@@ -11186,8 +11186,8 @@
               "id": "ACC-012",
               "title": "Configurer les conditions de paiement par défaut",
               "where": "Paramètres > Numérotation",
-              "steps": "1. Klicke auf den Button \"Numérotation\"\n2. Überprüfe, dass der Text \"Facture\" sichtbar ist",
-              "expected": "Das Feld für Standardzahlungsbedingungen (Zahlung Term) ist konfigurierbar.",
+              "steps": "1. Cliquer sur \"Paramètres\" dans le menu de gauche\n2. Cliquer sur l'onglet \"Numérotation\"\n3. Faire défiler jusqu'à la carte \"Valeurs par défaut\"\n4. Saisir \"30\" dans le champ \"Délai de paiement (jours)\"\n5. Cliquer sur \"Enregistrer la numérotation\"\n6. Vérifier que le message \"Paramètres de numérotation enregistrés\" s'affiche",
+              "expected": "La valeur par défaut du délai de paiement est enregistrée. Les nouvelles factures utilisent cette valeur comme date d'échéance calculée à partir de la date de facturation.",
               "prio": "High"
             },
             {
@@ -22264,8 +22264,8 @@
               "id": "ACC-012",
               "title": "Configure Default Payment Terms",
               "where": "Settings > Numbering",
-              "steps": "1. Click the button \"Numbering\"\n2. Verify that the text \"Payment Term\" is visible",
-              "expected": "The default payment terms field (Payment Term) is configurable.",
+              "steps": "1. Click \"Settings\" in the left menu\n2. Click the \"Numbering\" tab\n3. Scroll to the \"Default Values\" card\n4. Enter \"30\" in the \"Payment Term (Days)\" field\n5. Click \"Save Numbering\"\n6. Verify that the message \"Numbering settings saved\" appears",
+              "expected": "The default payment term value is saved. New invoices will use this value as the due date calculated from the invoice date.",
               "prio": "High"
             },
             {
@@ -23354,8 +23354,8 @@
               "id": "ACC-012",
               "title": "Configurare i termini di pagamento predefiniti",
               "where": "Impostazioni > Numerazione",
-              "steps": "1. Fare clic sul pulsante \"Numerazione\"\n2. Verificare che il testo \"Fattura\" sia visibile",
-              "expected": "Das Feld für Standardzahlungsbedingungen (Termini di pagamento) ist konfigurierbar.",
+              "steps": "1. Fare clic su \"Impostazioni\" nel menu a sinistra\n2. Fare clic sulla scheda \"Numerazione\"\n3. Scorrere fino alla scheda \"Valori predefiniti\"\n4. Inserire \"30\" nel campo \"Termine di pagamento (giorni)\"\n5. Fare clic su \"Salva numerazione\"\n6. Verificare che venga visualizzato il messaggio \"Impostazioni di numerazione salvate\"",
+              "expected": "Il valore predefinito del termine di pagamento viene salvato. Le nuove fatture utilizzeranno questo valore come data di scadenza calcolata dalla data della fattura.",
               "prio": "High"
             },
             {
