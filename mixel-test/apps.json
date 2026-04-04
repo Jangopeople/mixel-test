@@ -54,8 +54,8 @@
               "id": "ACC-006",
               "title": "Abmelden",
               "where": "Auth > Anmelden/Passwort vergessen",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app\n2. Klicken Sie auf das Benutzerprofil-Icon unten links in der Sidebar\n3. Klicken Sie auf \"Abmelden\"\n4. Prüfen Sie, dass die URL /auth/signin enthält",
-              "expected": "Der Benutzer wird abgemeldet und zur Anmeldeseite (/auth/signin) weitergeleitet.",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app\n2. Klicken Sie auf das Benutzerprofil-Icon unten links in der Sidebar\n3. Klicken Sie auf 'Abmelden'\n4. Prüfen Sie, dass die URL '/auth/signin' enthält",
+              "expected": "Der Benutzer wird abgemeldet. Der Browser navigiert zu /auth/signin (zeigt E-Mail-Eingabe oder OTP-Schritt). Die Anmeldeseite bestätigt die erfolgreiche Abmeldung.",
               "prio": "Medium"
             }
           ]
@@ -92,40 +92,40 @@
               "id": "ACC-010",
               "title": "Konfigurieren Sie die Mehrwertsteuereinstellungen",
               "where": "Einstellungen > Firmenprofil",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/settings\n2. Klicken Sie auf den Tab \"Firmenprofil\"\n3. Geben Sie die \"MwSt.-Nummer\" (UID) ein (z. B. CHE-123.456.789)\n4. Prüfen Sie, dass der \"Firmenname\" ausgefüllt ist\n5. Klicken Sie auf \"Firmenprofil speichern\"\n6. Prüfen Sie, dass die Meldung \"Firmenprofil gespeichert\" erscheint",
-              "expected": "Das Firmenprofil mit MwSt.-Nummer wird gespeichert. Die UID erscheint auf Rechnungen und Angeboten.",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/settings?tab=company\n2. Prüfen Sie, dass der Bereich 'Firmenprofil' sichtbar ist\n3. Tragen Sie den 'Firmenname' ein (z. B. 'Muster AG')\n4. Tragen Sie die UID ein (z. B. 'CHE-123.456.789')\n5. Klicken Sie auf 'Speichern'\n6. Prüfen Sie, dass eine Erfolgsmeldung erscheint",
+              "expected": "Das Firmenprofil wurde gespeichert. Eine Erfolgsmeldung erscheint.",
               "prio": "High"
             },
             {
               "id": "ACC-011",
               "title": "Legen Sie das Rechnungsnummerierungsformat fest",
               "where": "Einstellungen > Nummerierung",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/settings\n2. Klicken Sie auf den Tab \"Nummerierung\"\n3. Ändern Sie das Präfix für \"Rechnung\" (z. B. \"RE-\" auf \"INV-\")\n4. Setzen Sie die \"Weiter Nummer\" auf den gewünschten Startwert (z. B. 100)\n5. Prüfen Sie die Vorschau (z. B. INV-0100)\n6. Klicken Sie auf \"Nummerierung speichern\"\n7. Prüfen Sie, dass die Meldung \"Nummerierungseinstellungen gespeichert\" erscheint",
-              "expected": "Das Nummerierungsformat wird gespeichert. Die nächste Rechnung erhält die konfigurierte Nummer.",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/settings?tab=numbering\n2. Prüfen Sie, dass das Rechnungspräfix-Feld sichtbar ist (z. B. 'RE-')\n3. Prüfen Sie, dass das Feld für die nächste Rechnungsnummer sichtbar ist\n4. Ändern Sie das Präfix auf 'RE-'\n5. Klicken Sie auf 'Speichern'\n6. Prüfen Sie, dass eine Erfolgsmeldung erscheint",
+              "expected": "Das Rechnungsformat wurde aktualisiert. Eine Erfolgsmeldung erscheint.",
               "prio": "High"
             },
             {
               "id": "ACC-012",
               "title": "Konfigurieren Sie Standardzahlungsbedingungen",
               "where": "Einstellungen > Nummerierung",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/settings\n2. Klicken Sie auf den Tab \"Nummerierung\"\n3. Scrollen Sie zur Karte \"Standardwerte\"\n4. Geben Sie im Feld \"Zahlungsfrist (Tage)\" den Wert \"30\" ein\n5. Klicken Sie auf \"Nummerierung speichern\"\n6. Prüfen Sie, dass die Meldung \"Nummerierungseinstellungen gespeichert\" erscheint",
-              "expected": "Der Standardwert für die Zahlungsfrist wird gespeichert. Neue Rechnungen verwenden diesen Wert als Fälligkeitsdatum (berechnet ab Rechnungsdatum).",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/settings?tab=numbering\n2. Scrollen Sie zum Bereich 'Zahlungsbedingungen'\n3. Prüfen Sie, dass bestehende Zahlungsbedingungen (z. B. '30 Tage') angezeigt werden\n4. Prüfen Sie, dass ein Button zum Hinzufügen vorhanden ist",
+              "expected": "Der Bereich Zahlungsbedingungen zeigt bestehende Einträge und eine Hinzufügen-Option.",
               "prio": "High"
             },
             {
               "id": "ACC-013",
               "title": "Wählen Sie die Sprache der Benutzeroberfläche aus",
               "where": "Einstellungen > Mein Profil",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/settings\n2. Klicken Sie auf den Tab \"Mein Profil\"\n3. Geben Sie einen \"Anzeigename\" ein (z. B. \"Max Muster\")\n4. Wählen Sie unter \"Bevorzugte Sprache\" die gewünschte Sprache\n5. Klicken Sie auf \"Profil speichern\"\n6. Prüfen Sie, dass die Meldung \"Profil gespeichert\" erscheint\n7. Prüfen Sie, dass die Benutzeroberfläche in der gewählten Sprache erscheint",
-              "expected": "Sprache wird gespeichert. Die App-Oberfläche wechselt zur ausgewählten Sprache.",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/settings?tab=profile\n2. Prüfen Sie, dass der Bereich 'Mein Profil' sichtbar ist\n3. Suchen Sie das Feld für den Anzeigenamen\n4. Prüfen Sie, dass ein Dropdown für die Sprachauswahl vorhanden ist\n5. Wählen Sie 'Deutsch'\n6. Klicken Sie auf 'Speichern'",
+              "expected": "Profileinstellungen gespeichert. Die Sprache der Oberfläche ändert sich.",
               "prio": "Medium"
             },
             {
               "id": "ACC-014",
               "title": "Legen Sie die E-Mail-Absenderdetails fest",
               "where": "Einstellungen > E-Mail Einstellungen",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/settings\n2. Klicken Sie auf den Tab \"E-Mail Einstellungen\"\n3. Geben Sie im Feld \"Absender-E-Mail\" eine E-Mail-Adresse ein (z. B. buchhaltung@firma.ch)\n4. Geben Sie im Feld \"Absendername\" den Namen ein (z. B. \"Firma AG\")\n5. Klicken Sie auf \"Einstellungen speichern\"\n6. Prüfen Sie, dass die Meldung \"E-Mail-Einstellungen gespeichert\" erscheint",
-              "expected": "Die E-Mail-Absenderdaten werden gespeichert. Versendete Rechnungen und Angebote nutzen diese Angaben.",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/settings?tab=email\n2. Prüfen Sie, dass der Bereich 'E-Mail-Einstellungen' sichtbar ist\n3. Prüfen Sie, dass Absendername und E-Mail-Felder vorhanden sind\n4. Tragen Sie den Absendernamen ein\n5. Klicken Sie auf 'Speichern'\n6. Prüfen Sie, dass eine Erfolgsmeldung erscheint",
+              "expected": "E-Mail-Absendereinstellungen gespeichert. Eine Erfolgsmeldung erscheint.",
               "prio": "High"
             }
           ]
@@ -138,31 +138,31 @@
               "id": "ACC-015",
               "title": "Standardkontenplan anzeigen",
               "where": "Accounting > Kontenplan",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/accounting\n2. Klicken Sie auf den Tab \"Kontenplan\"\n3. Prüfen Sie, dass eine Liste von Konten mit Spalten \"Konto-Nr.\" und \"Kontoname\" erscheint\n4. Prüfen Sie, dass vorinstallierte Standardkonten (z. B. 1000–9999) vorhanden sind",
-              "expected": "Eine Liste von Konten mit Kontonummer, Kontoname und Typ wird angezeigt. Standard-Konten (z. B. 1000–9999) sind vorhanden.",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/accounting\n2. Klicken Sie auf den Tab 'Kontenplan'\n3. Prüfen Sie, dass eine Kontentabelle angezeigt wird\n4. Prüfen Sie, dass Zeilen Kontonummer und Kontoname enthalten\n5. Prüfen Sie, dass Konten im Bereich 1000–9999 vorhanden sind",
+              "expected": "Eine Kontentabelle mit Kontonummern und -namen wird angezeigt. Standard-Konten (1000–9999) sind vorhanden.",
               "prio": "Medium"
             },
             {
               "id": "ACC-016",
               "title": "Fügen Sie ein neues Konto hinzu",
               "where": "Accounting > Kontenplan",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/accounting\n2. Klicken Sie auf den Tab \"Kontenplan\"\n3. Klicken Sie auf den Button \"Add Account\"\n4. Geben Sie eine Kontonummer ein (z. B. 9001)\n5. Geben Sie einen Kontonamen ein (z. B. \"Testaufwand\")\n6. Wählen Sie den Kontotyp (z. B. \"Aufwand\")\n7. Klicken Sie auf \"Speichern\"\n8. Prüfen Sie, dass das neue Konto in der Liste erscheint",
-              "expected": "Das neue Konto wird erstellt und erscheint im Kontenplan. Es steht für Buchungen zur Verfügung.",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/accounting\n2. Klicken Sie auf den Tab 'Kontenplan'\n3. Klicken Sie auf 'Konto hinzufügen' oder 'Neues Konto'\n4. Tragen Sie die Kontonummer ein\n5. Tragen Sie den Kontonamen ein\n6. Klicken Sie auf 'Speichern'\n7. Prüfen Sie, dass das neue Konto in der Liste erscheint",
+              "expected": "Ein neues Konto wurde erstellt und erscheint im Kontenplan.",
               "prio": "Medium"
             },
             {
               "id": "ACC-017",
               "title": "Bearbeiten Sie ein vorhandenes Konto",
               "where": "Accounting > Kontenplan",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/accounting\n2. Klicken Sie auf den Tab \"Kontenplan\"\n3. Suchen Sie ein vorhandenes Konto in der Spalte \"Konto-Nr.\"\n4. Klicken Sie auf das Konto, um es zu bearbeiten\n5. Ändern Sie den \"Kontoname\"\n6. Klicken Sie auf \"Speichern\"\n7. Prüfen Sie, dass der aktualisierte Name in der Liste erscheint",
-              "expected": "Das Konto wird aktualisiert. Der neue Name erscheint sofort in der Kontoliste.",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/accounting\n2. Klicken Sie auf den Tab 'Kontenplan'\n3. Klicken Sie auf eine bestehende Kontozeile\n4. Ändern Sie den Kontonamen\n5. Klicken Sie auf 'Speichern'\n6. Prüfen Sie, dass der aktualisierte Name erscheint",
+              "expected": "Der Kontoname wurde aktualisiert und erscheint im Kontenplan.",
               "prio": "Medium"
             },
             {
               "id": "ACC-018",
               "title": "Konto deaktivieren/archivieren",
               "where": "Accounting > Kontenplan",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/accounting\n2. Klicken Sie auf den Tab \"Kontenplan\"\n3. Suchen Sie ein aktives Konto, das deaktiviert werden soll\n4. Klicken Sie auf das Aktionsmenü des Kontos\n5. Wählen Sie \"Deaktivieren\" oder \"Archivieren\"\n6. Bestätigen Sie die Aktion\n7. Prüfen Sie, dass das Konto als inaktiv markiert oder ausgeblendet wird",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/settings?tab=profile\n2. Suchen Sie das Sprachdropdown im Profilbereich\n3. Wählen Sie eine andere Sprache (z. B. Englisch)\n4. Klicken Sie auf 'Speichern'\n5. Prüfen Sie, dass die Oberflächensprache wechselt",
               "expected": "Die Sprache der Benutzeroberfläche wechselt entsprechend der Auswahl.",
               "prio": "High"
             },
@@ -170,8 +170,8 @@
               "id": "ACC-019",
               "title": "Konten suchen/filtern",
               "where": "Accounting > Kontenplan",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/accounting\n2. Klicken Sie auf den Tab \"Kontenplan\"\n3. Klicken Sie in das Suchfeld \"Konto suchen (Nummer oder Name)...\"\n4. Geben Sie eine Kontonummer ein (z. B. \"1000\")\n5. Prüfen Sie, dass die Liste auf passende Konten filtert\n6. Löschen Sie die Suche und geben Sie einen Kontonamen ein\n7. Prüfen Sie, dass die Filterung auch nach Name funktioniert",
-              "expected": "Die Suchfunktion filtert die Kontoliste in Echtzeit nach Nummer und Name.",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/accounting\n2. Klicken Sie auf den Tab 'Kontenplan'\n3. Suchen Sie das Suchfeld im Kontenplan\n4. Geben Sie eine Kontonummer oder einen Namen ein\n5. Prüfen Sie, dass die Liste entsprechend gefiltert wird",
+              "expected": "Die Kontenliste wird auf übereinstimmende Konten gefiltert.",
               "prio": "Medium"
             }
           ]
@@ -184,24 +184,24 @@
               "id": "ACC-020",
               "title": "Fügen Sie ein Bankkonto hinzu",
               "where": "Banking > Bankkonten",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/banking\n2. Klicken Sie auf den Button \"Neues Konto\"\n3. Geben Sie \"Kontoname\" ein (z. B. \"Geschäftskonto CHF\")\n4. Geben Sie den \"Bankname\" ein (z. B. \"UBS Switzerland AG\")\n5. Wählen Sie den \"Kontotyp\" (z. B. \"Girokonto\")\n6. Wählen Sie die Währung \"CHF\"\n7. Geben Sie einen \"Eröffnungssaldo\" ein (z. B. 10000)\n8. Klicken Sie auf \"Erstellen\"\n9. Prüfen Sie, dass die Meldung \"Konto erstellt\" erscheint",
-              "expected": "Das Bankkonto wird erstellt und in der Kontoliste angezeigt. Transaktionen können erfasst werden.",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/banking\n2. Klicken Sie auf 'Bankkonto hinzufügen' oder 'Neues Bankkonto'\n3. Tragen Sie den Kontonamen ein\n4. Tragen Sie die IBAN ein (z. B. CH44 3199 9123 0008 8901 2)\n5. Klicken Sie auf 'Speichern'\n6. Prüfen Sie, dass das Bankkonto in der Liste erscheint",
+              "expected": "Ein neues Bankkonto wird hinzugefügt und erscheint in der Bankliste.",
               "prio": "High"
             },
             {
               "id": "ACC-021",
               "title": "Validieren Sie das ungültige IBAN-Format",
               "where": "Banking > Bankkonten",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/banking\n2. Klicken Sie auf den Button \"Neues Konto\"\n3. Geben Sie einen \"Kontoname\" ein\n4. Suchen Sie das IBAN-Eingabefeld im Formular\n5. Geben Sie ein ungültiges IBAN-Format ein (z. B. \"INVALID123\")\n6. Klicken Sie auf \"Erstellen\"\n7. Prüfen Sie, dass eine Validierungsfehlermeldung für das IBAN-Feld erscheint",
-              "expected": "Das System zeigt einen Validierungsfehler für das ungültige IBAN-Format. Das Konto wird nicht gespeichert.",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/banking\n2. Klicken Sie auf 'Bankkonto hinzufügen'\n3. Tragen Sie eine ungültige IBAN ein (z. B. 'UNGUELTIG123')\n4. Klicken Sie auf 'Speichern'\n5. Prüfen Sie, dass eine Fehlermeldung für ungültige IBAN erscheint",
+              "expected": "Eine Fehlermeldung über eine ungültige IBAN wird angezeigt.",
               "prio": "High"
             },
             {
               "id": "ACC-022",
               "title": "Legen Sie das Standardbankkonto fest",
               "where": "Banking > Bankkonten",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/banking\n2. Prüfen Sie, dass mindestens ein Bankkonto in \"Ihre Konten\" aufgeführt ist\n3. Klicken Sie auf das Konto, das als Standard gesetzt werden soll\n4. Suchen Sie die Option \"Als Standard setzen\" im Konto-Details oder Aktionsmenü\n5. Aktivieren Sie die Option\n6. Prüfen Sie, dass das Konto als Standardkonto markiert ist",
-              "expected": "Das Standardbankkonto wird gesetzt. Bei neuen Rechnungen und Transaktionen wird dieses Konto vorausgewählt.",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/banking\n2. Prüfen Sie, dass mindestens ein Bankkonto aufgelistet ist\n3. Klicken Sie auf das Aktionsmenü eines Bankkontos\n4. Wählen Sie 'Als Standard setzen'\n5. Prüfen Sie, dass das Konto als Standard markiert ist",
+              "expected": "Das ausgewählte Bankkonto ist als Standard festgelegt.",
               "prio": "High"
             },
             {
@@ -766,8 +766,8 @@
               "id": "ACC-086",
               "title": "Haupt-Dashboard anzeigen",
               "where": "Reports > Berichte",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app\n2. Prüfen Sie, dass das Dashboard KPIs anzeigt (offene Rechnungen, Ausgaben, Einnahmen)\n3. Prüfen Sie, dass Beträge in der Standardwährung angezeigt werden",
-              "expected": "Das Dashboard zeigt KPIs wie offene Rechnungen, Ausgaben und Einnahmen.",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app\n2. Prüfen Sie, dass das Dashboard angezeigt wird\n3. Prüfen Sie, dass finanzielle KPIs sichtbar sind (offene Rechnungen, Einnahmen, Ausgaben)\n4. Prüfen Sie, dass Beträge in der Standardwährung angezeigt werden",
+              "expected": "Das Dashboard zeigt finanzielle KPIs inkl. offene Rechnungen, Einnahmen und Ausgaben.",
               "prio": "High"
             },
             {
@@ -944,32 +944,32 @@
               "id": "ACC-106",
               "title": "Konfigurieren Sie automatische Zahlungserinnerungen",
               "where": "Einstellungen > Nummerierung",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/settings\n2. Klicken Sie auf den Tab \"Nummerierung\"\n3. Scrollen Sie zur Karte \"Standardwerte\"\n4. Geben Sie im Feld \"Zahlungsfrist (Tage)\" den Standard-Wert ein (z. B. 30)\n5. Klicken Sie auf \"Nummerierung speichern\"\n6. Erstellen Sie eine neue Rechnung und prüfen Sie, dass das Fälligkeitsdatum 30 Tage ab heute berechnet wird",
-              "expected": "Die Standard-Zahlungsfrist wird gespeichert. Neue Rechnungen verwenden diesen Wert für die Fälligkeitsberechnung.",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/settings?tab=numbering\n2. Scrollen Sie zum Bereich 'Zahlungsbedingungen'\n3. Klicken Sie auf 'Hinzufügen'\n4. Tragen Sie den Namen ein (z. B. 'Netto 30')\n5. Tragen Sie '30' in das Tage-Feld ein\n6. Klicken Sie auf 'Speichern'\n7. Prüfen Sie, dass die neue Zahlungsbedingung erscheint",
+              "expected": "Eine neue Zahlungsbedingung wurde erstellt und erscheint in der Liste.",
               "prio": "High"
             },
             {
               "id": "ACC-107",
               "title": "Konfigurieren Sie die E-Mail-Versanddomäne",
               "where": "Einstellungen > E-Mail Einstellungen",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/settings\n2. Klicken Sie auf den Tab \"E-Mail Einstellungen\"\n3. Geben Sie im Feld \"Absender-E-Mail\" eine E-Mail-Adresse mit gewünschter Domain ein\n4. Geben Sie im Feld \"Absendername\" den Anzeigename ein\n5. Klicken Sie auf \"Einstellungen speichern\"\n6. Prüfen Sie, dass die Meldung \"E-Mail-Einstellungen gespeichert\" erscheint\n7. Senden Sie eine Test-E-Mail und prüfen Sie den Absender",
-              "expected": "Die E-Mail-Domain ist konfiguriert. Ausgehende E-Mails erscheinen mit der konfigurierten Absenderdomain.",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/settings?tab=email\n2. Prüfen Sie, dass der Bereich 'E-Mail-Einstellungen' sichtbar ist\n3. Suchen Sie den Absender-E-Mail/Domain-Konfigurationsbereich\n4. Prüfen Sie, dass Felder für Absendername und -adresse vorhanden sind",
+              "expected": "Der Tab E-Mail-Einstellungen zeigt Konfigurationsfelder für Absendername und -adresse.",
               "prio": "High"
             },
             {
               "id": "ACC-108",
               "title": "Datums- und Zahlenformat ändern",
               "where": "Einstellungen > Mein Profil",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/settings\n2. Klicken Sie auf den Tab \"Mein Profil\"\n3. Ändern Sie die \"Bevorzugte Sprache\" (die Sprache bestimmt auch das Datumsformat)\n4. Klicken Sie auf \"Profil speichern\"\n5. Prüfen Sie, dass die Meldung \"Profil gespeichert\" erscheint\n6. Prüfen Sie, dass Datum und Zahlenformate sich in der App angepasst haben",
-              "expected": "Die Sprach- und Formateinstellungen werden gespeichert. Datums- und Zahlenformate werden entsprechend der Spracheinstellung angepasst.",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/settings?tab=profile\n2. Prüfen Sie, dass der Bereich 'Mein Profil' sichtbar ist\n3. Suchen Sie die Felder für Anzeigename oder Locale\n4. Prüfen Sie, dass das Sprachdropdown vorhanden ist\n5. Wählen Sie eine andere Locale-Einstellung",
+              "expected": "Locale-Einstellungen im Profil sind sichtbar und können geändert werden.",
               "prio": "High"
             },
             {
               "id": "ACC-109",
               "title": "Zugriff auf Audit-Protokoll/Aktivitätsverlauf",
               "where": "Dashboard",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/settings\n2. Suchen Sie einen Tab \"E-Mail Verlauf\" für E-Mail-Aktivitäten\n3. Alternativ: Suchen Sie nach \"Aktivitätsverlauf\" oder \"Audit-Protokoll\" in der Navigation\n4. Öffnen Sie den Verlauf\n5. Prüfen Sie, dass Aktionen mit Zeitstempel, Benutzer und Beschreibung angezeigt werden",
-              "expected": "Das Aktivitätsprotokoll zeigt alle Aktionen mit Zeitstempel und Benutzerinformation.",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/en/app/audit-trail\n2. Prüfen Sie, dass eine Liste von Audit-Trail-Einträgen angezeigt wird\n3. Prüfen Sie, dass Einträge Benutzer, Aktion, Datum und Entität enthalten\n4. Prüfen Sie, dass die Liste scrollbar oder paginiert ist",
+              "expected": "Die Audit-Trail-Seite zeigt ein Protokoll von Benutzeraktionen mit Zeitstempeln.",
               "prio": "Critical"
             }
           ]
@@ -11216,8 +11216,8 @@
               "id": "ACC-006",
               "title": "Se déconnecter",
               "where": "Auth > Connexion / Mot de passe oublié",
-              "steps": "1. Naviguez vers https://acc.mixel.ch/en/app\n2. Cliquez sur l'icône de profil en bas à gauche de la barre latérale\n3. Cliquez sur \"Se déconnecter\"\n4. Vérifiez que l'URL contient /auth/signin",
-              "expected": "L'utilisateur est déconnecté et redirigé vers la page de connexion (/auth/signin).",
+              "steps": "1. Naviguez vers https://acc.mixel.ch/en/app\n2. Cliquez sur l'icône de profil en bas à gauche de la barre latérale\n3. Cliquez sur 'Se déconnecter'\n4. Vérifiez que l'URL contient '/auth/signin'",
+              "expected": "L'utilisateur est déconnecté. Le navigateur va à /auth/signin (affiche la saisie e-mail ou OTP). La page de connexion confirme la déconnexion.",
               "prio": "Medium"
             }
           ]
@@ -11254,40 +11254,40 @@
               "id": "ACC-010",
               "title": "Configurer les paramètres de TVA",
               "where": "Paramètres > Profil de l'entreprise",
-              "steps": "1. Cliquez sur \"Paramètres\" dans le menu gauche\n2. Cliquez sur l'onglet \"Profil de l'entreprise\"\n3. Saisissez le \"Numéro IDE\" (p. ex. CHE-123.456.789)\n4. Vérifiez que le \"Nom de l'entreprise\" est renseigné\n5. Cliquez sur \"Enregistrer le profil de l'entreprise\"\n6. Vérifiez que le message \"Profil de l'entreprise enregistré\" s'affiche",
-              "expected": "Le profil d'entreprise avec le numéro TVA est enregistré. L'IDE apparaît sur les factures et devis.",
+              "steps": "1. Naviguez vers https://acc.mixel.ch/en/app/settings?tab=company\n2. Vérifiez que la section 'Profil de l'entreprise' est visible\n3. Remplissez le champ 'Nom de l'entreprise' avec 'Test SA'\n4. Remplissez le numéro de TVA / UID avec 'CHE-123.456.789'\n5. Cliquez sur 'Enregistrer'\n6. Vérifiez qu'un message de succès apparaît",
+              "expected": "Le profil d'entreprise est sauvegardé. Un message de succès apparaît.",
               "prio": "High"
             },
             {
               "id": "ACC-011",
               "title": "Définir le format de numérotation des factures",
               "where": "Paramètres > Numérotation",
-              "steps": "1. Cliquez sur \"Paramètres\" dans le menu gauche\n2. Cliquez sur l'onglet \"Numérotation\"\n3. Modifiez le préfixe \"Facture\" (p. ex. de \"RE-\" à \"INV-\")\n4. Définissez le \"Prochain numéro\" (p. ex. 100)\n5. Vérifiez l'aperçu (p. ex. INV-0100)\n6. Cliquez sur \"Enregistrer la numérotation\"\n7. Vérifiez que \"Paramètres de numérotation enregistrés\" s'affiche",
-              "expected": "Le format de numérotation est enregistré. La prochaine facture reçoit le numéro configuré.",
+              "steps": "1. Naviguez vers https://acc.mixel.ch/en/app/settings?tab=numbering\n2. Vérifiez que le champ de préfixe de facture est visible (ex. 'RE-')\n3. Vérifiez que le champ du prochain numéro de facture est visible\n4. Changez le préfixe en 'FA-'\n5. Cliquez sur 'Enregistrer'\n6. Vérifiez qu'un message de succès apparaît",
+              "expected": "Le format de numérotation des factures est mis à jour. Un message de succès apparaît.",
               "prio": "High"
             },
             {
               "id": "ACC-012",
               "title": "Configurer les conditions de paiement par défaut",
               "where": "Paramètres > Numérotation",
-              "steps": "1. Cliquer sur \"Paramètres\" dans le menu de gauche\n2. Cliquer sur l'onglet \"Numérotation\"\n3. Faire défiler jusqu'à la carte \"Valeurs par défaut\"\n4. Saisir \"30\" dans le champ \"Délai de paiement (jours)\"\n5. Cliquer sur \"Enregistrer la numérotation\"\n6. Vérifier que le message \"Paramètres de numérotation enregistrés\" s'affiche",
-              "expected": "La valeur par défaut du délai de paiement est enregistrée. Les nouvelles factures utilisent cette valeur comme date d'échéance calculée à partir de la date de facturation.",
+              "steps": "1. Naviguez vers https://acc.mixel.ch/en/app/settings?tab=numbering\n2. Faites défiler jusqu'à la section 'Conditions de paiement'\n3. Vérifiez que les conditions existantes (ex. '30 jours') sont listées\n4. Vérifiez qu'un bouton pour en ajouter est visible",
+              "expected": "La section Conditions de paiement affiche les entrées existantes et une option d'ajout.",
               "prio": "High"
             },
             {
               "id": "ACC-013",
               "title": "Sélectionnez la langue de l'interface",
               "where": "Paramètres > Mon profil",
-              "steps": "1. Cliquez sur \"Paramètres\" dans le menu gauche\n2. Cliquez sur l'onglet \"Mon profil\"\n3. Saisissez un \"Nom d'affichage\" (p. ex. \"Jean Dupont\")\n4. Sélectionnez la langue sous \"Langue préférée\"\n5. Cliquez sur \"Enregistrer Profil\"\n6. Vérifiez que le message \"Profil enregistré\" s'affiche\n7. Vérifiez que l'interface bascule dans la langue sélectionnée",
-              "expected": "La langue est enregistrée. L'interface de l'application passe à la langue sélectionnée.",
+              "steps": "1. Naviguez vers https://acc.mixel.ch/en/app/settings?tab=profile\n2. Vérifiez que la section 'Mon Profil' est visible\n3. Localisez le champ de nom d'affichage\n4. Vérifiez qu'une liste déroulante de langue est visible\n5. Sélectionnez 'Français'\n6. Cliquez sur 'Enregistrer'",
+              "expected": "Les paramètres de profil sont sauvegardés. La langue de l'interface se met à jour.",
               "prio": "Medium"
             },
             {
               "id": "ACC-014",
               "title": "Définir les détails de l'expéditeur d'e-mail",
               "where": "Paramètres > Paramètres e-mail",
-              "steps": "1. Cliquez sur \"Paramètres\" dans le menu gauche\n2. Cliquez sur l'onglet \"Paramètres e-mail\"\n3. Saisissez l'adresse dans \"E-mail expéditeur\" (p. ex. facturation@societe.ch)\n4. Saisissez le nom dans \"Nom de l'expéditeur\" (p. ex. \"Société SA\")\n5. Cliquez sur \"Enregistrer Paramètres\"\n6. Vérifiez que le message \"Paramètres e-mail enregistrés\" s'affiche",
-              "expected": "Les informations d'expéditeur e-mail sont enregistrées. Les factures et devis envoyés utilisent ces données.",
+              "steps": "1. Naviguez vers https://acc.mixel.ch/en/app/settings?tab=email\n2. Vérifiez que la section 'Paramètres e-mail' est visible\n3. Vérifiez que les champs nom d'expéditeur et e-mail sont présents\n4. Remplissez le champ nom d'expéditeur\n5. Cliquez sur 'Enregistrer'\n6. Vérifiez qu'un message de succès apparaît",
+              "expected": "Les paramètres d'expéditeur e-mail sont sauvegardés.",
               "prio": "High"
             }
           ]
@@ -11300,31 +11300,31 @@
               "id": "ACC-015",
               "title": "Afficher le plan comptable par défaut",
               "where": "Comptabilité > Plan comptable",
-              "steps": "1. Cliquez sur \"Comptabilité\" dans le menu gauche\n2. Cliquez sur l'onglet \"Plan comptable\"\n3. Vérifiez que la liste affiche les colonnes \"Compte No.\" et \"Nom du compte\"\n4. Vérifiez que les comptes standard préinstallés sont présents",
-              "expected": "Une liste de comptes avec numéro, nom et type est affichée. Les comptes par défaut (p. ex. 1000–9999) sont présents.",
+              "steps": "1. Naviguez vers https://acc.mixel.ch/en/app/accounting\n2. Cliquez sur l'onglet 'Plan comptable'\n3. Vérifiez qu'un tableau de comptes est affiché\n4. Vérifiez que les lignes contiennent numéro et nom de compte\n5. Vérifiez que des comptes dans la plage 1000–9999 sont présents",
+              "expected": "Un tableau de comptes avec numéros et noms est affiché. Les comptes par défaut (1000–9999) sont présents.",
               "prio": "Medium"
             },
             {
               "id": "ACC-016",
               "title": "Ajouter un nouveau compte",
               "where": "Comptabilité > Plan comptable",
-              "steps": "1. Cliquez sur \"Comptabilité\" dans le menu gauche\n2. Cliquez sur l'onglet \"Plan comptable\"\n3. Cliquez sur le bouton \"Add Account\"\n4. Saisissez un numéro de compte (p. ex. 9001)\n5. Saisissez un nom de compte (p. ex. \"Charges test\")\n6. Sélectionnez le type de compte\n7. Cliquez sur \"Enregistrer\"\n8. Vérifiez que le nouveau compte apparaît dans la liste",
-              "expected": "Le nouveau compte est créé et apparaît dans le plan comptable. Il est disponible pour les écritures.",
+              "steps": "1. Naviguez vers https://acc.mixel.ch/en/app/accounting\n2. Cliquez sur l'onglet 'Plan comptable'\n3. Cliquez sur 'Ajouter un compte' ou 'Nouveau compte'\n4. Remplissez le numéro de compte\n5. Remplissez le nom du compte\n6. Cliquez sur 'Enregistrer'\n7. Vérifiez que le nouveau compte apparaît dans la liste",
+              "expected": "Un nouveau compte est créé et apparaît dans le plan comptable.",
               "prio": "Medium"
             },
             {
               "id": "ACC-017",
               "title": "Modifier un compte existant",
               "where": "Comptabilité > Plan comptable",
-              "steps": "1. Cliquez sur \"Comptabilité\" dans le menu gauche\n2. Cliquez sur l'onglet \"Plan comptable\"\n3. Trouvez un compte existant dans la colonne \"Compte No.\"\n4. Cliquez sur le compte pour le modifier\n5. Modifiez le \"Nom du compte\"\n6. Cliquez sur \"Enregistrer\"\n7. Vérifiez que le nom mis à jour apparaît dans la liste",
-              "expected": "Le compte est mis à jour. Le nouveau nom apparaît immédiatement dans la liste des comptes.",
+              "steps": "1. Naviguez vers https://acc.mixel.ch/en/app/accounting\n2. Cliquez sur l'onglet 'Plan comptable'\n3. Cliquez sur une ligne de compte existante\n4. Modifiez le nom du compte\n5. Cliquez sur 'Enregistrer'\n6. Vérifiez que le nom mis à jour apparaît dans la liste",
+              "expected": "Le nom du compte est mis à jour dans le plan comptable.",
               "prio": "Medium"
             },
             {
               "id": "ACC-018",
               "title": "Désactiver / Archiver un compte",
               "where": "Comptabilité > Plan comptable",
-              "steps": "1. Cliquez sur \"Comptabilité\" dans le menu gauche\n2. Cliquez sur l'onglet \"Plan comptable\"\n3. Trouvez un compte actif à désactiver\n4. Cliquez sur le menu d'action du compte\n5. Sélectionnez \"Désactiver\" ou \"Archiver\"\n6. Confirmez l'action\n7. Vérifiez que le compte est marqué comme inactif ou masqué",
+              "steps": "1. Naviguez vers https://acc.mixel.ch/en/app/settings?tab=profile\n2. Localisez le menu déroulant de langue dans la section profil\n3. Sélectionnez une autre langue (ex. Allemand)\n4. Cliquez sur 'Enregistrer'\n5. Vérifiez que la langue de l'interface change",
               "expected": "La langue de l'interface change selon la sélection.",
               "prio": "High"
             },
@@ -11332,8 +11332,8 @@
               "id": "ACC-019",
               "title": "Rechercher/Filtrer des comptes",
               "where": "Comptabilité > Plan comptable",
-              "steps": "1. Cliquez sur \"Comptabilité\" dans le menu gauche\n2. Cliquez sur l'onglet \"Plan comptable\"\n3. Cliquez dans le champ de recherche \"Rechercher un compte...\"\n4. Saisissez un numéro de compte (p. ex. \"1000\")\n5. Vérifiez que la liste filtre sur les comptes correspondants\n6. Effacez la recherche et saisissez un nom de compte\n7. Vérifiez que le filtrage par nom fonctionne aussi",
-              "expected": "La fonction de recherche filtre la liste des comptes en temps réel par numéro et par nom.",
+              "steps": "1. Naviguez vers https://acc.mixel.ch/en/app/accounting\n2. Cliquez sur l'onglet 'Plan comptable'\n3. Localisez le champ de recherche dans le plan comptable\n4. Saisissez un numéro ou un nom de compte\n5. Vérifiez que la liste est filtrée en conséquence",
+              "expected": "La liste des comptes est filtrée pour afficher les comptes correspondants.",
               "prio": "Medium"
             }
           ]
@@ -11346,24 +11346,24 @@
               "id": "ACC-020",
               "title": "Ajouter un compte bancaire",
               "where": "Banque > Comptes bancaires",
-              "steps": "1. Cliquez sur \"Banque\" dans le menu gauche\n2. Cliquez sur le bouton \"Nouveau compte\"\n3. Saisissez le \"Nom du compte\" (p. ex. \"Compte commercial CHF\")\n4. Saisissez le \"Nom de la banque\" (p. ex. \"UBS Switzerland AG\")\n5. Sélectionnez le \"Type de compte\" (p. ex. \"Compte courant\")\n6. Sélectionnez la devise \"CHF\"\n7. Saisissez un \"Solde d'ouverture\" (p. ex. 10000)\n8. Cliquez sur \"Créer\"\n9. Vérifiez que le message \"Compte créé\" s'affiche",
-              "expected": "Le compte bancaire est créé et affiché dans la liste. Les transactions peuvent être enregistrées.",
+              "steps": "1. Naviguez vers https://acc.mixel.ch/en/app/banking\n2. Cliquez sur 'Ajouter un compte bancaire'\n3. Remplissez le nom du compte\n4. Remplissez l'IBAN (ex. CH44 3199 9123 0008 8901 2)\n5. Cliquez sur 'Enregistrer'\n6. Vérifiez que le compte apparaît dans la liste",
+              "expected": "Un nouveau compte bancaire est ajouté et apparaît dans la section banque.",
               "prio": "High"
             },
             {
               "id": "ACC-021",
               "title": "Valider le format IBAN invalide",
               "where": "Banque > Comptes bancaires",
-              "steps": "1. Cliquez sur \"Banque\" dans le menu gauche\n2. Cliquez sur le bouton \"Nouveau compte\"\n3. Saisissez un \"Nom du compte\"\n4. Trouvez le champ IBAN dans le formulaire\n5. Saisissez un format IBAN invalide (p. ex. \"INVALID123\")\n6. Cliquez sur \"Créer\"\n7. Vérifiez qu'un message d'erreur de validation s'affiche",
-              "expected": "Le système affiche une erreur de validation pour le format IBAN invalide. Le compte n'est pas enregistré.",
+              "steps": "1. Naviguez vers https://acc.mixel.ch/en/app/banking\n2. Cliquez sur 'Ajouter un compte bancaire'\n3. Saisissez un IBAN invalide (ex. 'INVALIDE123')\n4. Cliquez sur 'Enregistrer'\n5. Vérifiez qu'un message d'erreur d'IBAN invalide est affiché",
+              "expected": "Un message d'erreur indique que le format IBAN est invalide.",
               "prio": "High"
             },
             {
               "id": "ACC-022",
               "title": "Définir le compte bancaire par défaut",
               "where": "Banque > Comptes bancaires",
-              "steps": "1. Cliquez sur \"Banque\" dans le menu gauche\n2. Vérifiez qu'au moins un compte bancaire est listé dans \"Vos comptes\"\n3. Cliquez sur le compte à définir comme compte par défaut\n4. Cherchez l'option \"Définir par défaut\" dans les détails ou le menu d'action\n5. Activez l'option\n6. Vérifiez que le compte est marqué comme compte par défaut",
-              "expected": "Le compte bancaire par défaut est défini. Il sera présélectionné pour les nouvelles factures et transactions.",
+              "steps": "1. Naviguez vers https://acc.mixel.ch/en/app/banking\n2. Vérifiez qu'au moins un compte bancaire est listé\n3. Cliquez sur le menu d'actions d'un compte bancaire\n4. Sélectionnez 'Définir comme compte par défaut'\n5. Vérifiez que le compte est marqué comme compte par défaut",
+              "expected": "Le compte bancaire sélectionné est défini comme compte par défaut.",
               "prio": "High"
             },
             {
@@ -11928,8 +11928,8 @@
               "id": "ACC-086",
               "title": "Afficher le tableau de bord principal",
               "where": "Reports > Berichte",
-              "steps": "1. Naviguez vers https://acc.mixel.ch/en/app\n2. Vérifiez que le tableau de bord affiche les KPIs (factures ouvertes, dépenses, revenus)\n3. Vérifiez que les montants sont affichés dans la devise par défaut",
-              "expected": "Le tableau de bord affiche des KPIs comme les factures ouvertes, les dépenses et les revenus.",
+              "steps": "1. Naviguez vers https://acc.mixel.ch/en/app\n2. Vérifiez que le tableau de bord est affiché\n3. Vérifiez que les KPIs financiers sont visibles (factures ouvertes, revenus, dépenses)\n4. Vérifiez que les montants sont en devise par défaut",
+              "expected": "Le tableau de bord affiche les KPIs financiers dont les factures ouvertes, revenus et dépenses.",
               "prio": "High"
             },
             {
@@ -12106,32 +12106,32 @@
               "id": "ACC-106",
               "title": "Configurer les rappels de paiement automatiques",
               "where": "Paramètres > Numérotation",
-              "steps": "1. Cliquez sur \"Paramètres\" dans le menu gauche\n2. Cliquez sur l'onglet \"Numérotation\"\n3. Faites défiler jusqu'à la carte \"Valeurs par défaut\"\n4. Saisissez la valeur standard dans \"Conditions de paiement (jours)\" (p. ex. 30)\n5. Cliquez sur \"Enregistrer la numérotation\"\n6. Créez une nouvelle facture et vérifiez que la date d'échéance est à 30 jours",
-              "expected": "Les conditions de paiement standard sont enregistrées. Les nouvelles factures utilisent cette valeur.",
+              "steps": "1. Naviguez vers https://acc.mixel.ch/en/app/settings?tab=numbering\n2. Faites défiler vers la section 'Conditions de paiement'\n3. Cliquez sur 'Ajouter'\n4. Remplissez le nom (ex. 'Net 30')\n5. Remplissez le champ jours avec '30'\n6. Cliquez sur 'Enregistrer'\n7. Vérifiez que la nouvelle condition apparaît dans la liste",
+              "expected": "Une nouvelle condition de paiement est créée et listée.",
               "prio": "High"
             },
             {
               "id": "ACC-107",
               "title": "Configurer le domaine d'envoi d'e-mails",
               "where": "Paramètres > Paramètres e-mail",
-              "steps": "1. Cliquez sur \"Paramètres\" dans le menu gauche\n2. Cliquez sur l'onglet \"Paramètres e-mail\"\n3. Saisissez une adresse e-mail avec le domaine souhaité dans \"E-mail expéditeur\"\n4. Saisissez le nom d'affichage dans \"Nom de l'expéditeur\"\n5. Cliquez sur \"Enregistrer Paramètres\"\n6. Vérifiez que le message \"Paramètres e-mail enregistrés\" s'affiche\n7. Envoyez un e-mail test et vérifiez l'expéditeur",
-              "expected": "Le domaine e-mail est configuré. Les e-mails sortants utilisent le domaine expéditeur configuré.",
+              "steps": "1. Naviguez vers https://acc.mixel.ch/en/app/settings?tab=email\n2. Vérifiez que la section 'Paramètres e-mail' est visible\n3. Cherchez la section de configuration de l'expéditeur\n4. Vérifiez que les champs nom et adresse d'expéditeur sont présents",
+              "expected": "L'onglet Paramètres e-mail affiche les champs de configuration de l'expéditeur.",
               "prio": "High"
             },
             {
               "id": "ACC-108",
               "title": "Modifier le format de la date et du nombre",
               "where": "Paramètres > Mon profil",
-              "steps": "1. Cliquez sur \"Paramètres\" dans le menu gauche\n2. Cliquez sur l'onglet \"Mon profil\"\n3. Modifiez la \"Langue préférée\" (la langue détermine aussi le format de date)\n4. Cliquez sur \"Enregistrer Profil\"\n5. Vérifiez que le message \"Profil enregistré\" s'affiche\n6. Vérifiez que les formats de date et de nombre s'adaptent dans l'app",
-              "expected": "Les paramètres de langue et de format sont enregistrés. Les formats de date et de nombre s'adaptent à la langue.",
+              "steps": "1. Naviguez vers https://acc.mixel.ch/en/app/settings?tab=profile\n2. Vérifiez que la section 'Mon Profil' est visible\n3. Localisez les champs de nom d'affichage ou de préférence de locale\n4. Vérifiez que le menu déroulant de langue est présent\n5. Sélectionnez un autre paramètre de locale",
+              "expected": "Les paramètres de locale du profil sont visibles et modifiables.",
               "prio": "High"
             },
             {
               "id": "ACC-109",
               "title": "Accéder au journal d'audit/à l'historique des activités",
               "where": "Dashboard",
-              "steps": "1. Cliquez sur \"Paramètres\" dans le menu gauche\n2. Cherchez un onglet \"Historique e-mail\" pour les activités e-mail\n3. Alternativement : cherchez \"Historique d'activité\" dans la navigation\n4. Ouvrez l'historique\n5. Vérifiez que les actions sont affichées avec horodatage, utilisateur et description",
-              "expected": "Le journal d'activité affiche toutes les actions avec horodatage et informations utilisateur.",
+              "steps": "1. Naviguez vers https://acc.mixel.ch/en/app/audit-trail\n2. Vérifiez qu'une liste d'entrées de piste d'audit est affichée\n3. Vérifiez que les entrées montrent l'utilisateur, l'action, la date et l'entité\n4. Vérifiez que la liste est défilable ou paginée",
+              "expected": "La page de piste d'audit affiche un journal des actions utilisateur avec horodatages.",
               "prio": "Critical"
             }
           ]
@@ -22378,8 +22378,8 @@
               "id": "ACC-006",
               "title": "Sign Out",
               "where": "Auth > Login/Password Reset",
-              "steps": "1. Navigate to https://acc.mixel.ch/en/app\n2. Click the user profile icon at the bottom-left of the sidebar\n3. Click \"Sign out\"\n4. Verify the URL contains /auth/signin",
-              "expected": "User is signed out and redirected to the sign-in page (/auth/signin).",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app\n2. Click the user profile icon at the bottom-left of the sidebar\n3. Click the 'Sign out' button\n4. Verify the URL contains '/auth/signin'",
+              "expected": "The user is signed out. The browser navigates to /auth/signin (which may show an email entry or OTP step). Presence of the sign-in page confirms successful sign-out.",
               "prio": "Medium"
             }
           ]
@@ -22416,40 +22416,40 @@
               "id": "ACC-010",
               "title": "Configure VAT Settings",
               "where": "Settings > Company Profile",
-              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings\n2. Click the \"Company Profile\" tab\n3. Enter the \"UID Number\" (e.g. CHE-123.456.789)\n4. Verify the \"Company Name\" is filled in\n5. Click \"Save Company Profile\"\n6. Verify the message \"Company profile saved\" appears",
-              "expected": "Company profile with VAT number is saved. The UID appears on invoices and quotes.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings?tab=company\n2. Verify the 'Company Profile' section is visible\n3. Fill in the 'Company Name' field with 'Test AG'\n4. Fill in the tax ID / UID field with 'CHE-123.456.789'\n5. Click the 'Save' button\n6. Verify a success toast message appears",
+              "expected": "Company profile is saved. A success notification appears.",
               "prio": "High"
             },
             {
               "id": "ACC-011",
               "title": "Set Invoice Numbering Format",
               "where": "Settings > Numbering",
-              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings\n2. Click the \"Numbering\" tab\n3. Change the \"Invoice\" prefix (e.g. from \"RE-\" to \"INV-\")\n4. Set \"Next Number\" to desired start value (e.g. 100)\n5. Check the preview (e.g. INV-0100)\n6. Click \"Save Numbering\"\n7. Verify the message \"Numbering settings saved\" appears",
-              "expected": "Numbering format is saved. The next invoice will use the configured number.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings?tab=numbering\n2. Verify the invoice prefix field is visible (e.g. placeholder 'RE-')\n3. Verify the invoice next number field is visible\n4. Change the invoice prefix to 'INV-'\n5. Click the 'Save' button\n6. Verify a success message appears",
+              "expected": "Invoice numbering format is updated. A success message appears.",
               "prio": "High"
             },
             {
               "id": "ACC-012",
               "title": "Configure Default Payment Terms",
               "where": "Settings > Numbering",
-              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings\n2. Click the \"Numbering\" tab\n3. Scroll to the \"Default Values\" card\n4. Enter \"30\" in the \"Payment Term (Days)\" field\n5. Click \"Save Numbering\"\n6. Verify that the message \"Numbering settings saved\" appears",
-              "expected": "The default payment term value is saved. New invoices will use this value as the due date calculated from the invoice date.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings?tab=numbering\n2. Scroll down to the 'Payment Terms' section\n3. Verify that existing payment terms (e.g. '30 days') are listed\n4. Verify that a button to add a new payment term is visible",
+              "expected": "The Payment Terms section shows existing terms and an option to add new ones.",
               "prio": "High"
             },
             {
               "id": "ACC-013",
               "title": "Select UI Language",
               "where": "Settings > My Profile",
-              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings\n2. Click the \"My Profile\" tab\n3. Enter a \"Display Name\" (e.g. \"John Smith\")\n4. Select the desired language under \"Preferred Language\"\n5. Click \"Save Profile\"\n6. Verify the message \"Profile saved\" appears\n7. Verify the UI switches to the selected language",
-              "expected": "Language is saved. The app interface switches to the selected language.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings?tab=profile\n2. Verify the 'My Profile' section is visible\n3. Locate the display name field\n4. Verify a language selection dropdown is visible\n5. Change the language to 'English'\n6. Click 'Save'",
+              "expected": "Profile settings are saved. UI language updates to the selected language.",
               "prio": "Medium"
             },
             {
               "id": "ACC-014",
               "title": "Set Email Sender Details",
               "where": "Settings > Email Settings",
-              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings\n2. Click the \"Email Settings\" tab\n3. Enter sender email address (e.g. accounting@company.com)\n4. Enter sender name (e.g. \"Company Ltd\")\n5. Click \"Save Settings\"\n6. Verify the message \"Email settings saved\" appears",
-              "expected": "Email sender details are saved. Sent invoices and quotes use these details.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings?tab=email\n2. Verify the 'Email Settings' section is visible\n3. Verify sender name and sender email fields are present\n4. Fill in the sender name field\n5. Click 'Save'\n6. Verify a success message appears",
+              "expected": "Email sender settings are saved. A success message appears.",
               "prio": "High"
             }
           ]
@@ -22462,31 +22462,31 @@
               "id": "ACC-015",
               "title": "View Default Chart of Accounts",
               "where": "Accounting > Chart of Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/en/app/accounting\n2. Click the \"Chart of Accounts\" tab\n3. Verify the list shows columns \"Account No.\" and account name\n4. Verify pre-installed standard accounts (e.g. 1000–9999) are present",
-              "expected": "A list of accounts with account number, name and type is displayed. Default accounts (e.g. 1000–9999) are present.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/accounting\n2. Click the 'Chart of Accounts' tab button\n3. Verify a table of accounts is displayed\n4. Verify rows contain account number and account name columns\n5. Verify accounts in the range 1000–9999 are present",
+              "expected": "A table of accounts with account numbers and names is displayed. Default accounts (1000–9999) are present.",
               "prio": "Medium"
             },
             {
               "id": "ACC-016",
               "title": "Add a New Account",
               "where": "Accounting > Chart of Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/en/app/accounting\n2. Click the \"Chart of Accounts\" tab\n3. Click the \"Add Account\" button\n4. Enter an account number (e.g. 9001)\n5. Enter an account name (e.g. \"Test Expense\")\n6. Select account type (e.g. \"Expense\")\n7. Click \"Save\"\n8. Verify the new account appears in the list",
-              "expected": "New account is created and appears in the chart of accounts. It is available for journal entries.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/accounting\n2. Click the 'Chart of Accounts' tab button\n3. Click the 'Add Account' or 'New Account' button\n4. Fill in the account number field\n5. Fill in the account name field\n6. Click 'Save' or 'Create'\n7. Verify the new account appears in the list",
+              "expected": "A new account is created and appears in the chart of accounts.",
               "prio": "Medium"
             },
             {
               "id": "ACC-017",
               "title": "Edit an Existing Account",
               "where": "Accounting > Chart of Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/en/app/accounting\n2. Click the \"Chart of Accounts\" tab\n3. Find an existing account in the account list\n4. Click the account to edit it\n5. Change the account name\n6. Click \"Save\"\n7. Verify the updated name appears in the list",
-              "expected": "Account is updated. The new name appears immediately in the account list.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/accounting\n2. Click the 'Chart of Accounts' tab button\n3. Click on an existing account row to edit it\n4. Modify the account name field\n5. Click 'Save'\n6. Verify the updated name appears in the list",
+              "expected": "The account name is updated and reflected in the chart of accounts.",
               "prio": "Medium"
             },
             {
               "id": "ACC-018",
               "title": "Deactivate / Archive Account",
               "where": "Accounting > Chart of Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/en/app/accounting\n2. Click the \"Chart of Accounts\" tab\n3. Find an active account to deactivate\n4. Click the account's action menu\n5. Select \"Deactivate\" or \"Archive\"\n6. Confirm the action\n7. Verify the account is marked inactive or hidden",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings?tab=profile\n2. Locate the language dropdown in the profile section\n3. Select a different language (e.g. German)\n4. Click 'Save'\n5. Verify the UI language changes",
               "expected": "The UI language switches according to the selection.",
               "prio": "High"
             },
@@ -22494,8 +22494,8 @@
               "id": "ACC-019",
               "title": "Search / Filter Accounts",
               "where": "Accounting > Chart of Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/en/app/accounting\n2. Click the \"Chart of Accounts\" tab\n3. Click in the search field \"Search account (number or name)...\"\n4. Enter an account number (e.g. \"1000\")\n5. Verify the list filters to matching accounts\n6. Clear the search and enter an account name\n7. Verify filtering by name also works",
-              "expected": "The search function filters the account list in real time by number and name.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/accounting\n2. Click the 'Chart of Accounts' tab button\n3. Locate the search input in the chart of accounts\n4. Type an account number or name to filter\n5. Verify the list filters to show matching accounts",
+              "expected": "The account list filters to show only matching accounts.",
               "prio": "Medium"
             }
           ]
@@ -22508,24 +22508,24 @@
               "id": "ACC-020",
               "title": "Add a Bank Account",
               "where": "Banking > Bank Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/en/app/banking\n2. Click the \"New Account\" button\n3. Enter \"Account Name\" (e.g. \"Business Account CHF\")\n4. Enter \"Bank Name\" (e.g. \"UBS Switzerland AG\")\n5. Select \"Account Type\" (e.g. \"Checking\")\n6. Select currency \"CHF\"\n7. Enter \"Opening Balance\" (e.g. 10000)\n8. Click \"Create\"\n9. Verify the message \"Account created\" appears",
-              "expected": "Bank account is created and displayed in the account list. Transactions can be recorded.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/banking\n2. Click 'Add Bank Account' or 'New Bank Account'\n3. Fill in the account name field\n4. Fill in the IBAN field (e.g. CH44 3199 9123 0008 8901 2)\n5. Click 'Save'\n6. Verify the bank account appears in the list",
+              "expected": "A new bank account is added and appears in the banking section.",
               "prio": "High"
             },
             {
               "id": "ACC-021",
               "title": "Validate Invalid IBAN Format",
               "where": "Banking > Bank Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/en/app/banking\n2. Click the \"New Account\" button\n3. Enter an account name\n4. Find the IBAN input field in the form\n5. Enter an invalid IBAN format (e.g. \"INVALID123\")\n6. Click \"Create\"\n7. Verify a validation error message appears for the IBAN field",
-              "expected": "The system shows a validation error for the invalid IBAN format. The account is not saved.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/banking\n2. Click 'Add Bank Account' or 'New Bank Account'\n3. Fill in the IBAN field with an invalid value (e.g. 'INVALID123')\n4. Click 'Save'\n5. Verify an error message about invalid IBAN is shown",
+              "expected": "An error message is displayed indicating the IBAN format is invalid.",
               "prio": "High"
             },
             {
               "id": "ACC-022",
               "title": "Set Default Bank Account",
               "where": "Banking > Bank Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/en/app/banking\n2. Verify at least one bank account is listed under \"Your Accounts\"\n3. Click on the account to set as default\n4. Look for \"Set as Default\" option in account details or action menu\n5. Enable the option\n6. Verify the account is marked as the default account",
-              "expected": "Default bank account is set. It will be pre-selected for new invoices and transactions.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/banking\n2. Verify at least one bank account is listed\n3. Click the actions menu on a bank account\n4. Select 'Set as default' or 'Make default'\n5. Verify the account is marked as default",
+              "expected": "The selected bank account is set as the default.",
               "prio": "High"
             },
             {
@@ -23090,8 +23090,8 @@
               "id": "ACC-086",
               "title": "Haupt-Dashboard anzeigen",
               "where": "Reports > Reports",
-              "steps": "1. Navigate to https://acc.mixel.ch/en/app\n2. Verify the dashboard displays KPIs (open invoices, expenses, revenue)\n3. Verify amounts are shown in the company default currency",
-              "expected": "The dashboard shows KPIs like open invoices, expenses and revenue.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app\n2. Verify the dashboard is displayed\n3. Verify financial KPIs are visible (open invoices, revenue, expenses)\n4. Verify amounts are shown in the company default currency",
+              "expected": "The dashboard shows financial KPIs including open invoices, revenue and expenses.",
               "prio": "High"
             },
             {
@@ -23268,32 +23268,32 @@
               "id": "ACC-106",
               "title": "Konfigurieren Sie automatische Zahlungserinnerungen",
               "where": "Settings > Numbering",
-              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings\n2. Click the \"Numbering\" tab\n3. Scroll to the \"Default Values\" card\n4. Enter the standard value in \"Payment Terms (Days)\" (e.g. 30)\n5. Click \"Save Numbering\"\n6. Create a new invoice and verify the due date is calculated 30 days from today",
-              "expected": "Default payment terms are saved. New invoices use this value for due date calculation.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings?tab=numbering\n2. Scroll to the 'Payment Terms' section\n3. Click 'Add' to create a new payment term\n4. Fill in the name field (e.g. 'Net 30')\n5. Fill in the days field with '30'\n6. Click 'Save'\n7. Verify the new payment term appears in the list",
+              "expected": "A new payment term is created and listed in the payment terms section.",
               "prio": "High"
             },
             {
               "id": "ACC-107",
               "title": "Konfigurieren Sie die E-Mail-Versanddomäne",
               "where": "Settings > Email Settings",
-              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings\n2. Click the \"Email Settings\" tab\n3. Enter an email address with the desired domain in \"Sender Email\"\n4. Enter the display name in \"Sender Name\"\n5. Click \"Save Settings\"\n6. Verify the message \"Email settings saved\" appears\n7. Send a test email and verify the sender",
-              "expected": "Email domain is configured. Outgoing emails use the configured sender domain.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings?tab=email\n2. Verify the 'Email Settings' section is visible\n3. Look for the sender email / domain configuration section\n4. Verify fields for sender name and sender address are present",
+              "expected": "The Email Settings tab shows sender name and email address configuration fields.",
               "prio": "High"
             },
             {
               "id": "ACC-108",
               "title": "Datums- und Zahlenformat ändern",
               "where": "Settings > My Profile",
-              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings\n2. Click the \"My Profile\" tab\n3. Change the \"Preferred Language\" (language also determines date format)\n4. Click \"Save Profile\"\n5. Verify the message \"Profile saved\" appears\n6. Verify date and number formats adapt accordingly in the app",
-              "expected": "Language and format settings are saved. Date and number formats adapt to the language setting.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings?tab=profile\n2. Verify the 'My Profile' section is visible\n3. Locate the display name or locale preference fields\n4. Verify the language dropdown is present\n5. Select a different locale setting",
+              "expected": "Profile locale settings are visible and can be changed.",
               "prio": "High"
             },
             {
               "id": "ACC-109",
               "title": "Zugriff auf Audit-Protokoll/Aktivitätsverlauf",
               "where": "Dashboard",
-              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings\n2. Look for an \"Email History\" tab for email activity\n3. Alternatively: look for \"Activity History\" or \"Audit Log\" in navigation\n4. Open the history\n5. Verify actions are shown with timestamp, user and description",
-              "expected": "Activity log shows all actions with timestamp and user information.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/audit-trail\n2. Verify a list of audit trail entries is displayed\n3. Verify entries show user, action, date and entity information\n4. Verify the list is scrollable or paginated",
+              "expected": "The audit trail page shows a log of user actions with timestamps.",
               "prio": "Critical"
             }
           ]
@@ -23552,8 +23552,8 @@
               "id": "ACC-006",
               "title": "Disconnessione",
               "where": "Auth > Accesso/Reset password",
-              "steps": "1. Navigare a https://acc.mixel.ch/en/app\n2. Fare clic sull'icona del profilo in basso a sinistra nella barra laterale\n3. Fare clic su \"Disconnetti\"\n4. Verificare che l'URL contenga /auth/signin",
-              "expected": "L'utente è disconnesso e reindirizzato alla pagina di accesso (/auth/signin).",
+              "steps": "1. Navigare a https://acc.mixel.ch/en/app\n2. Fare clic sull'icona del profilo in basso a sinistra nella barra laterale\n3. Fare clic su 'Disconnetti'\n4. Verificare che l'URL contenga '/auth/signin'",
+              "expected": "L'utente è disconnesso. Il browser va a /auth/signin (mostra inserimento e-mail o OTP). La pagina di accesso conferma la disconnessione.",
               "prio": "Medium"
             }
           ]
@@ -23590,40 +23590,40 @@
               "id": "ACC-010",
               "title": "Configurare le impostazioni IVA",
               "where": "Impostazioni > Profilo azienda",
-              "steps": "1. Cliccare su \"Impostazioni\" nel menu a sinistra\n2. Cliccare sulla scheda \"Profilo aziendale\"\n3. Inserire il \"Numero IDI\" (es. CHE-123.456.789)\n4. Verificare che il \"Nome azienda\" sia compilato\n5. Cliccare su \"Salva profilo aziendale\"\n6. Verificare che appaia il messaggio \"Profilo aziendale salvato\"",
-              "expected": "Il profilo aziendale con il numero IVA viene salvato. L'IDI appare su fatture e preventivi.",
+              "steps": "1. Navigare a https://acc.mixel.ch/en/app/settings?tab=company\n2. Verificare che la sezione 'Profilo Azienda' sia visibile\n3. Inserire il 'Nome Azienda' (es. 'Test SA')\n4. Inserire il numero IVA / UID 'CHE-123.456.789'\n5. Fare clic su 'Salva'\n6. Verificare che appaia un messaggio di successo",
+              "expected": "Il profilo aziendale è salvato. Appare un messaggio di successo.",
               "prio": "High"
             },
             {
               "id": "ACC-011",
               "title": "Impostare il formato numerazione fatture",
               "where": "Impostazioni > Numerazione",
-              "steps": "1. Cliccare su \"Impostazioni\" nel menu a sinistra\n2. Cliccare sulla scheda \"Numerazione\"\n3. Modificare il prefisso \"Fattura\" (es. da \"RE-\" a \"INV-\")\n4. Impostare il \"Prossimo numero\" (es. 100)\n5. Verificare l'anteprima (es. INV-0100)\n6. Cliccare su \"Salva numerazione\"\n7. Verificare che appaia \"Impostazioni di numerazione salvate\"",
-              "expected": "Il formato di numerazione viene salvato. La prossima fattura userà il numero configurato.",
+              "steps": "1. Navigare a https://acc.mixel.ch/en/app/settings?tab=numbering\n2. Verificare che il campo prefisso fattura sia visibile (es. 'RE-')\n3. Verificare che il campo numero successivo sia visibile\n4. Modificare il prefisso in 'FAT-'\n5. Fare clic su 'Salva'\n6. Verificare che appaia un messaggio di successo",
+              "expected": "Il formato di numerazione è aggiornato. Appare un messaggio di successo.",
               "prio": "High"
             },
             {
               "id": "ACC-012",
               "title": "Configurare i termini di pagamento predefiniti",
               "where": "Impostazioni > Numerazione",
-              "steps": "1. Fare clic su \"Impostazioni\" nel menu a sinistra\n2. Fare clic sulla scheda \"Numerazione\"\n3. Scorrere fino alla scheda \"Valori predefiniti\"\n4. Inserire \"30\" nel campo \"Termine di pagamento (giorni)\"\n5. Fare clic su \"Salva numerazione\"\n6. Verificare che venga visualizzato il messaggio \"Impostazioni di numerazione salvate\"",
-              "expected": "Il valore predefinito del termine di pagamento viene salvato. Le nuove fatture utilizzeranno questo valore come data di scadenza calcolata dalla data della fattura.",
+              "steps": "1. Navigare a https://acc.mixel.ch/en/app/settings?tab=numbering\n2. Scorrere fino alla sezione 'Termini di Pagamento'\n3. Verificare che i termini esistenti (es. '30 giorni') siano elencati\n4. Verificare che sia visibile un pulsante per aggiungerne",
+              "expected": "La sezione Termini di Pagamento mostra le voci esistenti e un'opzione per aggiungerne.",
               "prio": "High"
             },
             {
               "id": "ACC-013",
               "title": "Selezionare la lingua dell'interfaccia",
               "where": "Impostazioni > Il mio profilo",
-              "steps": "1. Cliccare su \"Impostazioni\" nel menu a sinistra\n2. Cliccare sulla scheda \"Il mio profilo\"\n3. Inserire un \"Nome visualizzato\" (es. \"Mario Rossi\")\n4. Selezionare la lingua in \"Lingua preferita\"\n5. Cliccare su \"Salva profilo\"\n6. Verificare che appaia il messaggio \"Profilo salvato\"\n7. Verificare che l'interfaccia passi alla lingua selezionata",
-              "expected": "La lingua viene salvata. L'interfaccia dell'app passa alla lingua selezionata.",
+              "steps": "1. Navigare a https://acc.mixel.ch/en/app/settings?tab=profile\n2. Verificare che la sezione 'Il Mio Profilo' sia visibile\n3. Individuare il campo nome visualizzato\n4. Verificare che sia visibile un menu a discesa per la lingua\n5. Selezionare 'Italiano'\n6. Fare clic su 'Salva'",
+              "expected": "Le impostazioni del profilo sono salvate. La lingua dell'interfaccia si aggiorna.",
               "prio": "Medium"
             },
             {
               "id": "ACC-014",
               "title": "Impostare i dettagli del mittente e-mail",
               "where": "Impostazioni > Impostazioni email",
-              "steps": "1. Cliccare su \"Impostazioni\" nel menu a sinistra\n2. Cliccare sulla scheda \"Impostazioni e-mail\"\n3. Inserire l'indirizzo in \"E-mail mittente\" (es. contabilita@azienda.ch)\n4. Inserire il nome in \"Nome mittente\" (es. \"Azienda Srl\")\n5. Cliccare su \"Salva impostazioni\"\n6. Verificare che appaia il messaggio \"Impostazioni e-mail salvate\"",
-              "expected": "I dati del mittente e-mail vengono salvati. Le fatture e preventivi inviati usano questi dati.",
+              "steps": "1. Navigare a https://acc.mixel.ch/en/app/settings?tab=email\n2. Verificare che la sezione 'Impostazioni Email' sia visibile\n3. Verificare che i campi nome mittente ed email siano presenti\n4. Inserire il nome mittente\n5. Fare clic su 'Salva'\n6. Verificare che appaia un messaggio di successo",
+              "expected": "Le impostazioni email mittente sono salvate.",
               "prio": "High"
             }
           ]
@@ -23636,31 +23636,31 @@
               "id": "ACC-015",
               "title": "Visualizzare il piano dei conti predefinito",
               "where": "Contabilità > Piano dei conti",
-              "steps": "1. Cliccare su \"Contabilità\" nel menu a sinistra\n2. Cliccare sulla scheda \"Piano dei conti\"\n3. Verificare che la lista mostri le colonne con numeri e nomi dei conti\n4. Verificare che i conti standard preinstallati siano presenti",
-              "expected": "Viene mostrato un elenco di conti con numero, nome e tipo. I conti predefiniti (ad es. 1000–9999) sono presenti.",
+              "steps": "1. Navigare a https://acc.mixel.ch/en/app/accounting\n2. Fare clic sulla scheda 'Piano dei Conti'\n3. Verificare che sia visualizzata una tabella dei conti\n4. Verificare che le righe contengano numero e nome conto\n5. Verificare che siano presenti conti nell'intervallo 1000–9999",
+              "expected": "Viene visualizzata una tabella dei conti con numeri e nomi. I conti predefiniti (1000–9999) sono presenti.",
               "prio": "Medium"
             },
             {
               "id": "ACC-016",
               "title": "Aggiungere un nuovo conto",
               "where": "Contabilità > Piano dei conti",
-              "steps": "1. Cliccare su \"Contabilità\" nel menu a sinistra\n2. Cliccare sulla scheda \"Piano dei conti\"\n3. Cliccare sul pulsante \"Add Account\"\n4. Inserire un numero di conto (es. 9001)\n5. Inserire un nome conto (es. \"Spesa test\")\n6. Selezionare il tipo di conto\n7. Cliccare su \"Salva\"\n8. Verificare che il nuovo conto appaia nella lista",
-              "expected": "Il nuovo conto viene creato e appare nel piano dei conti. È disponibile per le registrazioni.",
+              "steps": "1. Navigare a https://acc.mixel.ch/en/app/accounting\n2. Fare clic sulla scheda 'Piano dei Conti'\n3. Fare clic su 'Aggiungi Conto' o 'Nuovo Conto'\n4. Inserire il numero conto\n5. Inserire il nome conto\n6. Fare clic su 'Salva'\n7. Verificare che il nuovo conto appaia nell'elenco",
+              "expected": "Un nuovo conto è creato e appare nel piano dei conti.",
               "prio": "Medium"
             },
             {
               "id": "ACC-017",
               "title": "Modificare un conto esistente",
               "where": "Contabilità > Piano dei conti",
-              "steps": "1. Cliccare su \"Contabilità\" nel menu a sinistra\n2. Cliccare sulla scheda \"Piano dei conti\"\n3. Trovare un conto esistente nella lista\n4. Cliccare sul conto per modificarlo\n5. Modificare il nome del conto\n6. Cliccare su \"Salva\"\n7. Verificare che il nome aggiornato appaia nella lista",
-              "expected": "Il conto viene aggiornato. Il nuovo nome appare immediatamente nella lista dei conti.",
+              "steps": "1. Navigare a https://acc.mixel.ch/en/app/accounting\n2. Fare clic sulla scheda 'Piano dei Conti'\n3. Fare clic su una riga di conto esistente\n4. Modificare il nome conto\n5. Fare clic su 'Salva'\n6. Verificare che il nome aggiornato appaia nell'elenco",
+              "expected": "Il nome del conto è aggiornato e visibile nel piano dei conti.",
               "prio": "Medium"
             },
             {
               "id": "ACC-018",
               "title": "Disattivare / archiviare conto",
               "where": "Contabilità > Piano dei conti",
-              "steps": "1. Cliccare su \"Contabilità\" nel menu a sinistra\n2. Cliccare sulla scheda \"Piano dei conti\"\n3. Trovare un conto attivo da disattivare\n4. Cliccare sul menu azioni del conto\n5. Selezionare \"Disattiva\" o \"Archivia\"\n6. Confermare l'azione\n7. Verificare che il conto sia contrassegnato come inattivo",
+              "steps": "1. Navigare a https://acc.mixel.ch/en/app/settings?tab=profile\n2. Individuare il menu a discesa della lingua nella sezione profilo\n3. Selezionare un'altra lingua (es. Tedesco)\n4. Fare clic su 'Salva'\n5. Verificare che la lingua dell'interfaccia cambi",
               "expected": "La lingua dell'interfaccia cambia in base alla selezione.",
               "prio": "High"
             },
@@ -23668,8 +23668,8 @@
               "id": "ACC-019",
               "title": "Cercare / filtrare conti",
               "where": "Contabilità > Piano dei conti",
-              "steps": "1. Cliccare su \"Contabilità\" nel menu a sinistra\n2. Cliccare sulla scheda \"Piano dei conti\"\n3. Cliccare nel campo di ricerca \"Cerca conto...\"\n4. Inserire un numero di conto (es. \"1000\")\n5. Verificare che la lista filtri sui conti corrispondenti\n6. Cancellare la ricerca e inserire un nome conto\n7. Verificare che il filtraggio per nome funzioni",
-              "expected": "La funzione di ricerca filtra la lista dei conti in tempo reale per numero e nome.",
+              "steps": "1. Navigare a https://acc.mixel.ch/en/app/accounting\n2. Fare clic sulla scheda 'Piano dei Conti'\n3. Individuare il campo di ricerca nel piano dei conti\n4. Digitare un numero o nome conto per filtrare\n5. Verificare che l'elenco si filtri di conseguenza",
+              "expected": "L'elenco dei conti viene filtrato per mostrare i conti corrispondenti.",
               "prio": "Medium"
             }
           ]
@@ -23682,24 +23682,24 @@
               "id": "ACC-020",
               "title": "Aggiungere un conto bancario",
               "where": "Banca > Conti bancari",
-              "steps": "1. Cliccare su \"Banca\" nel menu a sinistra\n2. Cliccare sul pulsante \"Nuovo conto\"\n3. Inserire il \"Nome del conto\" (es. \"Conto commerciale CHF\")\n4. Inserire il \"Nome della banca\" (es. \"UBS Switzerland AG\")\n5. Selezionare il \"Tipo di conto\" (es. \"Conto corrente\")\n6. Selezionare la valuta \"CHF\"\n7. Inserire il \"Saldo di apertura\" (es. 10000)\n8. Cliccare su \"Crea\"\n9. Verificare che appaia il messaggio \"Conto creato\"",
-              "expected": "Il conto bancario viene creato e visualizzato nella lista. Le transazioni possono essere registrate.",
+              "steps": "1. Navigare a https://acc.mixel.ch/en/app/banking\n2. Fare clic su 'Aggiungi Conto Bancario'\n3. Inserire il nome del conto\n4. Inserire l'IBAN (es. CH44 3199 9123 0008 8901 2)\n5. Fare clic su 'Salva'\n6. Verificare che il conto appaia nell'elenco",
+              "expected": "Un nuovo conto bancario è aggiunto e appare nella sezione banca.",
               "prio": "High"
             },
             {
               "id": "ACC-021",
               "title": "Validare il formato IBAN non valido",
               "where": "Banca > Conti bancari",
-              "steps": "1. Cliccare su \"Banca\" nel menu a sinistra\n2. Cliccare sul pulsante \"Nuovo conto\"\n3. Inserire un nome conto\n4. Trovare il campo IBAN nel modulo\n5. Inserire un formato IBAN non valido (es. \"INVALID123\")\n6. Cliccare su \"Crea\"\n7. Verificare che appaia un messaggio di errore di validazione per il campo IBAN",
-              "expected": "Il sistema mostra un errore di validazione per il formato IBAN non valido. Il conto non viene salvato.",
+              "steps": "1. Navigare a https://acc.mixel.ch/en/app/banking\n2. Fare clic su 'Aggiungi Conto Bancario'\n3. Inserire un IBAN non valido (es. 'INVALIDO123')\n4. Fare clic su 'Salva'\n5. Verificare che venga mostrato un messaggio di errore IBAN non valido",
+              "expected": "Viene mostrato un messaggio di errore che indica che il formato IBAN non è valido.",
               "prio": "High"
             },
             {
               "id": "ACC-022",
               "title": "Impostare il conto bancario predefinito",
               "where": "Banca > Conti bancari",
-              "steps": "1. Cliccare su \"Banca\" nel menu a sinistra\n2. Verificare che almeno un conto bancario sia elencato in \"I tuoi conti\"\n3. Cliccare sul conto da impostare come predefinito\n4. Cercare l'opzione \"Imposta come predefinito\" nei dettagli o nel menu azioni\n5. Attivare l'opzione\n6. Verificare che il conto sia contrassegnato come predefinito",
-              "expected": "Il conto bancario predefinito viene impostato. Sarà preselezionato per nuove fatture e transazioni.",
+              "steps": "1. Navigare a https://acc.mixel.ch/en/app/banking\n2. Verificare che sia elencato almeno un conto bancario\n3. Fare clic sul menu azioni di un conto bancario\n4. Selezionare 'Imposta come predefinito'\n5. Verificare che il conto sia contrassegnato come predefinito",
+              "expected": "Il conto bancario selezionato è impostato come predefinito.",
               "prio": "High"
             },
             {
@@ -24264,8 +24264,8 @@
               "id": "ACC-086",
               "title": "Haupt-Dashboard anzeigen",
               "where": "Rapporti > Rapporti",
-              "steps": "1. Navigare a https://acc.mixel.ch/en/app\n2. Verificare che la dashboard mostri KPI (fatture aperte, spese, ricavi)\n3. Verificare che gli importi siano nella valuta predefinita",
-              "expected": "La dashboard mostra KPI come fatture aperte, spese e ricavi.",
+              "steps": "1. Navigare a https://acc.mixel.ch/en/app\n2. Verificare che la dashboard sia visualizzata\n3. Verificare che i KPI finanziari siano visibili (fatture aperte, ricavi, spese)\n4. Verificare che gli importi siano nella valuta predefinita",
+              "expected": "La dashboard mostra i KPI finanziari inclusi fatture aperte, ricavi e spese.",
               "prio": "High"
             },
             {
@@ -24442,32 +24442,32 @@
               "id": "ACC-106",
               "title": "Konfigurieren Sie automatische Zahlungserinnerungen",
               "where": "Impostazioni > Numerazione",
-              "steps": "1. Cliccare su \"Impostazioni\" nel menu a sinistra\n2. Cliccare sulla scheda \"Numerazione\"\n3. Scorrere fino alla scheda \"Valori predefiniti\"\n4. Inserire il valore standard in \"Termini di pagamento (giorni)\" (es. 30)\n5. Cliccare su \"Salva numerazione\"\n6. Creare una nuova fattura e verificare che la data di scadenza sia calcolata a 30 giorni",
-              "expected": "I termini di pagamento predefiniti vengono salvati. Le nuove fatture usano questo valore per il calcolo della scadenza.",
+              "steps": "1. Navigare a https://acc.mixel.ch/en/app/settings?tab=numbering\n2. Scorrere fino alla sezione 'Termini di Pagamento'\n3. Fare clic su 'Aggiungi'\n4. Inserire il nome (es. 'Netto 30')\n5. Inserire '30' nel campo giorni\n6. Fare clic su 'Salva'\n7. Verificare che il nuovo termine appaia nell'elenco",
+              "expected": "Un nuovo termine di pagamento è creato e elencato.",
               "prio": "High"
             },
             {
               "id": "ACC-107",
               "title": "Konfigurieren Sie die E-Mail-Versanddomäne",
               "where": "Impostazioni > Impostazioni email",
-              "steps": "1. Cliccare su \"Impostazioni\" nel menu a sinistra\n2. Cliccare sulla scheda \"Impostazioni e-mail\"\n3. Inserire un indirizzo e-mail con il dominio desiderato in \"E-mail mittente\"\n4. Inserire il nome visualizzato in \"Nome mittente\"\n5. Cliccare su \"Salva impostazioni\"\n6. Verificare che appaia il messaggio \"Impostazioni e-mail salvate\"\n7. Inviare un'e-mail di test e verificare il mittente",
-              "expected": "Il dominio e-mail è configurato. Le e-mail in uscita usano il dominio mittente configurato.",
+              "steps": "1. Navigare a https://acc.mixel.ch/en/app/settings?tab=email\n2. Verificare che la sezione 'Impostazioni Email' sia visibile\n3. Cercare la sezione configurazione mittente\n4. Verificare che siano presenti i campi nome e indirizzo mittente",
+              "expected": "La scheda Impostazioni Email mostra i campi di configurazione del mittente.",
               "prio": "High"
             },
             {
               "id": "ACC-108",
               "title": "Datums- und Zahlenformat ändern",
               "where": "Impostazioni > Il mio profilo",
-              "steps": "1. Cliccare su \"Impostazioni\" nel menu a sinistra\n2. Cliccare sulla scheda \"Il mio profilo\"\n3. Modificare la \"Lingua preferita\" (la lingua determina anche il formato della data)\n4. Cliccare su \"Salva profilo\"\n5. Verificare che appaia il messaggio \"Profilo salvato\"\n6. Verificare che i formati di data e numero si adattino nell'app",
-              "expected": "Le impostazioni di lingua e formato vengono salvate. I formati di data e numero si adattano alla lingua.",
+              "steps": "1. Navigare a https://acc.mixel.ch/en/app/settings?tab=profile\n2. Verificare che la sezione 'Il Mio Profilo' sia visibile\n3. Individuare i campi nome visualizzato o preferenza locale\n4. Verificare che il menu a discesa della lingua sia presente\n5. Selezionare un'altra impostazione locale",
+              "expected": "Le impostazioni locale del profilo sono visibili e modificabili.",
               "prio": "High"
             },
             {
               "id": "ACC-109",
               "title": "Zugriff auf Audit-Protokoll/Aktivitätsverlauf",
               "where": "Dashboard",
-              "steps": "1. Cliccare su \"Impostazioni\" nel menu a sinistra\n2. Cercare una scheda \"Cronologia e-mail\" per le attività e-mail\n3. In alternativa: cercare \"Cronologia attività\" o \"Audit log\" nella navigazione\n4. Aprire la cronologia\n5. Verificare che le azioni siano mostrate con timestamp, utente e descrizione",
-              "expected": "Il registro attività mostra tutte le azioni con timestamp e informazioni sull'utente.",
+              "steps": "1. Navigare a https://acc.mixel.ch/en/app/audit-trail\n2. Verificare che sia visualizzato un elenco di voci di audit trail\n3. Verificare che le voci mostrino utente, azione, data ed entità\n4. Verificare che l'elenco sia scorrevole o paginato",
+              "expected": "La pagina audit trail mostra un registro delle azioni utente con timestamp.",
               "prio": "Critical"
             }
           ]
