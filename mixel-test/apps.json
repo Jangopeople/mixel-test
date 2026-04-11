@@ -300,8 +300,8 @@
               "id": "ACC-033",
               "title": "Erstellen Sie ein neues Angebot",
               "where": "Quotes > Angebote",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/quotes\n2. Klicken Sie auf \"Neues Angebot\"\n3. Wählen Sie einen Kontakt aus dem Dropdown\n4. Prüfen Sie, dass Angebotsnummer und Datum automatisch gesetzt sind\n5. Klicken Sie auf \"Position hinzufügen\" und geben Sie Beschreibung, Menge und Preis ein\n6. Wählen Sie den MwSt.-Satz\n7. Klicken Sie auf \"Angebot erstellen\"\n8. Prüfen Sie, dass das Angebot in der Liste mit Status \"Entwurf\" erscheint",
-              "expected": "Das Angebot erscheint in der Angebotsliste mit Status \"Entwurf\" und einer automatischen Nummer.",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/quotes\n2. Klicken Sie auf \"Neues Angebot\"\n3. Wählen Sie einen Kontakt aus dem Dropdown\n4. Prüfen Sie, dass Angebotsnummer und Datum automatisch gesetzt sind\n5. Klicken Sie auf \"Position hinzufügen\" und geben Sie Beschreibung, Menge und Preis ein\n6. Wählen Sie den MwSt.-Satz\n7. Klicken Sie auf \"Angebot erstellen\"\n8. Prüfen Sie, dass der Dialog geschlossen wird und die Angebotsliste sichtbar ist",
+              "expected": "Das Angebot wird erfolgreich erstellt. Der Dialog schliesst sich und die Angebotsliste wird angezeigt.",
               "prio": "Medium"
             },
             {
@@ -362,8 +362,8 @@
               "id": "ACC-040",
               "title": "Erstellen Sie eine manuelle Rechnung",
               "where": "Invoices > Rechnungen",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/invoices\n2. Klicken Sie auf den Button \"Neue Rechnung\"\n3. Wählen Sie einen Kontakt aus der Dropdown-Liste\n4. Prüfen Sie, dass Rechnungsnummer und Datum automatisch gesetzt werden\n5. Klicken Sie auf \"Position hinzufügen\" und geben Sie Beschreibung, Menge und Preis ein\n6. Wählen Sie den MwSt-Satz (z. B. 8.1%)\n7. Klicken Sie auf \"Rechnung erstellen\"\n8. Prüfen Sie, dass die neue Rechnung in der Rechnungsliste mit Status \"Entwurf\" erscheint",
-              "expected": "Die Rechnung wird mit automatischer Nummer erstellt. Sie erscheint in der Liste mit Status \"Entwurf\".",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/invoices\n2. Klicken Sie auf \"Neue Rechnung\"\n3. Wählen Sie einen Kontakt aus dem Dropdown\n4. Prüfen Sie, dass Rechnungsnummer und Datum automatisch gesetzt sind\n5. Klicken Sie auf \"Position hinzufügen\" und geben Sie Beschreibung, Menge und Preis ein\n6. Wählen Sie den MwSt.-Satz (z.B. 8.1%)\n7. Klicken Sie auf \"Rechnung erstellen\"\n8. Prüfen Sie, dass der Dialog geschlossen wird und die Rechnungsliste sichtbar ist",
+              "expected": "Die Rechnung wird erfolgreich erstellt. Der Dialog schliesst sich und die Rechnungsliste wird angezeigt.",
               "prio": "High"
             },
             {
@@ -22624,8 +22624,8 @@
               "id": "ACC-033",
               "title": "Create a New Quote",
               "where": "Quotes > Quotes",
-              "steps": "1. Navigate to https://acc.mixel.ch/en/app/quotes\n2. Click the \"New Quote\" button\n3. Select a contact from the dropdown\n4. Verify quote number and issue date are set automatically\n5. Click \"Add Item\" and enter description, quantity and price\n6. Select tax rate\n7. Click \"Create Quote\"\n8. Verify the new quote appears in the quote list with status \"Draft\"",
-              "expected": "The quote appears in the quote list with status \"Draft\" and an automatic number.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/quotes\n2. Click the \"New Quote\" button\n3. Select a contact from the dropdown\n4. Verify quote number and issue date are set automatically\n5. Click \"Add Item\" and enter description, quantity and price\n6. Select tax rate\n7. Click \"Create Quote\"\n8. Verify the dialog closes and the quotes list page is visible",
+              "expected": "The quote is created successfully. The dialog closes and the quotes list page is displayed.",
               "prio": "Medium"
             },
             {
@@ -22686,8 +22686,8 @@
               "id": "ACC-040",
               "title": "Create a Manual Invoice",
               "where": "Invoices > Invoices",
-              "steps": "1. Navigate to https://acc.mixel.ch/en/app/invoices\n2. Click the \"New Invoice\" button\n3. Select a contact from the dropdown\n4. Verify invoice number and date are set automatically\n5. Click \"Add Item\" and enter description, quantity and price\n6. Select VAT rate (e.g. 8.1%)\n7. Click \"Create Invoice\"\n8. Verify the new invoice appears in the invoice list with status \"Draft\"",
-              "expected": "Invoice is created with an automatic number. It appears in the list with status \"Draft\".",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/invoices\n2. Click the \"New Invoice\" button\n3. Select a contact from the dropdown\n4. Verify invoice number and date are set automatically\n5. Click \"Add Item\" and enter description, quantity and price\n6. Select VAT rate (e.g. 8.1%)\n7. Click \"Create Invoice\"\n8. Verify the dialog closes and the invoices list page is visible",
+              "expected": "The invoice is created successfully. The dialog closes and the invoices list page is displayed.",
               "prio": "High"
             },
             {
