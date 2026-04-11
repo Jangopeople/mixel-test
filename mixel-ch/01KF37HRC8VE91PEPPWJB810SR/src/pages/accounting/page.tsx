@@ -4,10 +4,13 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button.tsx";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card.tsx";
+import { RouteGuard } from "@/components/auth/RouteGuard";
+import { useAuth } from "@/hooks/use-auth";
 
-export default function AccountingDashboard() {
+function AccountingDashboardContent() {
   const navigate = useNavigate();
   const { i18n } = useTranslation();
+  const { user } = useAuth();
   const lng = i18n.language;
 
   return (
@@ -15,6 +18,9 @@ export default function AccountingDashboard() {
       <div>
         <h1 className="text-2xl font-bold">Dashboard</h1>
         <p className="text-sm text-muted-foreground">Übersicht Ihrer Buchhaltung</p>
+        {user && (
+          <p className="text-xs text-muted-foreground mt-1">Willkommen, {user.name || user.email}</p>
+        )}
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -77,5 +83,13 @@ export default function AccountingDashboard() {
         </Card>
       </div>
     </div>
+  );
+}
+
+export default function AccountingDashboard() {
+  return (
+    <RouteGuard requireAuth={true}>
+      <AccountingDashboardContent />
+    </RouteGuard>
   );
 }
