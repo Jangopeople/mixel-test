@@ -19,7 +19,7 @@ def apps_section(lang):
     """Return (start, end) of a language section in apps.json."""
     order = ['DE', 'FR', 'EN', 'IT']
     idx = order.index(lang)
-    starts = [apps.find(f'  {L}: [') for L in order]
+    starts = [apps.find(f'  "{L}": [') for L in order]
     s = starts[idx]
     e = starts[idx + 1] if idx + 1 < len(order) else len(apps)
     return s, e
