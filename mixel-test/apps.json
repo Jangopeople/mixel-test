@@ -84,7 +84,7 @@
               "id": "ACC-009",
               "title": "Geschäftsjahr konfigurieren",
               "where": "Einstellungen > Finanzen",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/settings\n2. Klicken Sie auf den Tab \"Finanzen\"\n3. Wählen Sie \"Geschäftsjahresbeginn\" (z. B. Januar)\n4. Wählen Sie die \"Standardwährung\" (z. B. CHF)\n5. Klicken Sie auf \"Finanzeinstellungen speichern\"\n6. Prüfen Sie, dass die Meldung \"Finanzeinstellungen gespeichert\" erscheint",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/settings\n2. Klicken Sie auf den Tab \"Finanzen\"\n3. Wählen Sie \"Geschäftsjahresbeginn\" (z. B. Januar)\n4. Wählen Sie die \"Standardwährung\" (z. B. CHF)\n5. Klicken Sie auf \"Finanzeinstellungen speichern\"\n6. Prüfen Sie, dass die gespeicherten Werte nach dem Neuladen der Seite bestehen bleiben",
               "expected": "Das Geschäftsjahr und die Standardwährung werden gespeichert. Neue Dokumente verwenden diese Werte.",
               "prio": "High"
             },
@@ -92,7 +92,7 @@
               "id": "ACC-010",
               "title": "Firmenprofil aktualisieren",
               "where": "Einstellungen > Firmenprofil",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/settings?tab=company\n2. Geben Sie im Feld 'Firmenname' den Namen 'Muster AG' ein\n3. Geben Sie die UID ein (z. B. 'CHE-123.456.789')\n4. Klicken Sie auf 'Speichern'\n5. Prüfen Sie dass eine Erfolgsmeldung erscheint",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/settings?tab=company\n2. Geben Sie im Feld 'Firmenname' den Namen 'Muster AG' ein\n3. Geben Sie die UID ein (z. B. 'CHE-123.456.789')\n4. Klicken Sie auf 'Speichern'\n5. Prüfen Sie, dass der Firmenname in den Einstellungen angezeigt wird",
               "expected": "Das Firmenprofil wurde gespeichert. Der Firmenname und die UID erscheinen auf Rechnungen.",
               "prio": "High"
             },
@@ -100,7 +100,7 @@
               "id": "ACC-011",
               "title": "Legen Sie das Rechnungsnummerierungsformat fest",
               "where": "Einstellungen > Nummerierung",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/settings?tab=numbering\n2. Geben Sie im Feld 'Rechnungsnummer' z.B. 'RE-' ein\n3. Klicken Sie auf 'Speichern'\n4. Prüfen Sie dass eine Erfolgsmeldung erscheint",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/settings?tab=numbering\n2. Geben Sie im Feld 'Rechnungsnummer' z.B. 'RE-' ein\n3. Klicken Sie auf 'Speichern'\n4. Prüfen Sie, dass der Präfix-Wert nach dem Speichern bestehen bleibt",
               "expected": "Die Nummerierung wurde gespeichert.",
               "prio": "High"
             },
@@ -108,7 +108,7 @@
               "id": "ACC-012",
               "title": "Konfigurieren Sie Standardzahlungsbedingungen",
               "where": "Einstellungen > Nummerierung",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/settings?tab=numbering\n2. Scrollen Sie zum Abschnitt 'Zahlungsbedingungen'\n3. Ändern Sie die Zahlungsfrist\n4. Klicken Sie auf 'Speichern'\n5. Prüfen Sie dass eine Erfolgsmeldung erscheint",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/settings?tab=numbering\n2. Scrollen Sie zum Abschnitt 'Zahlungsbedingungen'\n3. Ändern Sie die Zahlungsfrist\n4. Klicken Sie auf 'Speichern'\n5. Prüfen Sie, dass die aktualisierte Zahlungsfrist nach dem Speichern bestehen bleibt",
               "expected": "Die Zahlungsbedingungen wurden gespeichert.",
               "prio": "High"
             },
@@ -124,7 +124,7 @@
               "id": "ACC-014",
               "title": "Legen Sie die E-Mail-Absenderdetails fest",
               "where": "Einstellungen > E-Mail Einstellungen",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/settings?tab=email\n2. Geben Sie eine Test-E-Mail-Adresse ein\n3. Klicken Sie auf 'Speichern'\n4. Prüfen Sie dass eine Erfolgsmeldung erscheint",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/settings?tab=email\n2. Geben Sie eine Test-E-Mail-Adresse ein\n3. Klicken Sie auf 'Speichern'\n4. Prüfen Sie, dass die E-Mail-Adresse nach dem Speichern bestehen bleibt",
               "expected": "Die E-Mail-Einstellungen wurden gespeichert.",
               "prio": "High"
             }
@@ -208,7 +208,7 @@
               "id": "ACC-023",
               "title": "Bankkontodaten bearbeiten",
               "where": "Banking > Bankkonten",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/banking\n2. Klicken Sie auf das zu bearbeitende Bankkonto\n3. Klicken Sie auf \"Konto bearbeiten\"\n4. Ändern Sie den \"Kontoname\" oder den \"Bankname\"\n5. Klicken Sie auf \"Speichern\"\n6. Prüfen Sie, dass die Meldung \"Konto aktualisiert\" erscheint",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/banking\n2. Klicken Sie auf das zu bearbeitende Bankkonto\n3. Klicken Sie auf \"Konto bearbeiten\"\n4. Ändern Sie den \"Kontoname\" oder den \"Bankname\"\n5. Klicken Sie auf \"Speichern\"\n6. Prüfen Sie, dass der aktualisierte Name in der Kontoliste erscheint",
               "expected": "Die Bankkontodetails werden gespeichert. Der neue Name erscheint in der Kontoliste.",
               "prio": "High"
             },
@@ -230,7 +230,7 @@
               "id": "ACC-025",
               "title": "Erstellen Sie einen neuen Kundenkontakt",
               "where": "CRM > Kontakte",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/contacts\n2. Klicken Sie auf den Button \"Neuer Kontakt\"\n3. Wählen Sie den Typ \"Firma\"\n4. Geben Sie den \"Firmennamen\" ein (z. B. \"Muster AG\")\n5. Geben Sie \"E-Mail\" und \"Telefon\" ein\n6. Geben Sie die Adresse ein (Strasse, PLZ, Ort)\n7. Klicken Sie auf \"Erstellen\"\n8. Prüfen Sie, dass die Meldung \"Kontakt erstellt\" erscheint",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/contacts\n2. Klicken Sie auf den Button \"Neuer Kontakt\"\n3. Wählen Sie den Typ \"Firma\"\n4. Geben Sie den \"Firmennamen\" ein (z. B. \"Muster AG\")\n5. Geben Sie \"E-Mail\" und \"Telefon\" ein\n6. Geben Sie die Adresse ein (Strasse, PLZ, Ort)\n7. Klicken Sie auf \"Erstellen\"\n8. Prüfen Sie, dass der neue Kontakt in der Kontaktliste erscheint",
               "expected": "Der Kundenkontakt wird erstellt und in der Kontaktliste angezeigt. Er steht für Rechnungen und Angebote zur Verfügung.",
               "prio": "Medium"
             },
@@ -238,7 +238,7 @@
               "id": "ACC-026",
               "title": "Erstellen Sie einen neuen Lieferantenkontakt",
               "where": "CRM > Kontakte",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/contacts\n2. Klicken Sie auf den Button \"Neuer Kontakt\"\n3. Wählen Sie den Typ \"Firma\"\n4. Geben Sie den \"Firmennamen\" des Lieferanten ein (z. B. \"Lieferant GmbH\")\n5. Geben Sie E-Mail, Telefon und Adresse ein\n6. Klicken Sie auf \"Erstellen\"\n7. Prüfen Sie, dass die Meldung \"Kontakt erstellt\" erscheint",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/contacts\n2. Klicken Sie auf den Button \"Neuer Kontakt\"\n3. Wählen Sie den Typ \"Firma\"\n4. Geben Sie den \"Firmennamen\" des Lieferanten ein (z. B. \"Lieferant GmbH\")\n5. Geben Sie E-Mail, Telefon und Adresse ein\n6. Klicken Sie auf \"Erstellen\"\n7. Prüfen Sie, dass der neue Lieferantenkontakt in der Kontaktliste erscheint",
               "expected": "Der Lieferantenkontakt wird erstellt. Er steht für Ausgaben und Bestellungen zur Verfügung.",
               "prio": "Medium"
             },
@@ -246,7 +246,7 @@
               "id": "ACC-027",
               "title": "Kontaktdaten bearbeiten",
               "where": "CRM > Kontakte",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/contacts\n2. Klicken Sie auf einen vorhandenen Kontakt in der Liste\n3. Klicken Sie auf \"Bearbeiten\"\n4. Ändern Sie Telefonnummer oder Adresse\n5. Klicken Sie auf \"Speichern\"\n6. Prüfen Sie, dass die Meldung \"Kontakt aktualisiert\" erscheint",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/contacts\n2. Klicken Sie auf einen vorhandenen Kontakt in der Liste\n3. Klicken Sie auf \"Bearbeiten\"\n4. Ändern Sie Telefonnummer oder Adresse\n5. Klicken Sie auf \"Speichern\"\n6. Prüfen Sie, dass die aktualisierten Details in der Kontaktliste sichtbar sind",
               "expected": "Kontaktdaten werden aktualisiert. Die Änderungen sind sofort in der Kontaktliste sichtbar.",
               "prio": "Medium"
             },
@@ -362,7 +362,7 @@
               "id": "ACC-040",
               "title": "Erstellen Sie eine manuelle Rechnung",
               "where": "Invoices > Rechnungen",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/invoices\n2. Klicken Sie auf den Button \"Neue Rechnung\"\n3. Wählen Sie einen Kontakt aus der Dropdown-Liste\n4. Prüfen Sie, dass Rechnungsnummer und Datum automatisch gesetzt werden\n5. Klicken Sie auf \"Position hinzufügen\" und geben Sie Beschreibung, Menge und Preis ein\n6. Wählen Sie den MwSt-Satz (z. B. 8.1%)\n7. Klicken Sie auf \"Rechnung erstellen\"\n8. Prüfen Sie, dass die Meldung \"Rechnung erstellt\" erscheint",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/invoices\n2. Klicken Sie auf den Button \"Neue Rechnung\"\n3. Wählen Sie einen Kontakt aus der Dropdown-Liste\n4. Prüfen Sie, dass Rechnungsnummer und Datum automatisch gesetzt werden\n5. Klicken Sie auf \"Position hinzufügen\" und geben Sie Beschreibung, Menge und Preis ein\n6. Wählen Sie den MwSt-Satz (z. B. 8.1%)\n7. Klicken Sie auf \"Rechnung erstellen\"\n8. Prüfen Sie, dass die neue Rechnung in der Rechnungsliste mit Status \"Entwurf\" erscheint",
               "expected": "Die Rechnung wird mit automatischer Nummer erstellt. Sie erscheint in der Liste mit Status \"Entwurf\".",
               "prio": "High"
             },
@@ -426,7 +426,7 @@
               "id": "ACC-048",
               "title": "Gutschrift erstellen (Stornierung)",
               "where": "Credit Notes > Gutschriften",
-              "steps": "1. Klicken Sie im linken Menü auf \"Gutschriften\"\n2. Klicken Sie auf den Button \"Neue Gutschrift\"\n3. Wählen Sie einen Kontakt\n4. Wählen Sie optional eine verknüpfte Rechnung\n5. Fügen Sie eine Position mit Beschreibung und Betrag hinzu\n6. Wählen Sie den MwSt-Satz\n7. Klicken Sie auf \"Erstellen\"\n8. Prüfen Sie, dass die Meldung \"Gutschrift erstellt\" erscheint",
+              "steps": "1. Klicken Sie im linken Menü auf \"Gutschriften\"\n2. Klicken Sie auf den Button \"Neue Gutschrift\"\n3. Wählen Sie einen Kontakt\n4. Wählen Sie optional eine verknüpfte Rechnung\n5. Fügen Sie eine Position mit Beschreibung und Betrag hinzu\n6. Wählen Sie den MwSt-Satz\n7. Klicken Sie auf \"Erstellen\"\n8. Prüfen Sie, dass die neue Gutschrift in der Gutschriftenliste erscheint",
               "expected": "Die Gutschrift wird erstellt. Sie steht zur Verrechnung mit einer offenen Rechnung bereit.",
               "prio": "High"
             },
@@ -472,7 +472,7 @@
               "id": "ACC-053",
               "title": "Erstellen Sie eine wiederkehrende Rechnung",
               "where": "Recurring > Wiederkehrend",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/recurring-invoices\n2. Klicken Sie auf den Button \"Neue Vorlage\"\n3. Wählen Sie einen Kontakt\n4. Stellen Sie das Intervall ein (z. B. \"Monatlich\")\n5. Geben Sie Startdatum und ggf. Enddatum ein\n6. Fügen Sie Positionen mit Beschreibung, Menge und Preis hinzu\n7. Klicken Sie auf \"Vorlage erstellen\"\n8. Prüfen Sie, dass die Meldung \"Vorlage erstellt\" erscheint",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/recurring-invoices\n2. Klicken Sie auf den Button \"Neue Vorlage\"\n3. Wählen Sie einen Kontakt\n4. Stellen Sie das Intervall ein (z. B. \"Monatlich\")\n5. Geben Sie Startdatum und ggf. Enddatum ein\n6. Fügen Sie Positionen mit Beschreibung, Menge und Preis hinzu\n7. Klicken Sie auf \"Vorlage erstellen\"\n8. Prüfen Sie, dass die neue Vorlage in der Liste der wiederkehrenden Rechnungen erscheint",
               "expected": "Die wiederkehrende Rechnungsvorlage wird gespeichert. Rechnungen werden automatisch nach dem konfigurierten Intervall generiert.",
               "prio": "High"
             },
@@ -518,7 +518,7 @@
               "id": "ACC-058",
               "title": "Erstellen Sie einen manuellen Speseneintrag",
               "where": "Expenses > Ausgaben",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/expenses\n2. Klicken Sie auf den Button \"Neue Ausgabe\"\n3. Geben Sie eine Beschreibung ein (z. B. \"Büromaterial März\")\n4. Geben Sie den Betrag ein (z. B. 120.50)\n5. Wählen Sie ein Datum\n6. Wählen Sie eine Kategorie (z. B. \"Verbrauchsmaterial\")\n7. Klicken Sie auf \"Speichern\"\n8. Prüfen Sie, dass die Meldung \"Ausgabe erstellt\" erscheint",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/expenses\n2. Klicken Sie auf den Button \"Neue Ausgabe\"\n3. Geben Sie eine Beschreibung ein (z. B. \"Büromaterial März\")\n4. Geben Sie den Betrag ein (z. B. 120.50)\n5. Wählen Sie ein Datum\n6. Wählen Sie eine Kategorie (z. B. \"Verbrauchsmaterial\")\n7. Klicken Sie auf \"Speichern\"\n8. Prüfen Sie, dass die neue Ausgabe in der Ausgabenliste erscheint",
               "expected": "Die Ausgabe wird gespeichert und in der Ausgabenliste angezeigt.",
               "prio": "Medium"
             },
@@ -596,7 +596,7 @@
               "id": "ACC-067",
               "title": "Erstellen Sie einen manuellen Journaleintrag",
               "where": "Accounting > Journal",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/accounting\n2. Klicken Sie auf den Tab \"Journal (Tagebuch)\"\n3. Klicken Sie auf den Button \"Neue Buchung\"\n4. Geben Sie Datum und Beschreibung ein (z. B. \"Miete Januar 2026\")\n5. Klicken Sie auf \"Buchungszeile hinzufügen\": Wählen Sie Sollkonto (z. B. 5000) und geben Sie Betrag ein\n6. Klicken Sie auf \"Buchungszeile hinzufügen\": Wählen Sie Habenkonto (z. B. 1000) und denselben Betrag\n7. Prüfen Sie, dass Soll = Haben\n8. Klicken Sie auf \"Buchung erstellen\"\n9. Prüfen Sie, dass die Meldung \"Buchung erstellt\" erscheint",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/accounting\n2. Klicken Sie auf den Tab \"Journal (Tagebuch)\"\n3. Klicken Sie auf den Button \"Neue Buchung\"\n4. Geben Sie Datum und Beschreibung ein (z. B. \"Miete Januar 2026\")\n5. Klicken Sie auf \"Buchungszeile hinzufügen\": Wählen Sie Sollkonto (z. B. 5000) und geben Sie Betrag ein\n6. Klicken Sie auf \"Buchungszeile hinzufügen\": Wählen Sie Habenkonto (z. B. 1000) und denselben Betrag\n7. Prüfen Sie, dass Soll = Haben\n8. Klicken Sie auf \"Buchung erstellen\"\n9. Prüfen Sie, dass die neue Buchung in der Journalliste erscheint",
               "expected": "Die manuelle Buchung wird im Journal gespeichert. Soll = Haben, Buchungsnummer wird automatisch vergeben.",
               "prio": "Critical"
             },
@@ -728,7 +728,7 @@
               "id": "ACC-082",
               "title": "Erstellen Sie eine manuelle Banktransaktion",
               "where": "Banking > Bankkonten",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/banking\n2. Öffnen Sie ein Bankkonto\n3. Klicken Sie auf den Button \"Neue Transaktion\"\n4. Geben Sie Datum, Beschreibung und Betrag ein\n5. Wählen Sie den Typ (Einnahme / Ausgabe / Überweisung)\n6. Wählen Sie eine Kategorie\n7. Klicken Sie auf \"Speichern\"\n8. Prüfen Sie, dass die Meldung \"Transaktion erstellt\" erscheint",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/banking\n2. Öffnen Sie ein Bankkonto\n3. Klicken Sie auf den Button \"Neue Transaktion\"\n4. Geben Sie Datum, Beschreibung und Betrag ein\n5. Wählen Sie den Typ (Einnahme / Ausgabe / Überweisung)\n6. Wählen Sie eine Kategorie\n7. Klicken Sie auf \"Speichern\"\n8. Prüfen Sie, dass die neue Transaktion in der Transaktionsliste erscheint",
               "expected": "Die manuelle Transaktion wird gespeichert und in der Transaktionsliste des Kontos angezeigt.",
               "prio": "High"
             },
@@ -844,7 +844,7 @@
               "id": "ACC-095",
               "title": "Laden Sie ein Geschäftsdokument hoch",
               "where": "Documents > Dokumente",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/documents\n2. Klicken Sie auf den Button \"Hochladen\"\n3. Wählen Sie eine Datei (PDF, PNG oder JPG)\n4. Geben Sie optional einen Namen für das Dokument ein\n5. Klicken Sie auf \"Hochladen\" oder bestätigen Sie den Upload\n6. Prüfen Sie, dass die Meldung \"Dokument erfolgreich hochgeladen\" erscheint\n7. Prüfen Sie, dass das Dokument in der Liste erscheint",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/documents\n2. Klicken Sie auf den Button \"Hochladen\"\n3. Wählen Sie eine Datei (PDF, PNG oder JPG)\n4. Geben Sie optional einen Namen für das Dokument ein\n5. Klicken Sie auf \"Hochladen\" oder bestätigen Sie den Upload\n6. Prüfen Sie, dass das Dokument in der Dokumentenliste erscheint",
               "expected": "Das Dokument wird hochgeladen und in der Dokumentenliste angezeigt.",
               "prio": "Medium"
             },
@@ -928,7 +928,7 @@
               "id": "ACC-104",
               "title": "Benutzerprofil aktualisieren",
               "where": "Einstellungen > Mein Profil",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/settings\n2. Klicken Sie auf den Tab \"Mein Profil\"\n3. Ändern Sie den \"Anzeigename\"\n4. Klicken Sie auf \"Profil speichern\"\n5. Prüfen Sie, dass die Meldung \"Profil gespeichert\" erscheint\n6. Prüfen Sie, dass der neue Name in der App angezeigt wird",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/settings\n2. Klicken Sie auf den Tab \"Mein Profil\"\n3. Ändern Sie den \"Anzeigename\"\n4. Klicken Sie auf \"Profil speichern\"\n5. Prüfen Sie, dass der neue Name in der Sidebar oder im Profilbereich angezeigt wird",
               "expected": "Das Benutzerprofil wird aktualisiert. Der neue Name erscheint in der Benutzeroberfläche.",
               "prio": "Medium"
             },
@@ -22338,7 +22338,7 @@
               "id": "ACC-001",
               "title": "Register – Create a New Account",
               "where": "Auth > Login/Password Reset",
-              "steps": "1. Navigate to https://acc.mixel.ch\n2. Click on \"Kostenlos testen\" or \"Start Free\".\n3. Enter a valid email address and create a password\n4. Complete all email verification steps\n5. Confirm the account was created",
+              "steps": "1. Navigate to https://acc.mixel.ch\n2. Click on \"Start Free\" or \"Try for Free\"\n3. Enter a valid email address and create a password\n4. Complete all email verification steps\n5. Verify you are redirected to the app or an onboarding wizard",
               "expected": "Account created successfully. User is redirected to the app or an onboarding wizard.",
               "prio": "Medium"
             },
@@ -22346,7 +22346,7 @@
               "id": "ACC-002",
               "title": "Login – Valid Credentials",
               "where": "Auth > Login/Password Reset",
-              "steps": "1. Navigate to https://acc.mixel.ch\n2. Click on \"Anmelden\".\n3. Enter a valid email and password\n4. Click on Sign In / Submit",
+              "steps": "1. Navigate to https://acc.mixel.ch\n2. Click on \"Sign In\"\n3. Enter a valid email and password\n4. Click Sign In / Submit\n5. Verify the dashboard page loads",
               "expected": "User is authenticated and redirected to the application dashboard.",
               "prio": "Medium"
             },
@@ -22354,7 +22354,7 @@
               "id": "ACC-003",
               "title": "Login – Invalid Credentials",
               "where": "Auth > Login/Password Reset",
-              "steps": "1. Navigate tor Anmeldeseite\n2. Enter an incorrect password for a valid email\n3. Click on Anmelden",
+              "steps": "1. Navigate to the sign-in page\n2. Enter an incorrect password for a valid email\n3. Click Sign In\n4. Verify an error message is displayed on the page",
               "expected": "Login is rejected. An error message is displayed (e.g. \"Invalid credentials\"). No access is granted.",
               "prio": "Medium"
             },
@@ -22362,7 +22362,7 @@
               "id": "ACC-004",
               "title": "Login – Empty Field Validation",
               "where": "Auth > Login/Password Reset",
-              "steps": "1. Navigate tor Anmeldeseite\n2. Leave email and password fields empty\n3. Click on Anmelden",
+              "steps": "1. Navigate to the sign-in page\n2. Leave email and password fields empty\n3. Click Sign In\n4. Verify required field validation errors are shown on the form",
               "expected": "Form validation is triggered. Required field errors are displayed. No login attempt is made.",
               "prio": "Medium"
             },
@@ -22370,7 +22370,7 @@
               "id": "ACC-005",
               "title": "Password Reset Flow",
               "where": "Auth > Login/Password Reset",
-              "steps": "1. Click on der Anmeldeseite auf \"Passwort vergessen\".\n2. Enter a valid registered email address\n3. Click on \"Link zum Zurücksetzen senden\".\n4. Open the reset email and click the link\n5. Enter a new password and confirm it",
+              "steps": "1. Click \"Forgot Password\" on the sign-in page\n2. Enter a valid registered email address\n3. Click \"Send Reset Link\"\n4. Open the reset email and click the link\n5. Enter a new password and confirm it\n6. Verify you can sign in with the new password",
               "expected": "Password reset successfully. User can sign in with the new password.",
               "prio": "Medium"
             },
@@ -22378,8 +22378,8 @@
               "id": "ACC-006",
               "title": "Sign Out",
               "where": "Auth > Login/Password Reset",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app\n2. Klicken Sie auf das Benutzerprofil-Icon in der Sidebar\n3. Klicken Sie auf 'Abmelden'\n4. Prüfen Sie, dass die URL '/auth/signin' enthält",
-              "expected": "Der Benutzer wird abgemeldet.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app\n2. Click the user profile icon in the sidebar\n3. Click \"Sign Out\"\n4. Verify the URL contains \"/auth/signin\"",
+              "expected": "User is signed out and redirected to the sign-in page.",
               "prio": "Medium"
             }
           ]
@@ -22391,16 +22391,16 @@
             {
               "id": "ACC-007",
               "title": "Create First Company",
-              "where": "Settings > Firmen-Setup",
-              "steps": "1. Sign in to the app\n2. If prompted by an onboarding wizard, click on \"Unternehmen erstellen\".\n3. Enter the company name (e.g. \"Acme Test GmbH\")\n4. Enter company address, country and VAT ID\n5. Click on Speichern/Weiter",
+              "where": "Settings > Company Setup",
+              "steps": "1. Sign in to the app\n2. If prompted by an onboarding wizard, click \"Create Company\"\n3. Enter the company name (e.g. \"Acme Test GmbH\")\n4. Enter company address, country and VAT ID\n5. Click Save / Next\n6. Verify the company name appears in the top navigation",
               "expected": "Company is created. User lands on the company dashboard. The company name appears in the top navigation.",
               "prio": "Medium"
             },
             {
               "id": "ACC-008",
               "title": "Upload Company Logo",
-              "where": "Settings > Firmen-Setup",
-              "steps": "1. Navigate to den Unternehmenseinstellungen\n2. Find the logo upload field\n3. Upload a PNG or JPG image (max recommended size ~500 KB).\n4. Save the settings",
+              "where": "Settings > Company Setup",
+              "steps": "1. Navigate to the company settings page\n2. Find the logo upload field\n3. Upload a PNG or JPG image (max recommended size ~500 KB)\n4. Save the settings\n5. Verify the logo is displayed on the settings page",
               "expected": "The logo is saved and displayed on the settings page. It should later appear on invoices and quotes.",
               "prio": "High"
             },
@@ -22408,48 +22408,48 @@
               "id": "ACC-009",
               "title": "Configure Fiscal Year",
               "where": "Settings > Finance",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/settings\n2. Click the \"Financial\" tab\n3. Select \"Fiscal Year Start\" (e.g. January)\n4. Select the \"Default Currency\" (e.g. CHF)\n5. Click \"Save Financial Settings\"\n6. Verify the message \"Financial settings saved\" appears",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings\n2. Click the \"Financial\" tab\n3. Select \"Fiscal Year Start\" (e.g. January)\n4. Select the \"Default Currency\" (e.g. CHF)\n5. Click \"Save Financial Settings\"\n6. Verify the saved values persist after refreshing the page",
               "expected": "Fiscal year and currency are saved. New documents use these settings.",
               "prio": "High"
             },
             {
               "id": "ACC-010",
-              "title": "Configure VAT Settings",
+              "title": "Update Company Profile",
               "where": "Settings > Company Profile",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/settings?tab=company\n2. Geben Sie im Feld 'Firmenname' den Namen 'Muster AG' ein\n3. Klicken Sie auf den Button 'Speichern'\n4. Prüfen Sie dass eine Erfolgsmeldung erscheint",
-              "expected": "Das Firmenprofil wurde gespeichert.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings?tab=company\n2. Enter \"Example Ltd\" in the \"Company Name\" field\n3. Click the \"Save Company Profile\" button\n4. Verify the company name is displayed in the settings after save",
+              "expected": "Company profile is saved. The company name appears on invoices.",
               "prio": "High"
             },
             {
               "id": "ACC-011",
               "title": "Set Invoice Numbering Format",
               "where": "Settings > Numbering",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/settings?tab=numbering\n2. Geben Sie im Feld 'Rechnungsnummer' z.B. 'RE-' ein\n3. Klicken Sie auf 'Speichern'\n4. Prüfen Sie dass eine Erfolgsmeldung erscheint",
-              "expected": "Die Nummerierung wurde gespeichert.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings?tab=numbering\n2. Enter e.g. \"INV-\" in the Invoice prefix field\n3. Click \"Save Numbering\"\n4. Verify the prefix value persists after saving",
+              "expected": "Numbering settings are saved.",
               "prio": "High"
             },
             {
               "id": "ACC-012",
               "title": "Configure Default Payment Terms",
               "where": "Settings > Numbering",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/settings?tab=numbering\n2. Scrollen Sie zum Abschnitt 'Zahlungsbedingungen'\n3. Ändern Sie die Zahlungsfrist\n4. Klicken Sie auf 'Speichern'\n5. Prüfen Sie dass eine Erfolgsmeldung erscheint",
-              "expected": "Die Zahlungsbedingungen wurden gespeichert.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings?tab=numbering\n2. Scroll to the \"Payment Terms\" section\n3. Change the payment term days\n4. Click \"Save Numbering\"\n5. Verify the updated payment term value persists after saving",
+              "expected": "Payment terms are saved.",
               "prio": "High"
             },
             {
               "id": "ACC-013",
               "title": "Select UI Language",
               "where": "Settings > My Profile",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/settings?tab=appearance\n2. Wählen Sie eine andere Sprache aus dem Dropdown\n3. Klicken Sie auf 'Speichern'\n4. Prüfen Sie dass die Sprache geändert wurde",
-              "expected": "Die Sprache wurde geändert.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings?tab=appearance\n2. Select a different language from the dropdown\n3. Click \"Save\"\n4. Verify the UI language has changed",
+              "expected": "The UI language switches to the selected language.",
               "prio": "Medium"
             },
             {
               "id": "ACC-014",
               "title": "Set Email Sender Details",
               "where": "Settings > Email Settings",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/settings?tab=email\n2. Geben Sie eine Test-E-Mail-Adresse ein\n3. Klicken Sie auf 'Speichern'\n4. Prüfen Sie dass eine Erfolgsmeldung erscheint",
-              "expected": "Die E-Mail-Einstellungen wurden gespeichert.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings?tab=email\n2. Enter a test email address in the sender email field\n3. Click \"Save Settings\"\n4. Verify the email address persists after saving",
+              "expected": "Email settings are saved.",
               "prio": "High"
             }
           ]
@@ -22462,15 +22462,15 @@
               "id": "ACC-015",
               "title": "View Default Chart of Accounts",
               "where": "Accounting > Chart of Accounts",
-              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/accounting\n2. Prüfen Sie dass Konten in der Tabelle angezeigt werden",
-              "expected": "Der Kontenplan wird angezeigt.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/accounting\n2. Click the \"Chart of Accounts\" tab\n3. Verify accounts are displayed in the table\n4. Verify accounts in the range 1000-9999 are present",
+              "expected": "The chart of accounts is displayed with standard accounts.",
               "prio": "Medium"
             },
             {
               "id": "ACC-016",
               "title": "Add a New Account",
               "where": "Accounting > Chart of Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/accounting\n2. Click the 'Chart of Accounts' tab button\n3. Click the 'Add Account' or 'New Account' button\n4. Fill in the account number field\n5. Fill in the account name field\n6. Click 'Save' or 'Create'\n7. Verify the new account appears in the list",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/accounting\n2. Click the 'Chart of Accounts' tab button\n3. Click the 'Add Account' or 'New Account' button\n4. Fill in the account number field\n5. Fill in the account name field\n6. Click 'Save' or 'Create'\n7. Verify the new account appears in the list",
               "expected": "A new account is created and appears in the chart of accounts.",
               "prio": "Medium"
             },
@@ -22478,7 +22478,7 @@
               "id": "ACC-017",
               "title": "Edit an Existing Account",
               "where": "Accounting > Chart of Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/accounting\n2. Click the 'Chart of Accounts' tab button\n3. Click on an existing account row to edit it\n4. Modify the account name field\n5. Click 'Save'\n6. Verify the updated name appears in the list",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/accounting\n2. Click the 'Chart of Accounts' tab button\n3. Click on an existing account row to edit it\n4. Modify the account name field\n5. Click 'Save'\n6. Verify the updated name appears in the list",
               "expected": "The account name is updated and reflected in the chart of accounts.",
               "prio": "Medium"
             },
@@ -22486,15 +22486,15 @@
               "id": "ACC-018",
               "title": "Deactivate / Archive Account",
               "where": "Accounting > Chart of Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/settings?tab=profile\n2. Locate the language dropdown in the profile section\n3. Select a different language (e.g. German)\n4. Click 'Save'\n5. Verify the UI language changes",
-              "expected": "The UI language switches according to the selection.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/accounting\n2. Click the \"Chart of Accounts\" tab\n3. Find an existing account in the list\n4. Click the edit icon for the account\n5. Look for a \"Deactivate\" or \"Archive\" option\n6. Confirm the action\n7. Verify the account is marked as deactivated/archived",
+              "expected": "The account is deactivated and no longer selectable for new entries. It remains visible in historical entries.",
               "prio": "High"
             },
             {
               "id": "ACC-019",
               "title": "Search / Filter Accounts",
               "where": "Accounting > Chart of Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/accounting\n2. Click the 'Chart of Accounts' tab button\n3. Locate the search input in the chart of accounts\n4. Type an account number or name to filter\n5. Verify the list filters to show matching accounts",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/accounting\n2. Click the 'Chart of Accounts' tab button\n3. Locate the search input in the chart of accounts\n4. Type an account number or name to filter\n5. Verify the list filters to show matching accounts",
               "expected": "The account list filters to show only matching accounts.",
               "prio": "Medium"
             }
@@ -22508,7 +22508,7 @@
               "id": "ACC-020",
               "title": "Add a Bank Account",
               "where": "Banking > Bank Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/banking\n2. Click 'Add Bank Account' or 'New Bank Account'\n3. Fill in the account name field\n4. Fill in the IBAN field (e.g. CH44 3199 9123 0008 8901 2)\n5. Click 'Save'\n6. Verify the bank account appears in the list",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/banking\n2. Click 'Add Bank Account' or 'New Bank Account'\n3. Fill in the account name field\n4. Fill in the IBAN field (e.g. CH44 3199 9123 0008 8901 2)\n5. Click 'Save'\n6. Verify the bank account appears in the list",
               "expected": "A new bank account is added and appears in the banking section.",
               "prio": "High"
             },
@@ -22516,7 +22516,7 @@
               "id": "ACC-021",
               "title": "Validate Invalid IBAN Format",
               "where": "Banking > Bank Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/banking\n2. Click 'Add Bank Account' or 'New Bank Account'\n3. Fill in the IBAN field with an invalid value (e.g. 'INVALID123')\n4. Click 'Save'\n5. Verify an error message about invalid IBAN is shown",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/banking\n2. Click 'Add Bank Account' or 'New Bank Account'\n3. Fill in the IBAN field with an invalid value (e.g. 'INVALID123')\n4. Click 'Save'\n5. Verify an error message about invalid IBAN is shown",
               "expected": "An error message is displayed indicating the IBAN format is invalid.",
               "prio": "High"
             },
@@ -22524,23 +22524,23 @@
               "id": "ACC-022",
               "title": "Set Default Bank Account",
               "where": "Banking > Bank Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/banking\n2. Verify at least one bank account is listed\n3. Click the actions menu on a bank account\n4. Select 'Set as default' or 'Make default'\n5. Verify the account is marked as default",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/banking\n2. Verify at least one bank account is listed\n3. Click the actions menu on a bank account\n4. Select 'Set as default' or 'Make default'\n5. Verify the account is marked as default",
               "expected": "The selected bank account is set as the default.",
               "prio": "High"
             },
             {
               "id": "ACC-023",
-              "title": "Bankkontodaten bearbeiten",
+              "title": "Edit Bank Account Details",
               "where": "Banking > Bank Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/banking\n2. Click on the bank account to edit\n3. Click \"Edit Account\"\n4. Change the account name or bank name\n5. Click \"Save\"\n6. Verify the message \"Account updated\" appears",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/banking\n2. Click on the bank account to edit\n3. Click \"Edit Account\"\n4. Change the account name or bank name\n5. Click \"Save\"\n6. Verify the updated name appears in the account list",
               "expected": "Bank account details are saved. The updated name appears in the account list.",
               "prio": "High"
             },
             {
               "id": "ACC-024",
-              "title": "Löschen Sie ein Bankkonto",
+              "title": "Delete a Bank Account",
               "where": "Banking > Bank Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/banking\n2. Click on the bank account to delete\n3. Open the account action menu\n4. Select \"Delete\"\n5. Confirm the deletion in the confirmation dialog\n6. Verify the account has been removed from the list",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/banking\n2. Click on the bank account to delete\n3. Open the account action menu\n4. Select \"Delete\"\n5. Confirm the deletion in the confirmation dialog\n6. Verify the account has been removed from the list",
               "expected": "Bank account is deleted and removed from the list. Existing transactions remain in the system.",
               "prio": "High"
             }
@@ -22552,65 +22552,65 @@
           "cases": [
             {
               "id": "ACC-025",
-              "title": "Erstellen Sie einen neuen Kundenkontakt",
+              "title": "Create a New Customer Contact",
               "where": "CRM > Contacts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/contacts\n2. Click the \"New Contact\" button\n3. Select type \"Company\"\n4. Enter \"Company Name\" (e.g. \"Example Ltd\")\n5. Enter email and phone\n6. Enter address (street, zip, city)\n7. Click \"Create\"\n8. Verify the message \"Contact created\" appears",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/contacts\n2. Click the \"New Contact\" button\n3. Select type \"Company\"\n4. Enter \"Company Name\" (e.g. \"Example Ltd\")\n5. Enter email and phone\n6. Enter address (street, zip, city)\n7. Click \"Create\"\n8. Verify the new contact appears in the contact list",
               "expected": "Customer contact is created and displayed in the contact list. Available for invoices and quotes.",
               "prio": "Medium"
             },
             {
               "id": "ACC-026",
-              "title": "Erstellen Sie einen neuen Lieferantenkontakt",
+              "title": "Create a New Supplier Contact",
               "where": "CRM > Contacts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/contacts\n2. Click the \"New Contact\" button\n3. Select type \"Company\"\n4. Enter the supplier company name (e.g. \"Supplier Ltd\")\n5. Enter email, phone and address\n6. Click \"Create\"\n7. Verify the message \"Contact created\" appears",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/contacts\n2. Click the \"New Contact\" button\n3. Select type \"Company\"\n4. Enter the supplier company name (e.g. \"Supplier Ltd\")\n5. Enter email, phone and address\n6. Click \"Create\"\n7. Verify the new supplier contact appears in the contact list",
               "expected": "Supplier contact is created. Available for expenses and purchase orders.",
               "prio": "Medium"
             },
             {
               "id": "ACC-027",
-              "title": "Kontaktdaten bearbeiten",
+              "title": "Edit Contact Details",
               "where": "CRM > Contacts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/contacts\n2. Click on an existing contact in the list\n3. Click \"Edit\"\n4. Update phone number or address\n5. Click \"Save\"\n6. Verify the message \"Contact updated\" appears",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/contacts\n2. Click on an existing contact in the list\n3. Click \"Edit\"\n4. Update phone number or address\n5. Click \"Save\"\n6. Verify the updated details are visible in the contact list",
               "expected": "Contact details are updated. Changes are immediately visible in the contact list.",
               "prio": "Medium"
             },
             {
               "id": "ACC-028",
-              "title": "Fügen Sie dem Kontakt Tags/Kategorien hinzu",
+              "title": "Add Tags/Categories to Contact",
               "where": "CRM > Contacts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/contacts\n2. Open an existing contact\n3. Click \"Edit\"\n4. Scroll to the \"Notes\" field\n5. Enter category notes or tags (e.g. \"VIP Customer, Q1-2026\")\n6. Click \"Save\"\n7. Verify the notes are saved",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/contacts\n2. Open an existing contact\n3. Click \"Edit\"\n4. Scroll to the \"Notes\" field\n5. Enter category notes or tags (e.g. \"VIP Customer, Q1-2026\")\n6. Click \"Save\"\n7. Verify the notes are saved",
               "expected": "Notes and category tags are saved for the contact.",
               "prio": "Medium"
             },
             {
               "id": "ACC-029",
-              "title": "Umsatz pro Kontakt anzeigen",
+              "title": "View Revenue per Contact",
               "where": "CRM > Contacts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/contacts\n2. Click on a contact that has invoices\n3. Check the contact detail page for a revenue or invoice summary section\n4. Verify total revenue and linked invoices are displayed",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/contacts\n2. Click on a contact that has invoices\n3. Check the contact detail page for a revenue or invoice summary section\n4. Verify total revenue and linked invoices are displayed",
               "expected": "Contact detail page shows a revenue summary and all linked invoices for that contact.",
               "prio": "High"
             },
             {
               "id": "ACC-030",
-              "title": "Contacts aus CSV importieren",
+              "title": "Import Contacts from CSV",
               "where": "CRM > Contacts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/contacts\n2. Look for an import button or action menu in the top right\n3. Click \"Import\" (if available)\n4. Upload a CSV file with contact columns\n5. Map CSV columns to contact fields\n6. Click \"Confirm Import\"\n7. Verify imported contacts appear in the list",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/contacts\n2. Look for an import button or action menu in the top right\n3. Click \"Import\" (if available)\n4. Upload a CSV file with contact columns\n5. Map CSV columns to contact fields\n6. Click \"Confirm Import\"\n7. Verify imported contacts appear in the list",
               "expected": "Contacts are imported from CSV and displayed in the contact list.",
               "prio": "Medium"
             },
             {
               "id": "ACC-031",
-              "title": "Contacts nach Excel exportieren",
+              "title": "Export Contacts to Excel",
               "where": "CRM > Contacts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/settings\n2. Click the \"Data Export\" tab\n3. Find the \"Master Data\" section and \"Contacts\" entry\n4. Click \"Export\"\n5. Verify an Excel file with all contacts is downloaded",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings\n2. Click the \"Data Export\" tab\n3. Find the \"Master Data\" section and \"Contacts\" entry\n4. Click \"Export\"\n5. Verify an Excel file with all contacts is downloaded",
               "expected": "An Excel file with all contact data (name, email, phone, address) is downloaded.",
               "prio": "High"
             },
             {
               "id": "ACC-032",
-              "title": "Contacts suchen und filtern",
+              "title": "Search and Filter Contacts",
               "where": "CRM > Contacts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/contacts\n2. Click in the \"Search contacts...\" field\n3. Enter the name or email of a contact\n4. Verify the list filters in real time\n5. Use the \"All / Companies / Persons\" filter tabs\n6. Verify the filter correctly limits the list",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/contacts\n2. Click in the \"Search contacts...\" field\n3. Enter the name or email of a contact\n4. Verify the list filters in real time\n5. Use the \"All / Companies / Persons\" filter tabs\n6. Verify the filter correctly limits the list",
               "expected": "The search function filters the contact list by name, email or type.",
               "prio": "Medium"
             }
@@ -22618,7 +22618,7 @@
         },
         {
           "idx": 6,
-          "name": "F. Phase 6: Quotes und Bestellungen",
+          "name": "F. Phase 6: Quotes and Orders",
           "cases": [
             {
               "id": "ACC-033",
@@ -22630,25 +22630,25 @@
             },
             {
               "id": "ACC-034",
-              "title": "Wenden Sie einen Rabatt auf ein Angebot an",
+              "title": "Apply Discount to a Quote",
               "where": "Quotes > Quotes",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/quotes\n2. Click \"New Quote\"\n3. Select a contact\n4. Add a line item (description, quantity, price)\n5. Find the discount field on the line item and enter a percentage (e.g. 10%)\n6. Verify the discount is deducted from the line price\n7. Verify the total amount reflects the discount\n8. Click \"Create Quote\"",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/quotes\n2. Click \"New Quote\"\n3. Select a contact\n4. Add a line item (description, quantity, price)\n5. Find the discount field on the line item and enter a percentage (e.g. 10%)\n6. Verify the discount is deducted from the line price\n7. Verify the total amount reflects the discount\n8. Click \"Create Quote\"",
               "expected": "Discount is correctly calculated and deducted from the line price. Total reflects the discount.",
               "prio": "Medium"
             },
             {
               "id": "ACC-035",
-              "title": "Vorschau des Angebots als PDF",
+              "title": "Preview Quote as PDF",
               "where": "Sales > Quotes/Orders",
-              "steps": "1. Öffnen Sie ein gespeichertes Angebot\n2. Click on \"Vorschau\" oder \"PDF herunterladen\".",
-              "expected": "Es wird eine PDF-Datei mit Firmenlogo, Kontaktdaten, Einzelposten, Mehrwertsteueraufschlüsselung und Gesamtsumme erstellt. Die Formatierung ist sauber und professionell.",
+              "steps": "1. Open a saved quote\n2. Click \"Download PDF\" or \"Preview\"",
+              "expected": "A PDF is generated with company logo, contact details, line items, VAT breakdown and total. The format is clean and professional.",
               "prio": "Medium"
             },
             {
               "id": "ACC-036",
-              "title": "Angebot per E-Mail senden",
+              "title": "Send Quote by Email",
               "where": "Quotes > Quotes",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/quotes\n2. Open a quote with status \"Draft\"\n3. Click the action menu\n4. Select \"Mark as Sent\"\n5. Verify the quote status changes to \"Sent\"\n6. Optional: click the email send button and fill in recipient and subject",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/quotes\n2. Open a quote with status \"Draft\"\n3. Click the action menu\n4. Select \"Mark as Sent\"\n5. Verify the quote status changes to \"Sent\"\n6. Optional: click the email send button and fill in recipient and subject",
               "expected": "Quote is marked as \"Sent\". The contact can view the quote via email link or PDF.",
               "prio": "Medium"
             },
@@ -22684,89 +22684,89 @@
           "cases": [
             {
               "id": "ACC-040",
-              "title": "Erstellen Sie eine manuelle Rechnung",
+              "title": "Create a Manual Invoice",
               "where": "Invoices > Invoices",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/invoices\n2. Click the \"New Invoice\" button\n3. Select a contact from the dropdown\n4. Verify invoice number and date are set automatically\n5. Click \"Add Item\" and enter description, quantity and price\n6. Select VAT rate (e.g. 8.1%)\n7. Click \"Create Invoice\"\n8. Verify the message \"Invoice created\" appears",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/invoices\n2. Click the \"New Invoice\" button\n3. Select a contact from the dropdown\n4. Verify invoice number and date are set automatically\n5. Click \"Add Item\" and enter description, quantity and price\n6. Select VAT rate (e.g. 8.1%)\n7. Click \"Create Invoice\"\n8. Verify the new invoice appears in the invoice list with status \"Draft\"",
               "expected": "Invoice is created with an automatic number. It appears in the list with status \"Draft\".",
               "prio": "High"
             },
             {
               "id": "ACC-041",
-              "title": "Wenden Sie mehrere Mehrwertsteuersätze auf eine Rechnung an",
+              "title": "Apply Multiple VAT Rates to Invoice",
               "where": "Invoices > Invoices",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/invoices\n2. Click \"New Invoice\" and select a contact\n3. Add a first line item with 8.1% VAT rate\n4. Click \"Add Item\" and add a second item with 2.6% VAT rate\n5. Verify the VAT breakdown shows both rates separately\n6. Click \"Create Invoice\"",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/invoices\n2. Click \"New Invoice\" and select a contact\n3. Add a first line item with 8.1% VAT rate\n4. Click \"Add Item\" and add a second item with 2.6% VAT rate\n5. Verify the VAT breakdown shows both rates separately\n6. Click \"Create Invoice\"",
               "expected": "Invoice contains items with different VAT rates. VAT breakdown shows each rate separately.",
               "prio": "High"
             },
             {
               "id": "ACC-042",
-              "title": "Rechnung in mehreren Währungen (EUR)",
+              "title": "Multi-Currency Invoice (EUR)",
               "where": "Invoices > Invoices",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/invoices\n2. Click \"New Invoice\"\n3. Select a contact\n4. Change the \"Currency\" field from CHF to EUR\n5. Add a line item and enter an amount in EUR\n6. Click \"Create Invoice\"\n7. Verify the invoice is displayed in EUR",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/invoices\n2. Click \"New Invoice\"\n3. Select a contact\n4. Change the \"Currency\" field from CHF to EUR\n5. Add a line item and enter an amount in EUR\n6. Click \"Create Invoice\"\n7. Verify the invoice is displayed in EUR",
               "expected": "Invoice is issued in EUR. Amounts and currency symbol show EUR.",
               "prio": "High"
             },
             {
               "id": "ACC-043",
-              "title": "QR-Rechnung/Zahlungsreferenz generieren",
+              "title": "Generate QR Invoice / Payment Reference",
               "where": "Invoices > Invoices",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/invoices\n2. Open an existing invoice or create a new one\n3. Ensure IBAN is configured in Settings > Financial\n4. Click \"Validate and Post\"\n5. Click \"Download PDF\"\n6. Open the PDF and verify a QR code appears at the bottom",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/invoices\n2. Open an existing invoice or create a new one\n3. Ensure IBAN is configured in Settings > Financial\n4. Click \"Validate and Post\"\n5. Click \"Download PDF\"\n6. Open the PDF and verify a QR code appears at the bottom",
               "expected": "The invoice PDF contains a Swiss QR code with IBAN and payment reference.",
               "prio": "High"
             },
             {
               "id": "ACC-044",
-              "title": "Rechnung per E-Mail senden",
+              "title": "Send Invoice by Email",
               "where": "Invoices > Invoices",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/invoices\n2. Open an invoice with status \"Draft\"\n3. Click the action menu\n4. Select \"Mark as Sent\"\n5. Verify the invoice status changes to \"Sent\"\n6. Optional: click email button, enter recipient and subject, and send",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/invoices\n2. Open an invoice with status \"Draft\"\n3. Click the action menu\n4. Select \"Mark as Sent\"\n5. Verify the invoice status changes to \"Sent\"\n6. Optional: click email button, enter recipient and subject, and send",
               "expected": "Invoice is marked as \"Sent\". Contact receives the invoice by email.",
               "prio": "High"
             },
             {
               "id": "ACC-045",
-              "title": "Mark Invoice as Paid (vollständige Zahlung)",
+              "title": "Mark Invoice as Paid (Full Payment)",
               "where": "Invoices > Invoices",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/invoices\n2. Open an invoice with status \"Sent\"\n3. Click the action menu\n4. Select \"Mark as Paid\"\n5. Verify the invoice status changes to \"Paid\"\n6. Verify the open amount is set to 0",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/invoices\n2. Open an invoice with status \"Sent\"\n3. Click the action menu\n4. Select \"Mark as Paid\"\n5. Verify the invoice status changes to \"Paid\"\n6. Verify the open amount is set to 0",
               "expected": "Invoice is marked as fully paid. Status changes to \"Paid\".",
               "prio": "High"
             },
             {
               "id": "ACC-046",
-              "title": "Erfassen Sie die Teilzahlung auf der Rechnung",
+              "title": "Record Partial Payment on Invoice",
               "where": "Invoices > Invoices",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/invoices\n2. Open an invoice with status \"Sent\"\n3. Find the \"Payments\" or \"Partial Payment\" section in invoice details\n4. Click \"Add Payment\" or \"Record Partial Payment\"\n5. Enter the partial amount (less than the total)\n6. Click \"Save\"\n7. Verify the remaining open amount is updated",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/invoices\n2. Open an invoice with status \"Sent\"\n3. Find the \"Payments\" or \"Partial Payment\" section in invoice details\n4. Click \"Add Payment\" or \"Record Partial Payment\"\n5. Enter the partial amount (less than the total)\n6. Click \"Save\"\n7. Verify the remaining open amount is updated",
               "expected": "Partial payment is recorded. Remaining balance is correctly calculated. Status stays \"Sent\" until fully paid.",
               "prio": "High"
             },
             {
               "id": "ACC-047",
-              "title": "Automatische Zahlungserinnerung senden",
+              "title": "Send Automatic Payment Reminder",
               "where": "Invoices > Invoices",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/invoices\n2. Filter by \"Overdue\" status\n3. Open an overdue invoice\n4. Look in the action menu for \"Send Reminder\" or \"Payment Reminder\"\n5. Click it and confirm\n6. Verify a confirmation message appears",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/invoices\n2. Filter by \"Overdue\" status\n3. Open an overdue invoice\n4. Look in the action menu for \"Send Reminder\" or \"Payment Reminder\"\n5. Click it and confirm\n6. Verify the reminder history is updated in the invoice details",
               "expected": "Payment reminder is sent to the contact. Reminder history is noted in the invoice.",
               "prio": "High"
             },
             {
               "id": "ACC-048",
-              "title": "Gutschrift erstellen (Stornierung)",
-              "where": "Credit Notes > Gutschriften",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/credit-notes\n2. Click the \"New Credit Note\" button\n3. Select a contact\n4. Optionally select a linked invoice\n5. Add a line item with description and amount\n6. Select VAT rate\n7. Click \"Create\"\n8. Verify the message \"Credit note created\" appears",
+              "title": "Create Credit Note (Reversal)",
+              "where": "Credit Notes > Credit Notes",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/credit-notes\n2. Click the \"New Credit Note\" button\n3. Select a contact\n4. Optionally select a linked invoice\n5. Add a line item with description and amount\n6. Select VAT rate\n7. Click \"Create\"\n8. Verify the new credit note appears in the credit notes list",
               "expected": "Credit note is created. It is ready to be applied against an open invoice.",
               "prio": "High"
             },
             {
               "id": "ACC-049",
-              "title": "Eine Rechnung klonen/duplizieren",
+              "title": "Clone / Duplicate an Invoice",
               "where": "Invoices > Invoices",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/invoices\n2. Open an existing invoice\n3. Click the action menu\n4. Look for \"Duplicate\" or \"Clone\" option\n5. Confirm the action\n6. Verify a new invoice in \"Draft\" status is created\n7. Verify contact and line items are copied",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/invoices\n2. Open an existing invoice\n3. Click the action menu\n4. Look for \"Duplicate\" or \"Clone\" option\n5. Confirm the action\n6. Verify a new invoice in \"Draft\" status is created\n7. Verify contact and line items are copied",
               "expected": "A copy of the invoice is created as a new draft with a new invoice number.",
               "prio": "High"
             },
             {
               "id": "ACC-050",
-              "title": "Rechnung mit Gebühr für verspätete Zahlung",
+              "title": "Invoice with Late Payment Fee",
               "where": "Invoices > Invoices",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/invoices\n2. Open an overdue invoice\n3. Check whether late fees can be added in notes or line items\n4. Add a separate line item \"Late Payment Fee\" with the calculated amount\n5. Click \"Save\"\n6. Verify the total includes the late fee",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/invoices\n2. Open an overdue invoice\n3. Check whether late fees can be added in notes or line items\n4. Add a separate line item \"Late Payment Fee\" with the calculated amount\n5. Click \"Save\"\n6. Verify the total includes the late fee",
               "expected": "Late payment fee is recorded as an invoice line item. The total increases accordingly.",
               "prio": "High"
             },
@@ -22774,15 +22774,15 @@
               "id": "ACC-051",
               "title": "Verify automatic journal entry from invoice",
               "where": "Accounting > Journal",
-              "steps": "1. Create an invoice and click \"Validate and Post\"\n2. Navigate to https://acc.mixel.ch/de/app/accounting\n3. Click the \"Journal\" tab\n4. Search for the invoice number in the journal\n5. Verify an automatic entry with debit (debtor) and credit (revenue) was created\n6. Verify debit = credit",
+              "steps": "1. Create an invoice and click \"Validate and Post\"\n2. Navigate to https://acc.mixel.ch/en/app/accounting\n3. Click the \"Journal\" tab\n4. Search for the invoice number in the journal\n5. Verify an automatic entry with debit (debtor) and credit (revenue) was created\n6. Verify debit = credit",
               "expected": "Invoice validation automatically creates a double-entry in the journal (debtor / revenue).",
               "prio": "High"
             },
             {
               "id": "ACC-052",
-              "title": "Rechnungs-PDF mit benutzerdefinierter Vorlage",
+              "title": "Invoice PDF with Custom Template",
               "where": "Settings > Company Profile",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/settings\n2. Click the \"Company Profile\" tab\n3. Click \"Upload Logo\" and choose a PNG/JPG file (max 5 MB)\n4. Click \"Save Company Profile\"\n5. Open an invoice and click \"Download PDF\"\n6. Verify the company logo appears at the top of the PDF",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings\n2. Click the \"Company Profile\" tab\n3. Click \"Upload Logo\" and choose a PNG/JPG file (max 5 MB)\n4. Click \"Save Company Profile\"\n5. Open an invoice and click \"Download PDF\"\n6. Verify the company logo appears at the top of the PDF",
               "expected": "Company logo appears in the invoice PDF. Address and company details are correctly formatted.",
               "prio": "High"
             }
@@ -22790,13 +22790,13 @@
         },
         {
           "idx": 8,
-          "name": "H. Phase 8: Recurringe Invoices",
+          "name": "H. Phase 8: Recurring Invoices",
           "cases": [
             {
               "id": "ACC-053",
-              "title": "Erstellen Sie eine wiederkehrende Rechnung",
+              "title": "Create a Recurring Invoice",
               "where": "Recurring > Recurring",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/recurring-invoices\n2. Click the \"New Template\" button\n3. Select a contact\n4. Set the interval (e.g. \"Monthly\")\n5. Enter start date and optionally end date\n6. Add line items with description, quantity and price\n7. Click \"Create Template\"\n8. Verify the message \"Template created\" appears",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/recurring-invoices\n2. Click the \"New Template\" button\n3. Select a contact\n4. Set the interval (e.g. \"Monthly\")\n5. Enter start date and optionally end date\n6. Add line items with description, quantity and price\n7. Click \"Create Template\"\n8. Verify the new template appears in the recurring invoices list",
               "expected": "Recurring invoice template is saved. Invoices are automatically generated at the configured interval.",
               "prio": "High"
             },
@@ -22804,31 +22804,31 @@
               "id": "ACC-054",
               "title": "Verify automatic recurring invoice generation",
               "where": "Recurring > Recurring",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/recurring-invoices\n2. Open an active template\n3. Check the \"Next Run\" field and configured interval\n4. Navigate to \"Invoices\" after the configured date\n5. Verify a new invoice was automatically generated from the template",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/recurring-invoices\n2. Open an active template\n3. Check the \"Next Run\" field and configured interval\n4. Navigate to \"Invoices\" after the configured date\n5. Verify a new invoice was automatically generated from the template",
               "expected": "Recurring invoice is automatically generated on the configured date and appears in the invoice list.",
               "prio": "High"
             },
             {
               "id": "ACC-055",
-              "title": "Bearbeiten Sie eine wiederkehrende Rechnung",
+              "title": "Edit a Recurring Invoice",
               "where": "Recurring > Recurring",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/recurring-invoices\n2. Click on an active template\n3. Click \"Edit\"\n4. Change the price or interval\n5. Click \"Save\"\n6. Verify the changes are saved",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/recurring-invoices\n2. Click on an active template\n3. Click \"Edit\"\n4. Change the price or interval\n5. Click \"Save\"\n6. Verify the changes are saved",
               "expected": "Template is updated. Future invoices will use the new values.",
               "prio": "High"
             },
             {
               "id": "ACC-056",
-              "title": "Pausieren Sie eine wiederkehrende Rechnung",
+              "title": "Pause a Recurring Invoice",
               "where": "Recurring > Recurring",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/recurring-invoices\n2. Open an active recurring invoice template\n3. Click the action menu (three dots)\n4. Select \"Pause\" or \"Deactivate\"\n5. Verify the status changes to \"Paused\"",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/recurring-invoices\n2. Open an active recurring invoice template\n3. Click the action menu (three dots)\n4. Select \"Pause\" or \"Deactivate\"\n5. Verify the status changes to \"Paused\"",
               "expected": "Template is paused. No further automatic invoices until reactivated.",
               "prio": "High"
             },
             {
               "id": "ACC-057",
-              "title": "Löschen Sie eine wiederkehrende Rechnung",
+              "title": "Delete a Recurring Invoice",
               "where": "Recurring > Recurring",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/recurring-invoices\n2. Open a template\n3. Click the action menu\n4. Select \"Delete\"\n5. Confirm in the dialog\n6. Verify the template has been removed from the list",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/recurring-invoices\n2. Open a template\n3. Click the action menu\n4. Select \"Delete\"\n5. Confirm in the dialog\n6. Verify the template has been removed from the list",
               "expected": "Template is deleted. Already generated invoices are preserved.",
               "prio": "High"
             }
@@ -22840,65 +22840,65 @@
           "cases": [
             {
               "id": "ACC-058",
-              "title": "Erstellen Sie einen manuellen Speseneintrag",
+              "title": "Create a Manual Expense Entry",
               "where": "Expenses > Expenses",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/expenses\n2. Click the \"New Expense\" button\n3. Enter a description (e.g. \"Office supplies March\")\n4. Enter the amount (e.g. 120.50)\n5. Select a date\n6. Select a category (e.g. \"Supplies\")\n7. Click \"Save\"\n8. Verify the message \"Expense created\" appears",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/expenses\n2. Click the \"New Expense\" button\n3. Enter a description (e.g. \"Office supplies March\")\n4. Enter the amount (e.g. 120.50)\n5. Select a date\n6. Select a category (e.g. \"Office Supplies\")\n7. Click \"Save\"\n8. Verify the new expense appears in the expense list",
               "expected": "Expense is saved and displayed in the expense list.",
               "prio": "Medium"
             },
             {
               "id": "ACC-059",
-              "title": "Laden Sie ein Belegfoto hoch",
+              "title": "Upload Receipt Photo",
               "where": "Expenses > Expenses",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/expenses\n2. Click \"New Expense\"\n3. Fill in description and amount\n4. Find the receipt upload field\n5. Click the upload field and select an image (JPG/PNG)\n6. Verify the image is shown as a preview\n7. Click \"Save\"\n8. Verify the receipt is saved with the expense",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/expenses\n2. Click \"New Expense\"\n3. Fill in description and amount\n4. Find the receipt upload field\n5. Click the upload field and select an image (JPG/PNG)\n6. Verify the image is shown as a preview\n7. Click \"Save\"\n8. Verify the receipt is saved with the expense",
               "expected": "Receipt photo is saved with the expense and can be retrieved later.",
               "prio": "Medium"
             },
             {
               "id": "ACC-060",
-              "title": "Kategorisieren Sie eine Ausgabe",
+              "title": "Categorize an Expense",
               "where": "Expenses > Expenses",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/expenses\n2. Click \"New Expense\"\n3. Enter description and amount\n4. Click the \"Category\" dropdown field\n5. Select a category (e.g. \"Rent\", \"Salary\", \"Transport\")\n6. Click \"Save\"\n7. Verify the expense is saved with the selected category",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/expenses\n2. Click \"New Expense\"\n3. Enter description and amount\n4. Click the \"Category\" dropdown field\n5. Select a category (e.g. \"Rent\", \"Salary\", \"Transport\")\n6. Click \"Save\"\n7. Verify the expense is saved with the selected category",
               "expected": "Expense is saved with the selected category. Category appears in the expense list and exports.",
               "prio": "High"
             },
             {
               "id": "ACC-061",
-              "title": "Wenden Sie die Mehrwertsteuer auf eine Ausgabe an",
+              "title": "Apply VAT to an Expense",
               "where": "Expenses > Expenses",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/expenses\n2. Click \"New Expense\"\n3. Enter description and gross amount\n4. Enter 8.1% in the \"Tax Rate\" field\n5. Verify the tax amount is calculated automatically\n6. Click \"Save\"\n7. Verify the expense is saved with the tax amount",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/expenses\n2. Click \"New Expense\"\n3. Enter description and gross amount\n4. Enter 8.1% in the \"Tax Rate\" field\n5. Verify the tax amount is calculated automatically\n6. Click \"Save\"\n7. Verify the expense is saved with the tax amount",
               "expected": "Tax amount is correctly calculated. Expense appears in VAT report as input tax.",
               "prio": "Medium"
             },
             {
               "id": "ACC-062",
-              "title": "Spesen zur Genehmigung einreichen",
+              "title": "Submit Expense for Approval",
               "where": "Expenses > Expenses",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/expenses\n2. Create a new expense with description and amount\n3. Save the expense\n4. Open the saved expense\n5. Check if a \"Submit for Approval\" button exists\n6. Click it (if available)\n7. Verify the status changes to \"Pending\" or \"Submitted\"",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/expenses\n2. Create a new expense with description and amount\n3. Save the expense\n4. Open the saved expense\n5. Check if a \"Submit for Approval\" button exists\n6. Click it (if available)\n7. Verify the status changes to \"Pending\" or \"Submitted\"",
               "expected": "Expense is submitted for approval. Status changes to \"Pending\".",
               "prio": "Medium"
             },
             {
               "id": "ACC-063",
-              "title": "Genehmigen Sie eine Ausgabe",
+              "title": "Approve an Expense",
               "where": "Expenses > Expenses",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/expenses\n2. Filter by \"Pending\" status\n3. Open a pending expense\n4. Check if an \"Approve\" button is present\n5. Click \"Approve\"\n6. Verify the status changes to \"Approved\"",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/expenses\n2. Filter by \"Pending\" status\n3. Open a pending expense\n4. Check if an \"Approve\" button is present\n5. Click \"Approve\"\n6. Verify the status changes to \"Approved\"",
               "expected": "Expense is approved. Status changes to \"Approved\".",
               "prio": "High"
             },
             {
               "id": "ACC-064",
-              "title": "Eine Ausgabe ablehnen",
+              "title": "Reject an Expense",
               "where": "Expenses > Expenses",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/expenses\n2. Filter by \"Pending\" status\n3. Open a pending expense\n4. Check if a \"Reject\" button is present\n5. Click \"Reject\"\n6. Verify the status is updated accordingly",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/expenses\n2. Filter by \"Pending\" status\n3. Open a pending expense\n4. Check if a \"Reject\" button is present\n5. Click \"Reject\"\n6. Verify the status is updated accordingly",
               "expected": "Expense is rejected. Status is updated.",
               "prio": "Medium"
             },
             {
               "id": "ACC-065",
-              "title": "Exportkosten für die Steuererklärung",
+              "title": "Export Expenses for Tax Declaration",
               "where": "Expenses > Expenses",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/settings\n2. Click the \"Data Export\" tab\n3. Find the \"Purchases\" or \"Finance\" section and the \"Expenses\" entry\n4. Click \"Export\"\n5. Verify an Excel file with all expenses is downloaded\n6. Open the file and verify date, amount and category are included",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings\n2. Click the \"Data Export\" tab\n3. Find the \"Purchases\" or \"Finance\" section and the \"Expenses\" entry\n4. Click \"Export\"\n5. Verify an Excel file with all expenses is downloaded\n6. Open the file and verify date, amount and category are included",
               "expected": "An Excel file with all expenses is downloaded including expense number, description, amount, date, VAT, category.",
               "prio": "High"
             }
@@ -22910,23 +22910,23 @@
           "cases": [
             {
               "id": "ACC-066",
-              "title": "Journaleinträge anzeigen",
+              "title": "View Journal Entries",
               "where": "Accounting > Journal",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/accounting\n2. Click the \"Journal\" tab\n3. Verify the list shows entries with columns: number, date, description and amount\n4. Verify the status filter (Draft / Posted / Cancelled) works",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/accounting\n2. Click the \"Journal\" tab\n3. Verify the list shows entries with columns: number, date, description and amount\n4. Verify the status filter (Draft / Posted / Cancelled) works",
               "expected": "Journal shows all entries. Status filter and search work correctly.",
               "prio": "High"
             },
             {
               "id": "ACC-067",
-              "title": "Erstellen Sie einen manuellen Journaleintrag",
+              "title": "Create a Manual Journal Entry",
               "where": "Accounting > Journal",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/accounting\n2. Click the \"Journal\" tab\n3. Click the \"New Entry\" button\n4. Enter date and description (e.g. \"Rent January 2026\")\n5. Add a line: select debit account (e.g. 5000) and enter amount\n6. Add a line: select credit account (e.g. 1000) with the same amount\n7. Verify debit = credit\n8. Click \"Create Entry\"\n9. Verify the message \"Entry created\" appears",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/accounting\n2. Click the \"Journal\" tab\n3. Click the \"New Entry\" button\n4. Enter date and description (e.g. \"Rent January 2026\")\n5. Add a line: select debit account (e.g. 5000) and enter amount\n6. Add a line: select credit account (e.g. 1000) with the same amount\n7. Verify debit = credit\n8. Click \"Create Entry\"\n9. Verify the new entry appears in the journal list",
               "expected": "Manual journal entry is saved. Debit = credit, entry number assigned automatically.",
               "prio": "Critical"
             },
             {
               "id": "ACC-068",
-              "title": "Soll = Habensaldo überprüfen",
+              "title": "Verify Debit = Credit Balance",
               "where": "Accounting > Journal",
               "steps": "1. Click \"Accounting\" > \"Journal\" tab\n2. Click \"New Entry\"\n3. Enter date and description\n4. Add a debit line (amount CHF 1000)\n5. Add a credit line with CHF 900 (deliberately unbalanced)\n6. Verify the system shows a warning \"Debit != Credit\"\n7. Correct the credit amount to CHF 1000\n8. Verify the warning disappears and the entry can be saved",
               "expected": "System warns for unbalanced entries (debit != credit) and prevents saving.",
@@ -22934,15 +22934,15 @@
             },
             {
               "id": "ACC-069",
-              "title": "Stornieren Sie einen Journaleintrag",
+              "title": "Cancel a Journal Entry",
               "where": "Accounting > Journal",
               "steps": "1. Click \"Accounting\" > \"Journal\" tab\n2. Open a posted entry (status \"Posted\")\n3. Click the action menu\n4. Select \"Cancel\" or \"Reverse\"\n5. Confirm the cancellation\n6. Verify the status changes to \"Cancelled\"",
-              "expected": "Entry is cancelled. Status changes to \"Cancelled\". Reversal entry is visible in the journal.\"Annullata\". La registrazione di storno è visibile nel giornale.",
+              "expected": "Entry is cancelled. Status changes to \"Cancelled\". Reversal entry is visible in the journal.",
               "prio": "High"
             },
             {
               "id": "ACC-070",
-              "title": "Durchsuchen Sie Journaleinträge nach Konto",
+              "title": "Search Journal Entries by Account",
               "where": "Accounting > Journal",
               "steps": "1. Click \"Accounting\" > \"Journal\" tab\n2. Click in the \"Search entries...\" search field\n3. Enter an account name or account number\n4. Verify the entry list filters to matching entries\n5. Enter a description and verify the search works",
               "expected": "Search function filters the journal in real time by account number, description and reference.",
@@ -22950,7 +22950,7 @@
             },
             {
               "id": "ACC-071",
-              "title": "Kontobuch (Kontoauszug) anzeigen",
+              "title": "View Account Ledger (Account Statement)",
               "where": "Accounting > Chart of Accounts",
               "steps": "1. Click \"Accounting\" > \"Chart of Accounts\" tab\n2. Find an account with transactions (e.g. account 1000)\n3. Click on the account\n4. Verify a detail view with all entries for this account appears\n5. Verify date, description, debit, credit and balance are displayed",
               "expected": "Account ledger shows all entries for the selected account with running balance.",
@@ -22958,7 +22958,7 @@
             },
             {
               "id": "ACC-072",
-              "title": "Testguthaben prüfen",
+              "title": "Verify Trial Balance",
               "where": "Accounting > Chart of Accounts",
               "steps": "1. Click \"Accounting\" > \"Chart of Accounts\" tab\n2. Look for a \"Trial Balance\" section or scroll to balance overview\n3. Alternatively: navigate to \"Financial Reports\" and look for \"Trial Balance\"\n4. Verify all accounts with debit and credit balances are listed\n5. Verify that total debit balances = total credit balances",
               "expected": "Trial balance shows all accounts with their balances. Total debit = total credit confirms correct bookkeeping.",
@@ -22972,9 +22972,9 @@
           "cases": [
             {
               "id": "ACC-073",
-              "title": "Mehrwertsteuerübersicht anzeigen",
+              "title": "View VAT Overview",
               "where": "Accounting > VAT",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/accounting\n2. Click the \"VAT Report\" tab\n3. Select a period (e.g. Q1 2026)\n4. Verify the overview shows output tax (due) and input tax (credit)\n5. Verify the \"VAT Payable\" amount is correctly calculated",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/accounting\n2. Click the \"VAT Report\" tab\n3. Select a period (e.g. Q1 2026)\n4. Verify the overview shows output tax (due) and input tax (credit)\n5. Verify the \"VAT Payable\" amount is correctly calculated",
               "expected": "VAT report shows complete overview with output tax, input tax and amount due.",
               "prio": "High"
             },
@@ -23004,9 +23004,9 @@
             },
             {
               "id": "ACC-077",
-              "title": "Erstellen Sie einen Bericht zur Umsatzsteuererklärung",
+              "title": "Generate VAT Return Report",
               "where": "Accounting > VAT",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/accounting\n2. Click the \"VAT Report\" tab\n3. Select the quarter (e.g. Q1 2026)\n4. Click the \"Generate VAT Return\" button\n5. Wait for the return to be generated\n6. Verify output tax, input tax and VAT balance are correctly shown",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/accounting\n2. Click the \"VAT Report\" tab\n3. Select the quarter (e.g. Q1 2026)\n4. Click the \"Generate VAT Return\" button\n5. Wait for the return to be generated\n6. Verify output tax, input tax and VAT balance are correctly shown",
               "expected": "VAT return for the selected quarter is generated. All transactions are correctly recorded.",
               "prio": "Critical"
             },
@@ -23026,57 +23026,57 @@
           "cases": [
             {
               "id": "ACC-079",
-              "title": "Banktransaktionen anzeigen",
+              "title": "View Bank Transactions",
               "where": "Banking > Bank Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/banking\n2. Click on an existing bank account\n3. Verify the transaction list shows entries with date, description, amount and type\n4. Use the filters \"All / Income / Expense / Transfer\"\n5. Verify the filters correctly limit the list",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/banking\n2. Click on an existing bank account\n3. Verify the transaction list shows entries with date, description, amount and type\n4. Use the filters \"All / Income / Expense / Transfer\"\n5. Verify the filters correctly limit the list",
               "expected": "Transaction list shows all entries with date, description, amount, type and reconciliation status.",
               "prio": "Critical"
             },
             {
               "id": "ACC-080",
-              "title": "Ordnen Sie eine Banktransaktion einer Rechnungszahlung zu",
+              "title": "Match Bank Transaction to Invoice Payment",
               "where": "Banking > Bank Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/banking\n2. Open a bank account with transactions\n3. Click on an unreconciled transaction (type \"Income\")\n4. Look for \"Mark as Reconciled\" or \"Link Invoice\" option\n5. Select the corresponding invoice\n6. Confirm the assignment\n7. Verify the transaction is marked as reconciled",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/banking\n2. Open a bank account with transactions\n3. Click on an unreconciled transaction (type \"Income\")\n4. Look for \"Mark as Reconciled\" or \"Link Invoice\" option\n5. Select the corresponding invoice\n6. Confirm the assignment\n7. Verify the transaction is marked as reconciled",
               "expected": "Bank transaction is linked to the invoice payment and marked as reconciled.",
               "prio": "Critical"
             },
             {
               "id": "ACC-081",
-              "title": "Ordnen Sie eine Banktransaktion einer Ausgabe zu",
+              "title": "Match Bank Transaction to Expense",
               "where": "Banking > Bank Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/banking\n2. Open a bank account\n3. Click on an expense transaction (type \"Expense\")\n4. Look for \"Mark as Reconciled\" option\n5. Click it\n6. Verify the transaction is marked as reconciled",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/banking\n2. Open a bank account\n3. Click on an expense transaction (type \"Expense\")\n4. Look for \"Mark as Reconciled\" option\n5. Click it\n6. Verify the transaction is marked as reconciled",
               "expected": "Expense transaction is marked as reconciled.",
               "prio": "Critical"
             },
             {
               "id": "ACC-082",
-              "title": "Erstellen Sie eine manuelle Banktransaktion",
+              "title": "Create a Manual Bank Transaction",
               "where": "Banking > Bank Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/banking\n2. Open a bank account\n3. Click the \"New Transaction\" button\n4. Enter date, description and amount\n5. Select type (Income / Expense / Transfer)\n6. Select a category\n7. Click \"Save\"\n8. Verify the message \"Transaction created\" appears",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/banking\n2. Open a bank account\n3. Click the \"New Transaction\" button\n4. Enter date, description and amount\n5. Select type (Income / Expense / Transfer)\n6. Select a category\n7. Click \"Save\"\n8. Verify the new transaction appears in the transaction list",
               "expected": "Manual transaction is saved and shown in the account transaction list.",
               "prio": "High"
             },
             {
               "id": "ACC-083",
-              "title": "Bankkonto abgleichen",
+              "title": "Reconcile Bank Account",
               "where": "Banking > Bank Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/banking\n2. Open a bank account\n3. Click on an unreconciled transaction\n4. Click \"Mark as Reconciled\"\n5. Repeat for additional transactions\n6. Verify the \"unreconciled\" counter (badge) decreases",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/banking\n2. Open a bank account\n3. Click on an unreconciled transaction\n4. Click \"Mark as Reconciled\"\n5. Repeat for additional transactions\n6. Verify the \"unreconciled\" counter (badge) decreases",
               "expected": "Reconciled transactions are correctly marked. The reconciliation counter decreases.",
               "prio": "Critical"
             },
             {
               "id": "ACC-084",
-              "title": "Überprüfung der Abstimmungsdiskrepanz",
+              "title": "Review Reconciliation Discrepancy",
               "where": "Banking > Bank Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/banking\n2. Open a bank account\n3. Check the \"Current Balance\" on the account overview\n4. Compare the balance with the actual bank statement\n5. Check if unreconciled transactions explain the difference\n6. Click the \"Unreconciled\" badge to filter the transaction list",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/banking\n2. Open a bank account\n3. Check the \"Current Balance\" on the account overview\n4. Compare the balance with the actual bank statement\n5. Check if unreconciled transactions explain the difference\n6. Click the \"Unreconciled\" badge to filter the transaction list",
               "expected": "Discrepancies between book balance and bank balance are explained by unreconciled transactions.",
               "prio": "Critical"
             },
             {
               "id": "ACC-085",
-              "title": "Abgleichshistorie anzeigen",
+              "title": "View Reconciliation History",
               "where": "Banking > Bank Accounts",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/banking\n2. Open a bank account\n3. Use the filter and select \"Reconciled\" only\n4. Verify reconciled transactions are shown with their status\n5. Verify the reconciliation date is visible",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/banking\n2. Open a bank account\n3. Use the filter and select \"Reconciled\" only\n4. Verify reconciled transactions are shown with their status\n5. Verify the reconciliation date is visible",
               "expected": "Reconciled transactions are visible with date and status. Reconciliation history is traceable.",
               "prio": "Critical"
             }
@@ -23084,77 +23084,77 @@
         },
         {
           "idx": 13,
-          "name": "M. Phase 13: Reports und Dashboard",
+          "name": "M. Phase 13: Reports and Dashboard",
           "cases": [
             {
               "id": "ACC-086",
-              "title": "Haupt-Dashboard anzeigen",
+              "title": "View Main Dashboard",
               "where": "Reports > Reports",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app\n2. Verify the dashboard is displayed\n3. Verify financial KPIs are visible (open invoices, revenue, expenses)\n4. Verify amounts are shown in the company default currency",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app\n2. Verify the dashboard is displayed\n3. Verify financial KPIs are visible (open invoices, revenue, expenses)\n4. Verify amounts are shown in the company default currency",
               "expected": "The dashboard shows financial KPIs including open invoices, revenue and expenses.",
               "prio": "High"
             },
             {
               "id": "ACC-087",
-              "title": "Bilanz anzeigen",
+              "title": "View Balance Sheet",
               "where": "Reports > Reports",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/reports\n2. Click the \"Balance Sheet\" tab\n3. Select a date (e.g. 31.12.2025)\n4. Verify assets, liabilities and equity are displayed\n5. Verify assets = liabilities + equity",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/reports\n2. Click the \"Balance Sheet\" tab\n3. Select a date (e.g. 31.12.2025)\n4. Verify assets, liabilities and equity are displayed\n5. Verify assets = liabilities + equity",
               "expected": "Balance sheet shows assets, liabilities and equity at the selected date. Accounting equation is correct.",
               "prio": "High"
             },
             {
               "id": "ACC-088",
-              "title": "Gewinn- und Verlustrechnung (GuV) anzeigen",
+              "title": "View Profit & Loss Statement (P&L)",
               "where": "Reports > Reports",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/reports\n2. Click the \"Profit & Loss\" tab\n3. Select a period (e.g. 01.01.2025 – 31.12.2025)\n4. Verify revenue, expenses and net profit/loss are displayed\n5. Verify amounts match journal entries",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/reports\n2. Click the \"Profit & Loss\" tab\n3. Select a period (e.g. 01.01.2025 – 31.12.2025)\n4. Verify revenue, expenses and net profit/loss are displayed\n5. Verify amounts match journal entries",
               "expected": "P&L shows revenue, expenses and net profit/loss for the selected period.",
               "prio": "High"
             },
             {
               "id": "ACC-089",
-              "title": "Sehen Sie sich den Bericht über die Fälligkeit der Debitorenbuchhaltung an",
+              "title": "View Accounts Receivable Aging Report",
               "where": "Reports > Reports",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/invoices\n2. Filter by \"Overdue\" status\n3. Verify overdue invoices are shown with due date and open amount\n4. Alternatively: navigate to \"Financial Reports\" and look for an AR Aging report\n5. Verify invoices are grouped by aging (e.g. 0-30, 31-60, 61+ days)",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/invoices\n2. Filter by \"Overdue\" status\n3. Verify overdue invoices are shown with due date and open amount\n4. Alternatively: navigate to \"Financial Reports\" and look for an AR Aging report\n5. Verify invoices are grouped by aging (e.g. 0-30, 31-60, 61+ days)",
               "expected": "AR aging report shows open invoices grouped by aging period.",
               "prio": "High"
             },
             {
               "id": "ACC-090",
-              "title": "Sehen Sie sich den Fälligkeitsbericht der Kreditorenbuchhaltung an",
+              "title": "View Accounts Payable Aging Report",
               "where": "Reports > Reports",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/expenses\n2. Check pending expenses with due dates\n3. Alternatively: navigate to \"Financial Reports\" and look for an AP Aging report\n4. Verify pending liabilities are grouped by aging period",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/expenses\n2. Check pending expenses with due dates\n3. Alternatively: navigate to \"Financial Reports\" and look for an AP Aging report\n4. Verify pending liabilities are grouped by aging period",
               "expected": "AP aging report shows pending liabilities grouped by aging period.",
               "prio": "High"
             },
             {
               "id": "ACC-091",
-              "title": "Filtern Sie Reports nach benutzerdefiniertem Datumsbereich",
+              "title": "Filter Reports by Custom Date Range",
               "where": "Reports > Reports",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/reports\n2. Click the \"Profit & Loss\" tab\n3. Click the \"From\" field and select a start date\n4. Click the \"To\" field and select an end date\n5. Verify the report shows only data for the selected period\n6. Change the period and verify the report updates",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/reports\n2. Click the \"Profit & Loss\" tab\n3. Click the \"From\" field and select a start date\n4. Click the \"To\" field and select an end date\n5. Verify the report shows only data for the selected period\n6. Change the period and verify the report updates",
               "expected": "Report correctly filters by selected date range. Amounts change accordingly.",
               "prio": "High"
             },
             {
               "id": "ACC-092",
-              "title": "Bericht als PDF exportieren",
+              "title": "Export Report as PDF",
               "where": "Reports > Reports",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/reports\n2. Click the \"Profit & Loss\" or \"Balance Sheet\" tab\n3. Select the desired period\n4. Look for the export button (PDF icon or \"Export\")\n5. Click it and select PDF\n6. Verify a PDF file is downloaded\n7. Open the PDF and verify all data is correctly included",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/reports\n2. Click the \"Profit & Loss\" or \"Balance Sheet\" tab\n3. Select the desired period\n4. Look for the export button (PDF icon or \"Export\")\n5. Click it and select PDF\n6. Verify a PDF file is downloaded\n7. Open the PDF and verify all data is correctly included",
               "expected": "Financial report is downloaded as PDF with all positions and amounts.",
               "prio": "High"
             },
             {
               "id": "ACC-093",
-              "title": "Bericht nach Excel exportieren",
+              "title": "Export Report to Excel",
               "where": "Reports > Reports",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/settings\n2. Click the \"Data Export\" tab\n3. Find the section for financial reports or invoices\n4. Click \"Export\" for the desired data type\n5. Verify an Excel file is downloaded\n6. Open the file and verify columns and data are correct",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings\n2. Click the \"Data Export\" tab\n3. Find the section for financial reports or invoices\n4. Click \"Export\" for the desired data type\n5. Verify an Excel file is downloaded\n6. Open the file and verify columns and data are correct",
               "expected": "Data is downloaded as an Excel file with formatted columns and correct values.",
               "prio": "High"
             },
             {
               "id": "ACC-094",
-              "title": "Sehen Sie sich den Bericht \"Umsatz pro Kontakt\" an",
+              "title": "View Revenue per Contact Report",
               "where": "Reports > Reports",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/contacts\n2. Click on a contact with linked invoices\n3. Check if the contact detail shows a revenue or invoice summary\n4. Alternatively: navigate to \"Financial Reports\" and look for \"Revenue by Contact\"\n5. Verify total revenue and all invoices for this contact are shown",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/contacts\n2. Click on a contact with linked invoices\n3. Check if the contact detail shows a revenue or invoice summary\n4. Alternatively: navigate to \"Financial Reports\" and look for \"Revenue by Contact\"\n5. Verify total revenue and all invoices for this contact are shown",
               "expected": "Revenue per contact is correctly calculated and displayed.",
               "prio": "High"
             }
@@ -23162,45 +23162,45 @@
         },
         {
           "idx": 14,
-          "name": "N. Phase 14: Documentsnmanagement",
+          "name": "N. Phase 14: Document Management",
           "cases": [
             {
               "id": "ACC-095",
-              "title": "Laden Sie ein Geschäftsdokument hoch",
+              "title": "Upload a Business Document",
               "where": "Documents > Documents",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/documents\n2. Click the \"Upload\" button\n3. Select a file (PDF, PNG or JPG)\n4. Optionally enter a name for the document\n5. Click \"Upload\" or confirm the upload\n6. Verify the message \"Document uploaded successfully\" appears\n7. Verify the document appears in the list",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/documents\n2. Click the \"Upload\" button\n3. Select a file (PDF, PNG or JPG)\n4. Optionally enter a name for the document\n5. Click \"Upload\" or confirm the upload\n6. Verify the document appears in the document list",
               "expected": "Document is uploaded and shown in the document list.",
               "prio": "Medium"
             },
             {
               "id": "ACC-096",
-              "title": "Rufen Sie ein Dokument ab und laden Sie es herunter",
+              "title": "Retrieve and Download a Document",
               "where": "Documents > Documents",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/documents\n2. Click on an existing document in the list\n3. Look for a download button or click \"Download\"\n4. Verify the file is correctly downloaded\n5. Open the file and verify its content",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/documents\n2. Click on an existing document in the list\n3. Look for a download button or click \"Download\"\n4. Verify the file is correctly downloaded\n5. Open the file and verify its content",
               "expected": "Document is correctly downloaded and can be opened.",
               "prio": "Medium"
             },
             {
               "id": "ACC-097",
-              "title": "Erstellen Sie eine Rechnungs-PDF mit einer benutzerdefinierten Vorlage",
-              "where": "Documents > Documentsnverwaltung",
-              "steps": "1. Stellen Sie sicher, dass das Firmenlogo und die Details festgelegt sind\n2. Erstellen und finalisieren Sie eine Rechnung\n3. Click on \"PDF herunterladen\".",
-              "expected": "PDF wird anhand der konfigurierten Vorlage generiert. Firmenlogo, Adresse und Zahlungsdetails sind korrekt platziert.",
+              "title": "Generate Invoice PDF with Custom Template",
+              "where": "Documents > Document Management",
+              "steps": "1. Ensure company logo and details are set in Settings\n2. Create and finalize an invoice\n3. Click \"Download PDF\"\n4. Verify the PDF contains company logo, address and payment details",
+              "expected": "PDF is generated from the configured template. Company logo, address and payment details are correctly placed.",
               "prio": "High"
             },
             {
               "id": "ACC-098",
-              "title": "Suchen Sie nach einem Dokument",
-              "where": "Documents > Documentsnverwaltung",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/documents\n2. Find the search field in the document list\n3. Enter the name of an existing document\n4. Verify the list filters to matching documents\n5. Clear the search and verify all documents reappear",
+              "title": "Search for a Document",
+              "where": "Documents > Document Management",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/documents\n2. Find the search field in the document list\n3. Enter the name of an existing document\n4. Verify the list filters to matching documents\n5. Clear the search and verify all documents reappear",
               "expected": "Search function filters the document list by name in real time.",
               "prio": "Medium"
             },
             {
               "id": "ACC-099",
-              "title": "Archivieren Sie ein Dokument",
+              "title": "Archive a Document",
               "where": "Documents > Documents",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/documents\n2. Click on an existing document\n3. Look in the action menu for \"Delete\" or \"Archive\"\n4. Click it and confirm\n5. Verify the document has been removed from the active list",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/documents\n2. Click on an existing document\n3. Look in the action menu for \"Delete\" or \"Archive\"\n4. Click it and confirm\n5. Verify the document has been removed from the active list",
               "expected": "Document is archived/deleted and removed from the active list.",
               "prio": "Medium"
             }
@@ -23212,15 +23212,15 @@
           "cases": [
             {
               "id": "ACC-100",
-              "title": "Erstellen Sie ein zweites Unternehmen",
+              "title": "Create a Second Company",
               "where": "Settings > Company Profile",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/settings\n2. Click the \"Company Profile\" tab\n3. Look for a \"New Organization\" or \"+ Add Company\" button\n4. Click it and enter the second company name\n5. Fill in required fields (country, currency)\n6. Click \"Create\" / \"Save\"\n7. Verify the second company appears in the company switcher",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings\n2. Click the \"Company Profile\" tab\n3. Look for a \"New Organization\" or \"+ Add Company\" button\n4. Click it and enter the second company name\n5. Fill in required fields (country, currency)\n6. Click \"Create\" / \"Save\"\n7. Verify the second company appears in the company switcher",
               "expected": "Second company is created. It appears in the company switcher.",
               "prio": "Medium"
             },
             {
               "id": "ACC-101",
-              "title": "Wechseln Sie zwischen Unternehmen",
+              "title": "Switch Between Companies",
               "where": "Dashboard",
               "steps": "1. Click on the company name or logo in the top navigation\n2. Verify a dropdown with available companies appears\n3. Click on a different company\n4. Verify the app switches context (company name in navigation changes)\n5. Verify the new company data is loaded",
               "expected": "Company context is switched. All data (invoices, contacts) belongs to the new company.",
@@ -23236,9 +23236,9 @@
             },
             {
               "id": "ACC-103",
-              "title": "Eine Firma löschen/archivieren",
+              "title": "Delete / Archive a Company",
               "where": "Settings > Company Profile",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/settings\n2. Click the \"Company Profile\" tab\n3. Look for a \"Delete Organization\" or \"Archive Company\" button or link\n4. Click it (only possible for a non-primary company)\n5. Confirm the action in the confirmation dialog\n6. Verify the company has been removed from the company switcher",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings\n2. Click the \"Company Profile\" tab\n3. Look for a \"Delete Organization\" or \"Archive Company\" button or link\n4. Click it (only possible for a non-primary company)\n5. Confirm the action in the confirmation dialog\n6. Verify the company has been removed from the company switcher",
               "expected": "Company is archived/deleted. It no longer appears in the company switcher.",
               "prio": "High"
             }
@@ -23246,19 +23246,19 @@
         },
         {
           "idx": 16,
-          "name": "P. Phase 16: Settings und Konfiguration",
+          "name": "P. Phase 16: Settings and Configuration",
           "cases": [
             {
               "id": "ACC-104",
-              "title": "Benutzerprofil aktualisieren",
+              "title": "Update User Profile",
               "where": "Settings > My Profile",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/settings\n2. Click the \"My Profile\" tab\n3. Change the \"Display Name\"\n4. Click \"Save Profile\"\n5. Verify the message \"Profile saved\" appears\n6. Verify the new name is displayed in the app",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings\n2. Click the \"My Profile\" tab\n3. Change the \"Display Name\"\n4. Click \"Save Profile\"\n5. Verify the new name is displayed in the sidebar or profile section",
               "expected": "User profile is updated. The new name appears in the interface.",
               "prio": "Medium"
             },
             {
               "id": "ACC-105",
-              "title": "Konfigurieren Sie die Rechnungs-PDF-Vorlage mit Logo",
+              "title": "Configure Invoice PDF Template with Logo",
               "where": "Settings > Company Profile",
               "steps": "1. Click \"Settings\" > \"Company Profile\" tab\n2. Click \"Upload Logo\" and choose a PNG/JPG file\n3. Click \"Save Company Profile\"\n4. Navigate to \"Invoices\" and open or create an invoice\n5. Click \"Download PDF\"\n6. Verify the company logo appears in the top left of the PDF\n7. Verify address, UID and contact details are correctly shown",
               "expected": "Invoice PDF contains company logo and all configured company data in the right positions.",
@@ -23266,33 +23266,33 @@
             },
             {
               "id": "ACC-106",
-              "title": "Konfigurieren Sie automatische Zahlungserinnerungen",
+              "title": "Configure Automatic Payment Reminders",
               "where": "Settings > Numbering",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/settings?tab=numbering\n2. Scroll to the 'Payment Terms' section\n3. Click 'Add' to create a new payment term\n4. Fill in the name field (e.g. 'Net 30')\n5. Fill in the days field with '30'\n6. Click 'Save'\n7. Verify the new payment term appears in the list",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings?tab=numbering\n2. Scroll to the 'Payment Terms' section\n3. Click 'Add' to create a new payment term\n4. Fill in the name field (e.g. 'Net 30')\n5. Fill in the days field with '30'\n6. Click 'Save'\n7. Verify the new payment term appears in the list",
               "expected": "A new payment term is created and listed in the payment terms section.",
               "prio": "High"
             },
             {
               "id": "ACC-107",
-              "title": "Konfigurieren Sie die E-Mail-Versanddomäne",
+              "title": "Configure Email Sending Domain",
               "where": "Settings > Email Settings",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/settings?tab=email\n2. Verify the 'Email Settings' section is visible\n3. Look for the sender email / domain configuration section\n4. Verify fields for sender name and sender address are present",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings?tab=email\n2. Verify the 'Email Settings' section is visible\n3. Look for the sender email / domain configuration section\n4. Verify fields for sender name and sender address are present",
               "expected": "The Email Settings tab shows sender name and email address configuration fields.",
               "prio": "High"
             },
             {
               "id": "ACC-108",
-              "title": "Datums- und Zahlenformat ändern",
+              "title": "Change Date and Number Format",
               "where": "Settings > My Profile",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/settings?tab=profile\n2. Verify the 'My Profile' section is visible\n3. Locate the display name or locale preference fields\n4. Verify the language dropdown is present\n5. Select a different locale setting",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/settings?tab=profile\n2. Verify the 'My Profile' section is visible\n3. Locate the display name or locale preference fields\n4. Verify the language dropdown is present\n5. Select a different locale setting",
               "expected": "Profile locale settings are visible and can be changed.",
               "prio": "High"
             },
             {
               "id": "ACC-109",
-              "title": "Zugriff auf Audit-Protokoll/Aktivitätsverlauf",
+              "title": "Access Audit Log / Activity History",
               "where": "Dashboard",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/audit-trail\n2. Verify a list of audit trail entries is displayed\n3. Verify entries show user, action, date and entity information\n4. Verify the list is scrollable or paginated",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/audit-trail\n2. Verify a list of audit trail entries is displayed\n3. Verify entries show user, action, date and entity information\n4. Verify the list is scrollable or paginated",
               "expected": "The audit trail page shows a log of user actions with timestamps.",
               "prio": "Critical"
             }
@@ -23300,11 +23300,11 @@
         },
         {
           "idx": 17,
-          "name": "F. Phase 17: Aufgaben zum Jahresende",
+          "name": "F. Phase 17: Year-End Tasks",
           "cases": [
             {
               "id": "ACC-110",
-              "title": "Führen Sie die Probebilanz zum Jahresende aus",
+              "title": "Run Year-End Trial Balance",
               "where": "Accounting > Chart of Accounts",
               "steps": "1. Click \"Accounting\" > \"Chart of Accounts\" tab\n2. Review all accounts for correct year-end balances\n3. Alternatively: navigate to \"Financial Reports\" and look for \"Trial Balance\"\n4. Set the date to December 31 of the year being closed\n5. Verify total debit = total credit\n6. Verify no journal entries remain in draft status",
               "expected": "Year-end trial balance shows all accounts balanced. Total debit = total credit.",
@@ -23314,29 +23314,29 @@
               "id": "ACC-111",
               "title": "Verify all invoices are settled or accrued",
               "where": "Invoices > Invoices",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/invoices\n2. Filter by \"Sent\" or \"Overdue\" status\n3. Check if any open invoices from the fiscal year being closed remain\n4. For each open invoice: mark as \"Paid\" or \"Cancelled\"\n5. Verify no open invoices remain for year-end",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/invoices\n2. Filter by \"Sent\" or \"Overdue\" status\n3. Check if any open invoices from the fiscal year being closed remain\n4. For each open invoice: mark as \"Paid\" or \"Cancelled\"\n5. Verify no open invoices remain for year-end",
               "expected": "All invoices of the fiscal year are either paid or cancelled. No open items at year-end.",
               "prio": "Critical"
             },
             {
               "id": "ACC-112",
-              "title": "Erstellen Sie eine Jahresbilanz",
+              "title": "Create Annual Balance Sheet",
               "where": "Reports > Reports",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/reports\n2. Click the \"Balance Sheet\" tab\n3. Set the date to December 31 of the year being closed\n4. Verify all asset, liability and equity positions are correctly shown\n5. Export the balance sheet as PDF for archiving",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/reports\n2. Click the \"Balance Sheet\" tab\n3. Set the date to December 31 of the year being closed\n4. Verify all asset, liability and equity positions are correctly shown\n5. Export the balance sheet as PDF for archiving",
               "expected": "Annual balance sheet shows complete assets as of December 31. Can be exported as PDF.",
               "prio": "High"
             },
             {
               "id": "ACC-113",
-              "title": "Erstellen Sie eine jährliche Gewinn- und Verlustrechnung (GuV)",
+              "title": "Create Annual Profit & Loss Statement",
               "where": "Reports > Reports",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/reports\n2. Click the \"Profit & Loss\" tab\n3. Set \"From\" to January 1 and \"To\" to December 31 of the year being closed\n4. Verify total revenue, total expenses and annual result are correctly shown\n5. Export the P&L as PDF",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/reports\n2. Click the \"Profit & Loss\" tab\n3. Set \"From\" to January 1 and \"To\" to December 31 of the year being closed\n4. Verify total revenue, total expenses and annual result are correctly shown\n5. Export the P&L as PDF",
               "expected": "Annual P&L shows complete revenue, expenses and annual result. Exportable as PDF.",
               "prio": "High"
             },
             {
               "id": "ACC-114",
-              "title": "Erstellen Sie einen jährlichen Mehrwertsteuerbericht",
+              "title": "Create Annual VAT Report",
               "where": "Accounting > VAT",
               "steps": "1. Click \"Accounting\" > \"VAT Report\" tab\n2. Select Q4 of the year being closed\n3. Click \"Generate VAT Return\"\n4. Verify output tax and input tax for the full year are correctly totalled\n5. Export the report as XML (eTax) or PDF",
               "expected": "Annual VAT report Q4 contains all year transactions. eTax export is available.",
@@ -23344,7 +23344,7 @@
             },
             {
               "id": "ACC-115",
-              "title": "Abschreibungsjournaleintrag buchen",
+              "title": "Post Depreciation Journal Entry",
               "where": "Accounting > Journal",
               "steps": "1. Click \"Accounting\" > \"Journal\" tab\n2. Click \"New Entry\"\n3. Set the date to December 31 of the fiscal year\n4. Enter \"Depreciation Vehicle 2025\" as description\n5. Add debit line: depreciation expense account (e.g. 6800), CHF 5000\n6. Add credit line: vehicles account (e.g. 1510), CHF 5000\n7. Click \"Create Entry\"\n8. Click \"Post\"",
               "expected": "Depreciation journal entry is correctly created and posted. Asset account is reduced.",
@@ -23362,7 +23362,7 @@
               "id": "ACC-117",
               "title": "Close Fiscal Year / Open New Year",
               "where": "Settings > Finance",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/accounting\n2. Click the \"Fiscal Year\" tab\n3. Select the fiscal year to be closed\n4. Click \"Close\" or \"Perform Year-End Closing\"\n5. Confirm the action\n6. Verify the fiscal year is marked as \"Closed\"\n7. Verify no new entries can be posted to the closed year",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/accounting\n2. Click the \"Fiscal Year\" tab\n3. Select the fiscal year to be closed\n4. Click \"Close\" or \"Perform Year-End Closing\"\n5. Confirm the action\n6. Verify the fiscal year is marked as \"Closed\"\n7. Verify no new entries can be posted to the closed year",
               "expected": "Fiscal year is closed. New year opens automatically. Backdated entries to the closed year are blocked.",
               "prio": "Critical"
             },
@@ -23386,7 +23386,7 @@
               "id": "ACC-120",
               "title": "Archive Year-End Documents",
               "where": "Documents > Documents",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/documents\n2. Click the \"Upload\" button\n3. Upload year-end documents (annual report PDF, tax return PDF)\n4. Enter meaningful names (e.g. \"Annual Report 2025\", \"Tax Return 2025\")\n5. Click \"Upload\"\n6. Verify all documents are uploaded and visible in the list",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/documents\n2. Click the \"Upload\" button\n3. Upload year-end documents (annual report PDF, tax return PDF)\n4. Enter meaningful names (e.g. \"Annual Report 2025\", \"Tax Return 2025\")\n5. Click \"Upload\"\n6. Verify all documents are uploaded and visible in the list",
               "expected": "All year-end documents are uploaded and archived in the document list.",
               "prio": "Critical"
             }
