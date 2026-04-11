@@ -300,8 +300,8 @@
               "id": "ACC-033",
               "title": "Erstellen Sie ein neues Angebot",
               "where": "Quotes > Angebote",
-              "steps": "1. Klicken Sie im linken Menü auf \"Offerten\"\n2. Klicken Sie auf den Button \"Neue Offerte\"\n3. Wählen Sie einen Kontakt aus der Dropdown-Liste\n4. Prüfen Sie, dass Offertennummer und Ausstellungsdatum automatisch gesetzt werden\n5. Klicken Sie auf \"Position hinzufügen\" und geben Sie Beschreibung, Menge und Preis ein\n6. Wählen Sie den Steuersatz\n7. Klicken Sie auf \"Offerte erstellen\"\n8. Prüfen Sie, dass die Meldung \"Offerte erstellt\" erscheint",
-              "expected": "Die Offerte wird mit automatischer Nummer erstellt. Sie erscheint in der Angebotsliste mit Status \"Entwurf\".",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/quotes\n2. Klicken Sie auf \"Neues Angebot\"\n3. Wählen Sie einen Kontakt aus dem Dropdown\n4. Prüfen Sie, dass Angebotsnummer und Datum automatisch gesetzt sind\n5. Klicken Sie auf \"Position hinzufügen\" und geben Sie Beschreibung, Menge und Preis ein\n6. Wählen Sie den MwSt.-Satz\n7. Klicken Sie auf \"Angebot erstellen\"\n8. Prüfen Sie, dass das Angebot in der Liste mit Status \"Entwurf\" erscheint",
+              "expected": "Das Angebot erscheint in der Angebotsliste mit Status \"Entwurf\" und einer automatischen Nummer.",
               "prio": "Medium"
             },
             {
@@ -332,24 +332,24 @@
               "id": "ACC-037",
               "title": "Konvertieren Sie das akzeptierte Angebot in eine Rechnung",
               "where": "Quotes > Angebote",
-              "steps": "1. Klicken Sie im linken Menü auf \"Offerten\"\n2. Öffnen Sie eine Offerte mit Status \"Akzeptiert\" oder \"Gesendet\"\n3. Klicken Sie auf das Aktionsmenü\n4. Wählen Sie \"In Rechnung umwandeln\"\n5. Prüfen Sie, dass die Meldung \"Offerte in Rechnung umgewandelt\" erscheint\n6. Navigieren Sie zu \"Rechnungen\" und prüfen Sie, dass die neue Rechnung vorhanden ist",
-              "expected": "Die Offerte wird in eine Rechnung umgewandelt. Die Rechnungsdaten werden aus der Offerte übernommen.",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/quotes\n2. Finden Sie ein Angebot mit Status \"Angenommen\"\n3. Klicken Sie auf das Angebot\n4. Klicken Sie auf \"In Rechnung umwandeln\" im Aktionsmenü\n5. Prüfen Sie, dass eine neue Rechnung in der Rechnungsliste erstellt wurde\n6. Kehren Sie zu Angeboten zurück und prüfen Sie den Status \"Umgewandelt\"",
+              "expected": "Eine neue Rechnung erscheint in der Rechnungsliste mit den Daten des Angebots. Der Angebotsstatus ändert sich zu \"Umgewandelt\".",
               "prio": "High"
             },
             {
               "id": "ACC-038",
               "title": "Ein Angebot ablehnen / verfallen lassen",
               "where": "Quotes > Angebote",
-              "steps": "1. Klicken Sie im linken Menü auf \"Offerten\"\n2. Öffnen Sie eine Offerte mit Status \"Gesendet\"\n3. Klicken Sie auf das Aktionsmenü\n4. Wählen Sie \"Als abgelehnt markieren\"\n5. Prüfen Sie, dass der Status auf \"Abgelehnt\" wechselt",
-              "expected": "Die Offerte wird als \"Abgelehnt\" markiert. Sie wird nicht mehr als offene Offerte geführt.",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/quotes\n2. Finden Sie ein Angebot mit Status \"Gesendet\" oder \"Entwurf\"\n3. Klicken Sie auf das Angebot\n4. Klicken Sie auf \"Ablehnen\" im Aktionsmenü\n5. Bestätigen Sie die Aktion\n6. Prüfen Sie, dass der Status in der Liste auf \"Abgelehnt\" wechselt",
+              "expected": "Der Angebotsstatus ändert sich zu \"Abgelehnt\" in der Angebotsliste. Es wird nicht mehr als offenes Angebot gezählt.",
               "prio": "High"
             },
             {
               "id": "ACC-039",
               "title": "Klonen / duplizieren Sie ein Angebot",
               "where": "Quotes > Angebote",
-              "steps": "1. Klicken Sie im linken Menü auf \"Offerten\"\n2. Öffnen Sie eine vorhandene Offerte\n3. Klicken Sie auf das Aktionsmenü\n4. Suchen Sie die Option \"Duplizieren\" oder \"Klonen\"\n5. Bestätigen Sie die Aktion\n6. Prüfen Sie, dass eine neue Offerte im Status \"Entwurf\" mit denselben Positionen erstellt wird",
-              "expected": "Eine Kopie der Offerte wird als neuer Entwurf erstellt. Kontakt, Positionen und Preise werden übernommen.",
+              "steps": "1. Navigieren Sie zu https://acc.mixel.ch/de/app/quotes\n2. Finden Sie ein bestehendes Angebot\n3. Klicken Sie auf das Angebot\n4. Klicken Sie auf \"Duplizieren\" im Aktionsmenü\n5. Prüfen Sie, dass ein neues Entwurfs-Angebot in der Liste erscheint mit denselben Positionen und Kontakt",
+              "expected": "Eine Kopie des Angebots wird als neuer Entwurf erstellt. Kontakt, Positionen und Preise werden übernommen.",
               "prio": "Medium"
             }
           ]
@@ -22624,8 +22624,8 @@
               "id": "ACC-033",
               "title": "Create a New Quote",
               "where": "Quotes > Quotes",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/quotes\n2. Click the \"New Quote\" button\n3. Select a contact from the dropdown\n4. Verify quote number and issue date are set automatically\n5. Click \"Add Item\" and enter description, quantity and price\n6. Select tax rate\n7. Click \"Create Quote\"\n8. Verify the message \"Quote created\" appears",
-              "expected": "Quote is created with an automatic number. It appears in the quote list with status \"Draft\".",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/quotes\n2. Click the \"New Quote\" button\n3. Select a contact from the dropdown\n4. Verify quote number and issue date are set automatically\n5. Click \"Add Item\" and enter description, quantity and price\n6. Select tax rate\n7. Click \"Create Quote\"\n8. Verify the new quote appears in the quote list with status \"Draft\"",
+              "expected": "The quote appears in the quote list with status \"Draft\" and an automatic number.",
               "prio": "Medium"
             },
             {
@@ -22654,26 +22654,26 @@
             },
             {
               "id": "ACC-037",
-              "title": "Konvertieren Sie das akzeptierte Angebot in eine Rechnung",
+              "title": "Convert Accepted Quote to Invoice",
               "where": "Quotes > Quotes",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/quotes\n2. Open a quote with status \"Accepted\" or \"Sent\"\n3. Click the action menu\n4. Select \"Convert to Invoice\"\n5. Verify the message \"Quote converted to invoice\" appears\n6. Navigate to \"Invoices\" and verify the new invoice exists",
-              "expected": "Quote is converted to an invoice. Invoice data is taken from the quote.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/quotes\n2. Find a quote with status \"Accepted\"\n3. Click the quote to open it\n4. Click \"Convert to Invoice\" from the actions menu\n5. Verify a new invoice is created in the invoices list\n6. Return to quotes and verify the quote status changed to \"Converted\"",
+              "expected": "A new invoice appears in the invoice list with data taken from the quote. The quote status changes to \"Converted\".",
               "prio": "High"
             },
             {
               "id": "ACC-038",
-              "title": "Ein Angebot ablehnen / verfallen lassen",
+              "title": "Decline / Expire a Quote",
               "where": "Quotes > Quotes",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/quotes\n2. Open a quote with status \"Sent\"\n3. Click the action menu\n4. Select \"Mark as Declined\"\n5. Verify the status changes to \"Declined\"",
-              "expected": "Quote is marked as \"Declined\". It is no longer counted as an open quote.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/quotes\n2. Find a quote with status \"Sent\" or \"Draft\"\n3. Click the quote to open it\n4. Click \"Decline\" from the actions menu\n5. Confirm the action\n6. Verify the quote status changes to \"Declined\" in the list",
+              "expected": "The quote status changes to \"Declined\" in the quote list. It is no longer counted as an open quote.",
               "prio": "High"
             },
             {
               "id": "ACC-039",
-              "title": "Klonen / duplizieren Sie ein Angebot",
+              "title": "Clone / Duplicate a Quote",
               "where": "Quotes > Quotes",
-              "steps": "1. Navigate to https://acc.mixel.ch/de/app/quotes\n2. Open an existing quote\n3. Click the action menu\n4. Look for \"Duplicate\" or \"Clone\" option\n5. Confirm the action\n6. Verify a new quote in \"Draft\" status with the same items is created",
-              "expected": "A copy of the quote is created as a new draft. Contact, items and prices are copied.",
+              "steps": "1. Navigate to https://acc.mixel.ch/en/app/quotes\n2. Find an existing quote\n3. Click the quote to open it\n4. Click \"Duplicate\" or \"Clone\" from the actions menu\n5. Verify a new draft quote appears in the quote list with the same items and contact",
+              "expected": "A new draft quote appears in the quote list. Contact, items and prices are copied from the original.",
               "prio": "Medium"
             }
           ]
