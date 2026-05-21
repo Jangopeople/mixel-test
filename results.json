@@ -1,0 +1,19 @@
+{
+  "job_id": "5944e6ed",
+  "app_id": "acc",
+  "lang": "en",
+  "ts": "2026-04-04 15:31 UTC",
+  "duration": "0:00:18",
+  "passed": 0,
+  "failed": 0,
+  "skipped": 1,
+  "total": 1,
+  "results": [
+    {
+      "id": "ACC-001",
+      "title": "Register – Create a New Account",
+      "status": "skip",
+      "reason": "Skipped: requires email/OAuth/PDF or tests auth-UI itself"
+    }
+  ]
+}
